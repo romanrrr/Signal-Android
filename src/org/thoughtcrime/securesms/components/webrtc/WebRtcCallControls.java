@@ -11,7 +11,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import com.tomergoldst.tooltips.ToolTip;
 import com.tomergoldst.tooltips.ToolTipsManager;
@@ -31,6 +33,13 @@ public class WebRtcCallControls extends LinearLayout {
   private AccessibleToggleButton speakerButton;
   private AccessibleToggleButton bluetoothButton;
   private AccessibleToggleButton cameraFlipButton;
+
+  private RelativeLayout audioMuteContainer;
+  private RelativeLayout videoMuteContainer;
+  private RelativeLayout speakerContainer;
+  private RelativeLayout bluetoothContainer;
+  private RelativeLayout cameraFlipContainer;
+
   private boolean                cameraFlipAvailable;
 
   @TargetApi(Build.VERSION_CODES.LOLLIPOP)
@@ -64,6 +73,12 @@ public class WebRtcCallControls extends LinearLayout {
     this.audioMuteButton = ViewUtil.findById(this, R.id.muteButton);
     this.videoMuteButton = ViewUtil.findById(this, R.id.video_mute_button);
     this.cameraFlipButton = ViewUtil.findById(this, R.id.camera_flip_button);
+
+    this.speakerContainer   = ViewUtil.findById(this, R.id.speakerContainer);
+    this.bluetoothContainer = ViewUtil.findById(this, R.id.bluetoothContainer);
+    this.audioMuteContainer = ViewUtil.findById(this, R.id.muteContainer);
+    this.videoMuteContainer = ViewUtil.findById(this, R.id.video_mute_Container);
+    this.cameraFlipContainer = ViewUtil.findById(this, R.id.camera_flip_Container);
   }
 
   public void setAudioMuteButtonListener(final MuteButtonListener listener) {
@@ -81,7 +96,7 @@ public class WebRtcCallControls extends LinearLayout {
       public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         boolean videoMuted = !isChecked;
         listener.onToggle(videoMuted);
-        cameraFlipButton.setVisibility(!videoMuted && cameraFlipAvailable ? View.VISIBLE : View.GONE);
+        cameraFlipContainer.setVisibility(!videoMuted && cameraFlipAvailable ? View.VISIBLE : View.GONE);
       }
     });
   }
@@ -103,7 +118,7 @@ public class WebRtcCallControls extends LinearLayout {
       @Override
       public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         listener.onSpeakerChange(isChecked);
-        updateAudioState(bluetoothButton.getVisibility() == View.VISIBLE);
+        updateAudioState(bluetoothContainer.getVisibility() == View.VISIBLE);
       }
     });
   }
@@ -122,9 +137,9 @@ public class WebRtcCallControls extends LinearLayout {
     AudioManager audioManager = ServiceUtil.getAudioManager(getContext());
 
     if (!isBluetoothAvailable) {
-      bluetoothButton.setVisibility(View.GONE);
+      bluetoothContainer.setVisibility(View.GONE);
     } else {
-      bluetoothButton.setVisibility(View.VISIBLE);
+      bluetoothContainer.setVisibility(View.VISIBLE);
     }
 
     if (audioManager.isBluetoothScoOn()) {
@@ -148,7 +163,7 @@ public class WebRtcCallControls extends LinearLayout {
   }
 
   public void setVideoAvailable(boolean available) {
-    videoMuteButton.setVisibility(available ? VISIBLE : GONE);
+    videoMuteContainer.setVisibility(available ? VISIBLE : GONE);
   }
 
   public void setCameraFlipButtonEnabled(boolean enabled) {
@@ -191,7 +206,7 @@ public class WebRtcCallControls extends LinearLayout {
 
       ToolTip toolTip = new ToolTip.Builder(getContext(), videoMuteButton, viewGroup,
                                             getContext().getString(R.string.WebRtcCallControls_tap_to_enable_your_video),
-                                            ToolTip.POSITION_BELOW).build();
+                                            ToolTip.POSITION_ABOVE).build();
       toolTipsManager.show(toolTip);
 
       videoMuteButton.postDelayed(() -> toolTipsManager.findAndDismiss(videoMuteButton), 4000);

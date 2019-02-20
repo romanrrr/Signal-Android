@@ -8,9 +8,7 @@
         android:focusable="true"
         android:nextFocusRight="@+id/fab"
         android:nextFocusLeft="@+id/container"
-        android:layout_height="72dp"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp">
+        android:layout_height="72dp">
 
     <FrameLayout
         android:id="@+id/avatar_container"
@@ -20,7 +18,9 @@
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
         android:layout_marginRight="6dp"
-        android:layout_marginEnd="6dp">
+        android:layout_marginEnd="6dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp">
 
         <org.thoughtcrime.securesms.components.AvatarImageView
             android:id="@+id/contact_photo_image"
@@ -54,7 +54,9 @@
                   android:layout_toRightOf="@id/avatar_container"
                   android:layout_toEndOf="@id/avatar_container"
                   android:weightSum="1"
-                  android:orientation="horizontal">
+                  android:orientation="horizontal"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp">
 
         <org.thoughtcrime.securesms.components.FromTextView
                   android:id="@+id/from"
@@ -144,7 +146,7 @@
                   android:layout_alignParentEnd="true"
                   android:layout_alignBaseline="@+id/from"
                   android:layout_above="@id/subject"
-                  style="@style/Signal.Text.Caption"
+                  style="@style/Signal.Text.Caption.Small"
                   android:textColor="?attr/conversation_list_item_date_color"
                   android:textAllCaps="true"
                   tools:text="30 mins"
@@ -189,5 +191,12 @@
         </FrameLayout>
 
     </RelativeLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/conversation_compose_divider"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="80dp"
+        android:layout_marginStart="80dp" />
 
 </org.thoughtcrime.securesms.ConversationListItem>

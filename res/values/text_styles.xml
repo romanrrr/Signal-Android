@@ -29,6 +29,13 @@
         <item name="android:letterSpacing">0.03</item>
     </style>
 
+    <style name="Signal.Text.Caption.Small" parent="Base.TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">10sp</item>
+        <item name="android:lineSpacingExtra">2sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+
 
     <style name="Signal.Text.Caption.MessageSent">
         <item name="android:textColor">?conversation_item_sent_text_secondary_color</item>

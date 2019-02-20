@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/grp1"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/menu_new_group"
+            android:icon="@drawable/ic_group_black_24dp"
+            android:title="@string/text_secure_normal__menu_new_group" />
+
+        <item
+            android:id="@+id/menu_invite"
+            android:icon="@drawable/ic_person_add_black_24dp"
+            android:title="@string/text_secure_normal__invite_friends" />
+
+        <item
+            android:id="@+id/menu_contacts"
+            android:icon="@drawable/ic_contacts_black_24dp"
+            android:title="@string/SearchFragment_header_contacts" />
+
+        <item
+            android:id="@+id/saved_messages"
+            android:icon="@drawable/ic_bookmark_black_24dp"
+            android:title="@string/note_to_self" />
+    </group>
+    <group
+        android:id="@+id/grp2"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/menu_settings"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:title="@string/text_secure_normal__menu_settings" />
+
+        <item
+            android:id="@+id/menu_help"
+            android:icon="@drawable/ic_help_black_24dp"
+            android:title="@string/text_secure_normal__help" />
+    </group>
+
+</menu>

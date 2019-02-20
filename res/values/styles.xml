@@ -208,8 +208,8 @@
            text label behavior of the ToggleButton class.) -->
 
     <style name="WebRtcCallCompoundButton">
-        <item name="android:layout_height">31dp</item>
-        <item name="android:layout_width">31dp</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:layout_width">36dp</item>
         <item name="android:textOn">@null</item>
         <item name="android:textOff">@null</item>
     </style>
@@ -237,5 +237,6 @@
     <style name="Color1SwitchStyle">
         <item name="colorControlActivated">@color/white</item>
     </style>
+
 
 </resources>

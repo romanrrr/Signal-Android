@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.os.Build;
+import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
@@ -57,6 +58,8 @@ public class DeliveryStatusView extends FrameLayout {
     if (attrs != null) {
       TypedArray typedArray = context.getTheme().obtainStyledAttributes(attrs, R.styleable.DeliveryStatusView, 0, 0);
       setTint(typedArray.getColor(R.styleable.DeliveryStatusView_iconColor, getResources().getColor(R.color.core_white)));
+      setReadTint(ContextCompat.getColor(getContext(), R.color.signal_primary));
+
       typedArray.recycle();
     }
   }
@@ -105,6 +108,10 @@ public class DeliveryStatusView extends FrameLayout {
     pendingIndicator.setColorFilter(color);
     deliveredIndicator.setColorFilter(color);
     sentIndicator.setColorFilter(color);
+    readIndicator.setColorFilter(color);
+  }
+
+  public void setReadTint(int color) {
     readIndicator.setColorFilter(color);
   }
 }

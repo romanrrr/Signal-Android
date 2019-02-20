@@ -42,6 +42,9 @@
     <color name="transparent_white_bb">#bbffffff</color>
     <color name="transparent_white_dd">#ddffffff</color>
 
+    <color name="webrtc_header">#45000000</color>
+
+    <color name="conversation_list_divider">#26000000</color>
     <color name="conversation_compose_divider">#32000000</color>
 
     <color name="action_mode_status_bar">@color/gray65</color>

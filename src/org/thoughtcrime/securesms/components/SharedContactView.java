@@ -9,6 +9,7 @@ import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
+import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
@@ -100,6 +101,7 @@ public class SharedContactView extends LinearLayout implements RecipientModified
       footer.setTextColor(captionColor);
       footer.setIconColor(iconColor);
       footer.setAlpha(footerAlpha);
+      footer.setReadIconColor(ContextCompat.getColor(getContext(), R.color.signal_primary));
     }
 
     if (cornerMask.isLegacy()) {

@@ -7,6 +7,7 @@ import android.content.res.TypedArray;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
@@ -62,6 +63,7 @@ public class ConversationItemFooter extends LinearLayout {
       TypedArray typedArray = getContext().getTheme().obtainStyledAttributes(attrs, R.styleable.ConversationItemFooter, 0, 0);
       setTextColor(typedArray.getInt(R.styleable.ConversationItemFooter_footer_text_color, getResources().getColor(R.color.core_white)));
       setIconColor(typedArray.getInt(R.styleable.ConversationItemFooter_footer_icon_color, getResources().getColor(R.color.core_white)));
+      deliveryStatusView.setReadTint(ContextCompat.getColor(getContext(), R.color.signal_primary));
       typedArray.recycle();
     }
   }
@@ -89,6 +91,10 @@ public class ConversationItemFooter extends LinearLayout {
     timerView.setColorFilter(color);
     insecureIndicatorView.setColorFilter(color);
     deliveryStatusView.setTint(color);
+  }
+
+  public void setReadIconColor(int color) {
+    deliveryStatusView.setReadTint(color);
   }
 
   private void presentDate(@NonNull MessageRecord messageRecord, @NonNull Locale locale) {

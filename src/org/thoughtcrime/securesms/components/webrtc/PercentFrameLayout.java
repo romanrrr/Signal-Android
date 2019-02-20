@@ -129,8 +129,8 @@ public class PercentFrameLayout extends ViewGroup {
         int childTop = subTop + (subHeight - childHeight) / 2;
 
         if (hidden) {
-          childLeft = 0;
-          childTop  = 0;
+          childLeft = -width;
+          childTop  = -height;
         }
 
         child.layout(childLeft, childTop, childLeft + childWidth, childTop + childHeight);

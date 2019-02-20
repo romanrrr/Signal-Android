@@ -23,6 +23,7 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.media.AudioManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -30,6 +31,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import org.thoughtcrime.securesms.logging.Log;
 import android.view.View;
+import android.view.ViewConfiguration;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -74,12 +76,19 @@ public class WebRtcCallActivity extends Activity {
     getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
     super.onCreate(savedInstanceState);
 
+
     requestWindowFeature(Window.FEATURE_NO_TITLE);
     setContentView(R.layout.webrtc_call_activity);
 
     setVolumeControlStream(AudioManager.STREAM_VOICE_CALL);
 
     initializeResources();
+  }
+
+  public boolean hasNavBar(Resources resources)
+  {
+    int id = resources.getIdentifier("config_showNavigationBar", "bool", "android");
+    return id > 0 && resources.getBoolean(id);
   }
 
 
