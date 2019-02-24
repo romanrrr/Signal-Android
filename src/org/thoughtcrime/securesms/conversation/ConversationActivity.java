@@ -66,6 +66,7 @@ import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -200,6 +201,7 @@ import org.thoughtcrime.securesms.util.IdentityUtil;
 import org.thoughtcrime.securesms.util.MediaUtil;
 import org.thoughtcrime.securesms.util.ServiceUtil;
 import org.thoughtcrime.securesms.util.TextSecurePreferences;
+import org.thoughtcrime.securesms.util.UiUtils;
 import org.thoughtcrime.securesms.util.Util;
 import org.thoughtcrime.securesms.util.ViewUtil;
 import org.thoughtcrime.securesms.util.concurrent.AssertedSuccessListener;
@@ -417,7 +419,7 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
     composeText.setTransport(sendButton.getSelectedTransport());
 
     titleView.setTitle(glideRequests, recipient);
-    setActionBarColor(recipient.getColor());
+    //setActionBarColor(UiUtils.themeAttributeToColor(R.attr.colorPrimary, this, recipient.getColor().toActionBarColor(this)));
     setBlockedUserState(recipient, isSecureText, isDefaultSms);
     setGroupShareProfileReminder(recipient);
     calculateCharactersRemaining();
@@ -613,7 +615,9 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
         final MenuItem item       = menu.findItem(R.id.menu_expiring_messages);
         final View     actionView = MenuItemCompat.getActionView(item);
         final TextView badgeView  = actionView.findViewById(R.id.expiration_badge);
-
+        final ImageView badgeIcon  = actionView.findViewById(R.id.menu_badge_icon);
+        badgeIcon.setColorFilter(UiUtils.themeAttributeToColor(R.attr.toolbar_icon_color, this, R.color.white));
+        badgeView.setTextColor(UiUtils.themeAttributeToColor(R.attr.toolbar_icon_color, this, R.color.white));
         badgeView.setText(ExpirationUtil.getExpirationAbbreviatedDisplayValue(this, recipient.getExpireMessages()));
         actionView.setOnClickListener(v -> onOptionsItemSelected(item));
       } else {
@@ -1665,7 +1669,7 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
       titleView.setTitle(glideRequests, recipient);
       titleView.setVerified(identityRecords.isVerified());
       setBlockedUserState(recipient, isSecureText, isDefaultSms);
-      setActionBarColor(recipient.getColor());
+      //setActionBarColor(recipient.getColor());
       setGroupShareProfileReminder(recipient);
       updateReminders(recipient.hasSeenInviteReminder());
       updateDefaultSubscriptionId(recipient.getDefaultSubscriptionId());

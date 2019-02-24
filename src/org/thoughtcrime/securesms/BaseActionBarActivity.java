@@ -2,6 +2,7 @@ package org.thoughtcrime.securesms;
 
 import android.annotation.TargetApi;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ import android.view.WindowManager;
 
 import org.thoughtcrime.securesms.logging.Log;
 import org.thoughtcrime.securesms.util.TextSecurePreferences;
+import org.thoughtcrime.securesms.util.UiUtils;
 
 import java.lang.reflect.Field;
 
@@ -29,6 +31,7 @@ public abstract class BaseActionBarActivity extends AppCompatActivity {
       forceOverflowMenu();
     }
     super.onCreate(savedInstanceState);
+    UiUtils.setThemedStatusBar(this);
   }
 
   @Override

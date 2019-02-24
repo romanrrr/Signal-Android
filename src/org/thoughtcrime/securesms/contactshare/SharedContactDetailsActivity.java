@@ -33,6 +33,7 @@ import org.thoughtcrime.securesms.util.CommunicationActions;
 import org.thoughtcrime.securesms.util.DynamicLanguage;
 import org.thoughtcrime.securesms.util.DynamicNoActionBarTheme;
 import org.thoughtcrime.securesms.util.DynamicTheme;
+import org.thoughtcrime.securesms.util.UiUtils;
 import org.thoughtcrime.securesms.util.Util;
 
 import java.util.ArrayList;
@@ -121,7 +122,7 @@ public class SharedContactDetailsActivity extends PassphraseRequiredActionBarAct
 
       array.recycle();
 
-      getWindow().setStatusBarColor(getResources().getColor(color));
+      UiUtils.setThemedStatusBar(this);
     }
   }
 

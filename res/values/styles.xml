@@ -45,20 +45,45 @@
         <item name="android:popupTheme">@style/ThemeOverlay.AppCompat.Dark</item>
         <item name="elevation">4dp</item>
         <item name="popupTheme">@style/ThemeOverlay.AppCompat.Dark</item>
-        <item name="titleTextStyle">@style/TextSecure.TitleTextStyle</item>
-        <item name="subtitleTextStyle">@style/TextSecure.SubtitleTextStyle</item>
+        <item name="titleTextStyle">@style/TextSecure.TitleTextStyleDark</item>
+        <item name="subtitleTextStyle">@style/TextSecure.SubtitleTextStyleDark</item>
         <item name="android:textColorSecondary">@color/white</item>
+        <item name="colorControlNormal">@color/white</item>
+
+    </style>
+
+    <style name="TextSecure.ActionBarThemeDark" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <!-- THIS is where you can color the arrow! -->
+        <item name="colorControlNormal">@color/white</item>
     </style>
 
     <style name="TextSecure.LightActionBar"
-           parent="@style/Widget.AppCompat.ActionBar">
-        <item name="background">@color/textsecure_primary</item>
+           parent="@style/Widget.AppCompat.Light.ActionBar">
+        <item name="background">@color/white</item>
         <item name="elevation">4dp</item>
         <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
-        <item name="titleTextStyle">@style/TextSecure.TitleTextStyle</item>
-        <item name="subtitleTextStyle">@style/TextSecure.SubtitleTextStyle</item>
-        <item name="android:textColorPrimary">@color/white</item>
-        <item name="android:textColorSecondary">@color/white</item>
+        <item name="titleTextStyle">@style/TextSecure.TitleTextStyleLight</item>
+        <item name="subtitleTextStyle">@style/TextSecure.SubtitleTextStyleLight</item>
+        <item name="android:textColorPrimary">@color/appbar_icon_light_color</item>
+        <item name="android:textColorSecondary">@color/appbar_icon_light_color_hint</item>
+        <item name="colorControlNormal">@color/appbar_icon_light_color_hint</item>
+        <item name="actionMenuTextColor">@color/appbar_icon_light_color_hint</item>
+
+    </style>
+
+    <style name="DrawerArrowStyleDark" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@android:color/white</item>
+        <item name="spinBars">true</item>
+    </style>
+
+    <style name="DrawerArrowStyleLight" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@color/appbar_icon_light_color</item>
+        <item name="spinBars">true</item>
+    </style>
+
+    <style name="TextSecure.ActionBarThemeLight" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <!-- THIS is where you can color the arrow! -->
+        <item name="colorControlNormal">@color/appbar_icon_light_color</item>
     </style>
 
     <style name="TextSecure.LightActionBar.DarkText"
@@ -88,12 +113,21 @@
         <item name="elevation">4dp</item>
     </style>
 
-    <style name="TextSecure.TitleTextStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+    <style name="TextSecure.TitleTextStyleLight" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/appbar_icon_light_color</item>
+        <item name="android:textColorHint">@color/appbar_icon_light_color_hint</item>
+    </style>
+
+    <style name="TextSecure.TitleTextStyleDark" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
         <item name="android:textColor">@color/white</item>
         <item name="android:textColorHint">#BFffffff</item>
     </style>
 
-    <style name="TextSecure.SubtitleTextStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Subtitle">
+    <style name="TextSecure.SubtitleTextStyleLight" parent="TextAppearance.AppCompat.Widget.ActionBar.Subtitle">
+        <item name="android:textColor">#BF000000</item>
+    </style>
+
+    <style name="TextSecure.SubtitleTextStyleDark" parent="TextAppearance.AppCompat.Widget.ActionBar.Subtitle">
         <item name="android:textColor">#BFffffff</item>
     </style>
 

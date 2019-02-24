@@ -21,6 +21,7 @@ import android.widget.TextView;
 
 import org.thoughtcrime.securesms.R;
 import org.thoughtcrime.securesms.components.AnimatingToggle;
+import org.thoughtcrime.securesms.util.UiUtils;
 import org.thoughtcrime.securesms.util.ViewUtil;
 
 public class GiphyActivityToolbar extends Toolbar {
@@ -55,6 +56,13 @@ public class GiphyActivityToolbar extends Toolbar {
     this.gridToggle      = ViewUtil.findById(this, R.id.view_grid);
     this.clearToggle     = ViewUtil.findById(this, R.id.search_clear);
     this.toggleContainer = ViewUtil.findById(this, R.id.toggle_container);
+
+    action.setColorFilter(UiUtils.themeAttributeToColor(R.attr.toolbar_icon_color, getContext(), R.color.white));
+    listToggle.setColorFilter(UiUtils.themeAttributeToColor(R.attr.toolbar_icon_color, getContext(), R.color.white));
+    gridToggle.setColorFilter(UiUtils.themeAttributeToColor(R.attr.toolbar_icon_color, getContext(), R.color.white));
+    clearToggle.setColorFilter(UiUtils.themeAttributeToColor(R.attr.toolbar_icon_color, getContext(), R.color.white));
+    searchText.setTextColor(UiUtils.themeAttributeToColor(R.attr.toolbar_icon_color, getContext(), R.color.white));
+    searchText.setHintTextColor(UiUtils.themeAttributeToColor(R.attr.toolbar_icon_color, getContext(), R.color.white));
 
     this.listToggle.setOnClickListener(new View.OnClickListener() {
       @Override

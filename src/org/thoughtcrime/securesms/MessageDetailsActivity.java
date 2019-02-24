@@ -152,7 +152,7 @@ public class MessageDetailsActivity extends PassphraseRequiredActionBarActivity 
     Recipient recipient = Recipient.from(this, getIntent().getParcelableExtra(ADDRESS_EXTRA), true);
     recipient.addListener(this);
 
-    setActionBarColor(recipient.getColor());
+    //setActionBarColor(recipient.getColor());
   }
 
   private void setActionBarColor(MaterialColor color) {
@@ -166,7 +166,7 @@ public class MessageDetailsActivity extends PassphraseRequiredActionBarActivity 
 
   @Override
   public void onModified(final Recipient recipient) {
-    Util.runOnMain(() -> setActionBarColor(recipient.getColor()));
+    //Util.runOnMain(() -> setActionBarColor(recipient.getColor()));
   }
 
   private void initializeResources() {

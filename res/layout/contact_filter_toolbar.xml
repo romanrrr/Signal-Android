@@ -16,7 +16,7 @@
                       android:layout_weight="1"
                       android:hint="@string/contact_selection_activity__enter_name_or_number"
                       android:inputType="textPersonName"
-                      style="@style/TextSecure.TitleTextStyle"
+                      style="?attr/titleTextStyle"
                       android:background="@android:color/transparent"
                       android:layout_gravity="center_vertical"
                       android:gravity="center_vertical"

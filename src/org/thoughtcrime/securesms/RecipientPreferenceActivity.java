@@ -6,6 +6,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
@@ -21,6 +23,7 @@ import android.support.v4.app.LoaderManager;
 import android.support.v4.content.Loader;
 import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.preference.CheckBoxPreference;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
@@ -78,6 +81,7 @@ import org.thoughtcrime.securesms.util.DynamicTheme;
 import org.thoughtcrime.securesms.util.GroupUtil;
 import org.thoughtcrime.securesms.util.IdentityUtil;
 import org.thoughtcrime.securesms.util.TextSecurePreferences;
+import org.thoughtcrime.securesms.util.UiUtils;
 import org.thoughtcrime.securesms.util.Util;
 import org.thoughtcrime.securesms.util.ViewUtil;
 import org.thoughtcrime.securesms.util.concurrent.ListenableFuture;
@@ -174,7 +178,7 @@ public class RecipientPreferenceActivity extends PassphraseRequiredActionBarActi
     this.threadPhotoRailLabel = ViewUtil.findById(this, R.id.rail_label);
 
     this.toolbarLayout.setExpandedTitleColor(getResources().getColor(R.color.white));
-    this.toolbarLayout.setCollapsedTitleTextColor(getResources().getColor(R.color.white));
+    this.toolbarLayout.setCollapsedTitleTextColor(UiUtils.themeAttributeToColor(R.attr.toolbar_icon_color, this, R.color.white));
 
     this.threadPhotoRailView.setListener(mediaRecord -> {
       Intent intent = new Intent(RecipientPreferenceActivity.this, MediaPreviewActivity.class);
@@ -199,6 +203,10 @@ public class RecipientPreferenceActivity extends PassphraseRequiredActionBarActi
     getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     getSupportActionBar().setLogo(null);
 
+    final Drawable upArrow = getResources().getDrawable(R.drawable.ic_arrow_back_black_24dp);
+    upArrow.setColorFilter(UiUtils.themeAttributeToColor(R.attr.toolbar_icon_color, this, R.color.white), PorterDuff.Mode.SRC_ATOP);
+    getSupportActionBar().setHomeAsUpIndicator(upArrow);
+
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
       getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
       getWindow().setStatusBarColor(Color.TRANSPARENT);
@@ -222,7 +230,7 @@ public class RecipientPreferenceActivity extends PassphraseRequiredActionBarActi
 
     this.avatar.setBackgroundColor(recipient.getColor().toActionBarColor(this));
     this.toolbarLayout.setTitle(recipient.toShortString());
-    this.toolbarLayout.setContentScrimColor(recipient.getColor().toActionBarColor(this));
+    this.toolbarLayout.setContentScrimColor(UiUtils.themeAttributeToColor(R.attr.colorPrimary, this, R.color.black));
   }
 
   @Override

@@ -15,6 +15,7 @@ import android.widget.LinearLayout;
 
 import org.thoughtcrime.securesms.R;
 import org.thoughtcrime.securesms.util.ServiceUtil;
+import org.thoughtcrime.securesms.util.UiUtils;
 import org.thoughtcrime.securesms.util.ViewUtil;
 
 public class ContactFilterToolbar extends Toolbar {
@@ -45,6 +46,10 @@ public class ContactFilterToolbar extends Toolbar {
     this.dialpadToggle   = ViewUtil.findById(this, R.id.search_dialpad);
     this.clearToggle     = ViewUtil.findById(this, R.id.search_clear);
     this.toggleContainer = ViewUtil.findById(this, R.id.toggle_container);
+
+    keyboardToggle.setColorFilter(UiUtils.themeAttributeToColor(R.attr.toolbar_icon_color, getContext(), R.color.white));
+    dialpadToggle.setColorFilter(UiUtils.themeAttributeToColor(R.attr.toolbar_icon_color, getContext(), R.color.white));
+    clearToggle.setColorFilter(UiUtils.themeAttributeToColor(R.attr.toolbar_icon_color, getContext(), R.color.white));
 
     this.keyboardToggle.setOnClickListener(new View.OnClickListener() {
       @Override

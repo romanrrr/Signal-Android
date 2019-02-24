@@ -66,6 +66,7 @@ import org.thoughtcrime.securesms.util.DynamicNoActionBarTheme;
 import org.thoughtcrime.securesms.util.DynamicTheme;
 import org.thoughtcrime.securesms.util.SaveAttachmentTask;
 import org.thoughtcrime.securesms.util.StickyHeaderDecoration;
+import org.thoughtcrime.securesms.util.UiUtils;
 import org.thoughtcrime.securesms.util.Util;
 import org.thoughtcrime.securesms.util.ViewUtil;
 import org.thoughtcrime.securesms.util.task.ProgressDialogAsyncTask;
@@ -471,7 +472,7 @@ public class MediaOverviewActivity extends PassphraseRequiredActionBarActivity {
         ((MediaOverviewActivity) getActivity()).onExitMultiSelect();
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-          getActivity().getWindow().setStatusBarColor(originalStatusBarColor);
+          UiUtils.setThemedStatusBar(getActivity());
         }
       }
     }

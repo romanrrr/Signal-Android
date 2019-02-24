@@ -60,7 +60,7 @@
             android:drawablePadding="5dp"
             android:gravity="center_vertical"
             android:layout_gravity="center_vertical"
-            style="@style/TextSecure.TitleTextStyle"
+            style="?attr/titleTextStyle"
             tools:ignore="UnusedAttribute"/>
 
         <LinearLayout
@@ -91,7 +91,7 @@
                 android:textDirection="ltr"
                 android:textSize="13dp"
                 tools:text="(123) 123-1234"
-                style="@style/TextSecure.SubtitleTextStyle"/>
+                style="?attr/subtitleTextStyle"/>
 
         </LinearLayout>
 

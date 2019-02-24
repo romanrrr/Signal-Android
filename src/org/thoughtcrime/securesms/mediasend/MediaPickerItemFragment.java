@@ -4,6 +4,8 @@ import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.graphics.Point;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -27,6 +29,7 @@ import android.widget.Toast;
 import org.thoughtcrime.securesms.R;
 import org.thoughtcrime.securesms.mms.GlideApp;
 import org.thoughtcrime.securesms.util.ThemeUtil;
+import org.thoughtcrime.securesms.util.UiUtils;
 import org.thoughtcrime.securesms.util.Util;
 
 import java.util.ArrayList;
@@ -235,7 +238,7 @@ public class MediaPickerItemFragment extends Fragment implements MediaPickerItem
       viewModel.onSelectedMediaChanged(requireContext(), Collections.emptyList());
 
       if (Build.VERSION.SDK_INT >= 21) {
-        requireActivity().getWindow().setStatusBarColor(statusBarColor);
+        UiUtils.setThemedStatusBar(getActivity());
       }
     }
   }

@@ -5,7 +5,8 @@
     <item android:title="@string/SearchToolbar_search"
         android:id="@+id/search_action"
         android:icon="@drawable/ic_search_white_24dp"
-        app:showAsAction="always"/>
+        app:showAsAction="always"
+        app:iconTint="?attr/toolbar_icon_color"/>
 
     <item android:title="@string/text_secure_normal__menu_clear_passphrase"
           android:id="@+id/menu_clear_passphrase" />
