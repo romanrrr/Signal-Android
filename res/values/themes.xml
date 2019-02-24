@@ -235,7 +235,7 @@
         <item name="linkpreview_divider_color">@color/core_grey_25</item>
 
         <item name="menu_new_conversation_icon">@drawable/ic_add_white_24dp</item>
-        <item name="menu_group_icon">@drawable/ic_group_white_24dp</item>
+        <item name="menu_group_icon">@drawable/ic_group_black_24dp</item>
         <item name="menu_search_icon">@drawable/ic_search_white_24dp</item>
         <item name="menu_call_icon">@drawable/ic_call_white_24dp</item>
         <item name="menu_popup_expand">@drawable/ic_launch_white_24dp</item>
@@ -264,7 +264,7 @@
 
         <item name="quote_missing_icon_color">@color/core_grey_60</item>
 
-        <item name="group_members_dialog_icon">@drawable/ic_group_grey600_24dp</item>
+        <item name="group_members_dialog_icon">@drawable/ic_group_black_24dp</item>
         <item name="preferenceTheme">@style/PreferenceThemeOverlay.Fix</item>
 
         <item name="search_toolbar_background">@color/white</item>
