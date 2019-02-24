@@ -21,6 +21,7 @@ import android.widget.TextView;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
 import org.thoughtcrime.securesms.ApplicationContext;
+import org.thoughtcrime.securesms.BuildConfig;
 import org.thoughtcrime.securesms.PassphraseRequiredActionBarActivity;
 import org.thoughtcrime.securesms.R;
 import org.thoughtcrime.securesms.database.RecipientDatabase;
@@ -231,7 +232,7 @@ public class SharedContactDetailsActivity extends PassphraseRequiredActionBarAct
 
       inviteButtonView.setOnClickListener(v -> {
         ContactUtil.selectRecipientThroughDialog(this, systemUsers, dynamicLanguage.getCurrentLocale(), recipient -> {
-          CommunicationActions.composeSmsThroughDefaultApp(this, recipient.getAddress(), getString(R.string.InviteActivity_lets_switch_to_signal, "https://sgnl.link/1KpeYmF"));
+          CommunicationActions.composeSmsThroughDefaultApp(this, recipient.getAddress(), getString(R.string.InviteActivity_lets_switch_to_signal, "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID));
         });
       });
     } else {

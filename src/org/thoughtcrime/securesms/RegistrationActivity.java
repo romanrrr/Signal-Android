@@ -421,7 +421,7 @@ public class RegistrationActivity extends BaseActionBarActivity implements Verif
                 TextSecurePreferences.setBackupPassphrase(context, passphrase);
                 return BackupImportResult.SUCCESS;
               } catch (FullBackupImporter.DatabaseDowngradeException e) {
-                Log.w(TAG, "Failed due to the backup being from a newer version of Signal.", e);
+                Log.w(TAG, "Failed due to the backup being from a newer version of APPNAME.", e);
                 return BackupImportResult.FAILURE_VERSION_DOWNGRADE;
               } catch (IOException e) {
                 Log.w(TAG, e);

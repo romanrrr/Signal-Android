@@ -43,6 +43,7 @@ import android.text.ClipboardManager;
 import android.text.TextUtils;
 
 import org.thoughtcrime.securesms.ApplicationContext;
+import org.thoughtcrime.securesms.BuildConfig;
 import org.thoughtcrime.securesms.MessageDetailsActivity;
 import org.thoughtcrime.securesms.PassphraseRequiredActionBarActivity;
 import org.thoughtcrime.securesms.R;
@@ -948,7 +949,7 @@ public class ConversationFragment extends Fragment
       if (getContext() == null) return;
 
       ContactUtil.selectRecipientThroughDialog(getContext(), choices, locale, recipient -> {
-        CommunicationActions.composeSmsThroughDefaultApp(getContext(), recipient.getAddress(), getString(R.string.InviteActivity_lets_switch_to_signal, "https://sgnl.link/1KpeYmF"));
+        CommunicationActions.composeSmsThroughDefaultApp(getContext(), recipient.getAddress(), getString(R.string.InviteActivity_lets_switch_to_signal, "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID));
       });
     }
   }

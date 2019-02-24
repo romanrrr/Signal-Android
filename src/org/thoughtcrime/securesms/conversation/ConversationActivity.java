@@ -77,6 +77,7 @@ import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 import org.thoughtcrime.securesms.ApplicationContext;
+import org.thoughtcrime.securesms.BuildConfig;
 import org.thoughtcrime.securesms.ConversationListActivity;
 import org.thoughtcrime.securesms.ConversationListArchiveActivity;
 import org.thoughtcrime.securesms.ExpirationDialog;
@@ -279,7 +280,7 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
   private   TextView                   charactersLeft;
   private   ConversationFragment       fragment;
   private   Button                     unblockButton;
-  private   Button                     makeDefaultSmsButton;
+  private   Button                     inviteButton;
   private   Button                     registerButton;
   private   InputAwareLayout           container;
   private   View                       composePanel;
@@ -374,7 +375,7 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
   @Override
   protected void onNewIntent(Intent intent) {
     Log.i(TAG, "onNewIntent()");
-    
+
     if (isFinishing()) {
       Log.w(TAG, "Activity is finishing...");
       return;
@@ -892,8 +893,8 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
       String inviteText;
 
       boolean a = SecureRandom.getInstance("SHA1PRNG").nextBoolean();
-      if (a) inviteText = getString(R.string.ConversationActivity_lets_switch_to_signal, "https://sgnl.link/1LoIMUl");
-      else   inviteText = getString(R.string.ConversationActivity_lets_use_this_to_chat, "https://sgnl.link/1MF56H1");
+      if (a) inviteText = getString(R.string.ConversationActivity_lets_switch_to_signal, "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID);
+      else   inviteText = getString(R.string.ConversationActivity_lets_use_this_to_chat, "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID);
 
       if (isDefaultSms) {
         composeText.appendInvite(inviteText);
@@ -1504,7 +1505,7 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
     charactersLeft         = ViewUtil.findById(this, R.id.space_left);
     emojiDrawerStub        = ViewUtil.findStubById(this, R.id.emoji_drawer_stub);
     unblockButton          = ViewUtil.findById(this, R.id.unblock_button);
-    makeDefaultSmsButton   = ViewUtil.findById(this, R.id.make_default_sms_button);
+    inviteButton   =        ViewUtil.findById(this, R.id.invite_button);
     registerButton         = ViewUtil.findById(this, R.id.register_button);
     composePanel           = ViewUtil.findById(this, R.id.bottom_panel);
     container              = ViewUtil.findById(this, R.id.layout_container);
@@ -1516,6 +1517,7 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
     inlineAttachmentToggle = ViewUtil.findById(this, R.id.inline_attachment_container);
     inputPanel             = ViewUtil.findById(this, R.id.bottom_panel);
     searchNav              = ViewUtil.findById(this, R.id.conversation_search_nav);
+
 
     ImageButton quickCameraToggle      = ViewUtil.findById(this, R.id.quick_camera_toggle);
     ImageButton inlineAttachmentButton = ViewUtil.findById(this, R.id.inline_attachment_button);
@@ -1551,7 +1553,7 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
     titleView.setOnLongClickListener(v -> handleDisplayQuickContact());
     titleView.setOnBackClickedListener(view -> super.onBackPressed());
     unblockButton.setOnClickListener(v -> handleUnblock());
-    makeDefaultSmsButton.setOnClickListener(v -> handleMakeDefaultSms());
+    inviteButton.setOnClickListener(v -> handleInviteLink());
     registerButton.setOnClickListener(v -> handleRegisterForSignal());
 
     composeText.setOnKeyListener(composeKeyPressedListener);
@@ -1860,22 +1862,22 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
     if (recipient.isBlocked()) {
       unblockButton.setVisibility(View.VISIBLE);
       composePanel.setVisibility(View.GONE);
-      makeDefaultSmsButton.setVisibility(View.GONE);
+        inviteButton.setVisibility(View.GONE);
       registerButton.setVisibility(View.GONE);
     } else if (!isSecureText && isPushGroupConversation()) {
       unblockButton.setVisibility(View.GONE);
       composePanel.setVisibility(View.GONE);
-      makeDefaultSmsButton.setVisibility(View.GONE);
+        inviteButton.setVisibility(View.GONE);
       registerButton.setVisibility(View.VISIBLE);
     } else if (!isSecureText && !isDefaultSms) {
       unblockButton.setVisibility(View.GONE);
       composePanel.setVisibility(View.GONE);
-      makeDefaultSmsButton.setVisibility(View.VISIBLE);
+      inviteButton.setVisibility(View.VISIBLE);
       registerButton.setVisibility(View.GONE);
     } else {
       composePanel.setVisibility(View.VISIBLE);
       unblockButton.setVisibility(View.GONE);
-      makeDefaultSmsButton.setVisibility(View.GONE);
+      inviteButton.setVisibility(View.GONE);
       registerButton.setVisibility(View.GONE);
     }
   }

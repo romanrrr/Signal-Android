@@ -156,8 +156,8 @@ public class UpdateApkJob extends ContextJob {
     DownloadManager.Request downloadRequest = new DownloadManager.Request(Uri.parse(uri));
 
     downloadRequest.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI);
-    downloadRequest.setTitle("Downloading Signal update");
-    downloadRequest.setDescription("Downloading Signal " + versionName);
+    downloadRequest.setTitle("Downloading APPNAME update");
+    downloadRequest.setDescription("Downloading APPNAME " + versionName);
     downloadRequest.setVisibleInDownloadsUi(false);
     downloadRequest.setDestinationInExternalFilesDir(context, null, "signal-update.apk");
 

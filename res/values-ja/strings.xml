@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
-  <string name="app_name">Signal</string>
+  <string name="app_name">APPNAME</string>
   <string name="yes">はい</string>
   <string name="no">いいえ</string>
   <string name="delete">削除</string>
@@ -129,9 +129,9 @@
   <string name="ConversationActivity_are_you_sure_you_want_to_leave_this_group">このグループを本当に抜けますか？</string>
   <string name="ConversationActivity_transport_insecure_sms">暗号化されていないSMS</string>
   <string name="ConversationActivity_transport_insecure_mms">暗号化されていないMMS</string>
-  <string name="ConversationActivity_transport_signal">Signal</string>
+  <string name="ConversationActivity_transport_signal">APPNAME</string>
   <string name="ConversationActivity_lets_switch_to_signal">チャットアプリをSignalに変えましょう。%1$s</string>
-  <string name="ConversationActivity_lets_use_this_to_chat">チャット・アプリ『Signal』を使いませんか？ %1$s</string>
+  <string name="ConversationActivity_lets_use_this_to_chat">チャット・アプリ『APPNAME』を使いませんか？ %1$s</string>
   <string name="ConversationActivity_error_leaving_group">グループ脱退でエラー</string>
   <string name="ConversationActivity_specify_recipient">連絡先を選択してください</string>
   <string name="ConversationActivity_unblock_this_contact_question">この連絡先のブロックを解除しますか？</string>
@@ -180,7 +180,7 @@
     <item quantity="other">%1$d個の添付ファイルを外部メモリに保存...</item>
   </plurals>
   <string name="ConversationFragment_pending">保留中...</string>
-  <string name="ConversationFragment_push">データ (Signal)</string>
+  <string name="ConversationFragment_push">データ (APPNAME)</string>
   <string name="ConversationFragment_mms">MMS</string>
   <string name="ConversationFragment_sms">SMS</string>
   <string name="ConversationFragment_deleting">削除中</string>
@@ -252,17 +252,17 @@
   <string name="ShareActivity_share_with">共有</string>
   <!--ExperienceUpgradeActivity-->
   <string name="ExperienceUpgradeActivity_welcome_to_signal_dgaf">Signalにようこそ</string>
-  <string name="ExperienceUpgradeActivity_textsecure_is_now_called_signal">TextSecureとRedPhoneは統合されて「Signal」になりました。</string>
+  <string name="ExperienceUpgradeActivity_textsecure_is_now_called_signal">TextSecureとRedPhoneは統合されて「APPNAME」になりました。</string>
   <string name="ExperienceUpgradeActivity_welcome_to_signal_excited">Signalにようこそ！</string>
   <string name="ExperienceUpgradeActivity_textsecure_is_now_signal">TextSecureはSignalに生まれ変わりました</string>
-  <string name="ExperienceUpgradeActivity_textsecure_is_now_signal_long">TextSecureとRedPhoneは１つのアプリ「Signal」になりました。タップすると詳細が分かります。</string>
+  <string name="ExperienceUpgradeActivity_textsecure_is_now_signal_long">TextSecureとRedPhoneは１つのアプリ「APPNAME」になりました。タップすると詳細が分かります。</string>
   <string name="ExperienceUpgradeActivity_say_hello_to_video_calls">安全なビデオ通話へようこそ！</string>
   <string name="ExperienceUpgradeActivity_signal_now_supports_secure_video_calls">安全なビデオ通話が可能になりました。通常通りに通話を開始してから，動画ボタンを押してください。</string>
   <string name="ExperienceUpgradeActivity_signal_now_supports_secure_video_calling">安全なビデオ通話が可能になりました</string>
   <string name="ExperienceUpgradeActivity_signal_now_supports_secure_video_calling_long">安全なビデオ通話が可能になりました。試すにはタップしてください。</string>
   <string name="ExperienceUpgradeActivity_ready_for_your_closeup">写真を撮りますが，準備はいいですか？</string>
   <string name="ExperienceUpgradeActivity_now_you_can_share_a_profile_photo_and_name_with_friends_on_signal">Signalでプロフィール名と画像が設定できるようになりました。</string>
-  <string name="ExperienceUpgradeActivity_signal_profiles_are_here">Signal のプロフィールは以下の通りです。</string>
+  <string name="ExperienceUpgradeActivity_signal_profiles_are_here">APPNAME のプロフィールは以下の通りです。</string>
   <string name="ExperienceUpgradeActivity_introducing_typing_indicators">入力中アイコンのご紹介</string>
   <string name="ExperienceUpgradeActivity_now_you_can_optionally_see_and_share_when_messages_are_being_typed">メッセージが入力中であることを表示します。</string>
   <string name="ExperienceUpgradeActivity_would_you_like_to_enable_them_now">いま有効化しますか？</string>
@@ -331,7 +331,7 @@
   <string name="MessageDetailsRecipient_failed_to_send">送信失敗</string>
   <string name="MessageDetailsRecipient_new_safety_number">新しい安全番号</string>
   <!--MessageRetrievalService-->
-  <string name="MessageRetrievalService_signal">Signal</string>
+  <string name="MessageRetrievalService_signal">APPNAME</string>
   <string name="MessageRetrievalService_background_connection_enabled">バックグラウンド通信が有効されました</string>
   <!--MmsDownloader-->
   <string name="MmsDownloader_error_reading_mms_settings">無線プロバイダのMMS設定の読み込みでエラー</string>
@@ -624,7 +624,7 @@
   <!--ShortcutLauncherActivity-->
   <string name="ShortcutLauncherActivity_invalid_shortcut">不正なショートカット</string>
   <!--SingleRecipientNotificationBuilder-->
-  <string name="SingleRecipientNotificationBuilder_signal">Signal</string>
+  <string name="SingleRecipientNotificationBuilder_signal">APPNAME</string>
   <string name="SingleRecipientNotificationBuilder_new_message">新着メッセージ</string>
   <!--TransferControlView-->
   <plurals name="TransferControlView_n_items">

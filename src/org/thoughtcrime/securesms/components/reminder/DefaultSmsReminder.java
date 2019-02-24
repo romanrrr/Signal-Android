@@ -44,6 +44,6 @@ public class DefaultSmsReminder extends Reminder {
       TextSecurePreferences.setPromptedDefaultSmsProvider(context, false);
     }
 
-    return !isDefault && !TextSecurePreferences.hasPromptedDefaultSmsProvider(context);
+    return false;
   }
 }
