@@ -12,6 +12,9 @@ import android.view.Window;
 
 import org.thoughtcrime.securesms.R;
 
+import static org.thoughtcrime.securesms.util.DynamicTheme.DARK;
+import static org.thoughtcrime.securesms.util.DynamicTheme.LIGHT;
+
 public class UiUtils {
     public static int themeAttributeToColor(int themeAttributeId,
                                             Context context,
@@ -54,7 +57,7 @@ public class UiUtils {
     public static void setThemedStatusBar(Activity activity) {
         String theme = TextSecurePreferences.getTheme(activity);
 
-        if (theme.equals(DynamicTheme.DARK)){
+        if (theme.equals(DARK)){
             setDarkStatusBar(activity);
         }else {
             setLightStatusBar(activity);

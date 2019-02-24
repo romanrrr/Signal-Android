@@ -7,6 +7,7 @@ import android.support.annotation.ColorRes;
 import android.support.annotation.NonNull;
 
 import org.thoughtcrime.securesms.R;
+import org.thoughtcrime.securesms.util.UiUtils;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -66,7 +67,7 @@ public enum MaterialColor {
   }
 
   public @ColorInt int toConversationColor(@NonNull Context context) {
-    return context.getResources().getColor(mainColor);
+    return context.getResources().getColor(isDarkTheme(context) ? shadeColor : mainColor) ;
   }
 
   public @ColorInt int toAvatarColor(@NonNull Context context) {

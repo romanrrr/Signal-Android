@@ -265,7 +265,7 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
   private static final int GROUP_EDIT          = 6;
   private static final int TAKE_PHOTO          = 7;
   private static final int ADD_CONTACT         = 8;
-  private static final int PICK_LOCATION       = 9;
+  private static final int PICK_VIDEO       = 9;
   private static final int PICK_GIF            = 10;
   private static final int SMS_DEFAULT         = 11;
   private static final int PICK_CAMERA         = 12;
@@ -518,9 +518,8 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
       recipient.addListener(this);
       fragment.reloadList();
       break;
-    case PICK_LOCATION:
-      SignalPlace place = new SignalPlace(PlacePicker.getPlace(data, this));
-      attachmentManager.setLocation(place, getCurrentMediaConstraints());
+    case PICK_VIDEO:
+      setMedia(data.getData(), MediaType.VIDEO);
       break;
     case PICK_GIF:
       setMedia(data.getData(),
@@ -1717,8 +1716,8 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
       AttachmentManager.selectAudio(this, PICK_AUDIO); break;
     case AttachmentTypeSelector.ADD_CONTACT_INFO:
       AttachmentManager.selectContactInfo(this, PICK_CONTACT); break;
-    case AttachmentTypeSelector.ADD_LOCATION:
-      AttachmentManager.selectLocation(this, PICK_LOCATION); break;
+    case AttachmentTypeSelector.ADD_VIDEO:
+      AttachmentManager.selectVideo(this, PICK_VIDEO); break;
     case AttachmentTypeSelector.TAKE_PHOTO:
       attachmentManager.capturePhoto(this, TAKE_PHOTO); break;
     case AttachmentTypeSelector.ADD_GIF:

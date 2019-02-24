@@ -17,7 +17,12 @@
 package org.thoughtcrime.securesms;
 
 import android.content.Intent;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
+
+import org.thoughtcrime.securesms.util.UiUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +43,10 @@ public class PushContactSelectionActivity extends ContactSelectionActivity {
     getIntent().putExtra(ContactSelectionListFragment.MULTI_SELECT, true);
     super.onCreate(icicle, ready);
 
-    getToolbar().setNavigationIcon(R.drawable.ic_check_white_24dp);
+    Drawable drawable = ContextCompat.getDrawable(this, R.drawable.ic_check_white_24dp);
+    drawable.setColorFilter(UiUtils.themeAttributeToColor(R.attr.toolbar_icon_color, this, R.color.white), PorterDuff.Mode.SRC_ATOP);
+    getToolbar().setNavigationIcon(drawable);
+
     getToolbar().setNavigationOnClickListener(v -> {
       Intent resultIntent = getIntent();
       List<String> selectedContacts = contactsFragment.getSelectedContacts();
