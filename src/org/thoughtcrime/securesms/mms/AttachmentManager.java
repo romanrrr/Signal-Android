@@ -392,6 +392,16 @@ public class AttachmentManager {
                .execute();
   }
 
+  public static void selectVideo(Activity activity, int requestCode) {
+    Permissions.with(activity)
+            .request(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+            .ifNecessary()
+            .withPermanentDenialDialog(activity.getString(R.string.AttachmentManager_signal_requires_the_external_storage_permission_in_order_to_attach_photos_videos_or_audio))
+            .onAllGranted(() -> selectMediaType(activity, "video/*", null, requestCode))
+            .execute();
+  }
+
+
   public static void selectContactInfo(Activity activity, int requestCode) {
     Permissions.with(activity)
                .request(Manifest.permission.WRITE_CONTACTS)

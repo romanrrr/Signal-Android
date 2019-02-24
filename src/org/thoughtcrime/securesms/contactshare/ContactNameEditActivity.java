@@ -3,8 +3,11 @@ package org.thoughtcrime.securesms.contactshare;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 
@@ -13,6 +16,7 @@ import org.thoughtcrime.securesms.R;
 import org.thoughtcrime.securesms.util.DynamicLanguage;
 import org.thoughtcrime.securesms.util.DynamicNoActionBarTheme;
 import org.thoughtcrime.securesms.util.DynamicTheme;
+import org.thoughtcrime.securesms.util.UiUtils;
 
 import static org.thoughtcrime.securesms.contactshare.Contact.*;
 
@@ -75,7 +79,9 @@ public class ContactNameEditActivity extends PassphraseRequiredActionBarActivity
     setSupportActionBar(toolbar);
 
     toolbar.setTitle("");
-    toolbar.setNavigationIcon(R.drawable.ic_check_white_24dp);
+    Drawable drawable = ContextCompat.getDrawable(this, R.drawable.ic_check_white_24dp);
+    drawable.setColorFilter(UiUtils.themeAttributeToColor(R.attr.toolbar_icon_color, this, R.color.white), PorterDuff.Mode.SRC_ATOP);
+    toolbar.setNavigationIcon(drawable);
     toolbar.setNavigationOnClickListener(v -> {
       Intent resultIntent = new Intent();
       resultIntent.putExtra(KEY_NAME, viewModel.getName());
