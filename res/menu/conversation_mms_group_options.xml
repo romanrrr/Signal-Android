@@ -4,7 +4,8 @@
     <item android:title="@string/conversation_group_options__delivery"
           android:id="@+id/menu_group_delivery"
           android:icon="?menu_split_icon"
-          app:showAsAction="ifRoom" >
+          app:showAsAction="ifRoom"
+        app:iconTint="?attr/toolbar_icon_color">
 
         <menu>
             <group android:id="@+id/distribution_group"

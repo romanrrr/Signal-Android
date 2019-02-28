@@ -127,7 +127,7 @@ public class VerifyIdentityActivity extends PassphraseRequiredActionBarActivity 
     Recipient recipient = Recipient.from(this, (Address)getIntent().getParcelableExtra(ADDRESS_EXTRA), true);
     recipient.addListener(this);
 
-    setActionBarNotificationBarColor(recipient.getColor());
+    //setActionBarNotificationBarColor(recipient.getColor());
 
     Bundle extras = new Bundle();
     extras.putParcelable(VerifyDisplayFragment.REMOTE_ADDRESS, getIntent().getParcelableExtra(ADDRESS_EXTRA));
@@ -154,7 +154,7 @@ public class VerifyIdentityActivity extends PassphraseRequiredActionBarActivity 
 
   @Override
   public void onModified(final Recipient recipient) {
-    Util.runOnMain(() -> setActionBarNotificationBarColor(recipient.getColor()));
+    //Util.runOnMain(() -> setActionBarNotificationBarColor(recipient.getColor()));
   }
 
   @Override

@@ -222,6 +222,8 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import ru.ryakovlev.adssdk.AdBannerView;
+
 import static org.thoughtcrime.securesms.TransportOption.Type;
 import static org.thoughtcrime.securesms.database.GroupDatabase.GroupRecord;
 import static org.whispersystems.libsignal.SessionCipher.SESSION_LOCK;
@@ -300,6 +302,7 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
   protected HidingLinearLayout     inlineAttachmentToggle;
   private   QuickAttachmentDrawer  quickAttachmentDrawer;
   private   InputPanel             inputPanel;
+  private AdBannerView adView;
 
   private LinkPreviewViewModel        linkPreviewViewModel;
   private ConversationSearchViewModel searchViewModel;
@@ -370,6 +373,8 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
         });
       }
     });
+    adView.setLocalId("small");
+    adView.load();
   }
 
   @Override
@@ -461,6 +466,7 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
     if (emojiDrawerStub.resolved() && container.getCurrentInput() == emojiDrawerStub.get()) {
       container.hideAttachedInput(true);
     }
+    adView.reload();
   }
 
   @Override
@@ -1516,6 +1522,7 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
     inlineAttachmentToggle = ViewUtil.findById(this, R.id.inline_attachment_container);
     inputPanel             = ViewUtil.findById(this, R.id.bottom_panel);
     searchNav              = ViewUtil.findById(this, R.id.conversation_search_nav);
+    adView              = ViewUtil.findById(this, R.id.adView);
 
 
     ImageButton quickCameraToggle      = ViewUtil.findById(this, R.id.quick_camera_toggle);

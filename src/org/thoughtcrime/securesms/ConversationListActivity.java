@@ -81,7 +81,13 @@ import org.thoughtcrime.securesms.util.UiUtils;
 import org.thoughtcrime.securesms.util.concurrent.SimpleTask;
 import org.whispersystems.libsignal.util.guava.Optional;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import ru.ryakovlev.adssdk.AdSdk;
+import ru.ryakovlev.domain.App;
+import ru.ryakovlev.domain.Banner;
+import ru.ryakovlev.domain.BannerSize;
 
 public class ConversationListActivity extends PassphraseRequiredActionBarActivity
         implements ConversationListFragment.ConversationSelectedListener {
@@ -110,6 +116,21 @@ public class ConversationListActivity extends PassphraseRequiredActionBarActivit
     protected void onCreate(Bundle icicle, boolean ready) {
         setContentView(R.layout.conversation_list_activity);
         Toolbar toolbar = findViewById(R.id.toolbar);
+        Log.w("ADS", "INIT");
+
+        App defaultApp = new App(getString(R.string.appId),
+                getString(R.string.admobAppId),
+                new ArrayList<>(),
+                getString(R.string.fullscreenBannerId),
+                true,
+                10000);
+        defaultApp.getBannerList().add(new Banner("small",
+                getString(R.string.smallBannerId),
+                BannerSize.BANNER));
+        defaultApp.getBannerList().add(new Banner("call",
+                getString(R.string.callBannerId),
+                BannerSize.MEDIUM_RECTANGLE));
+        AdSdk.INSTANCE.init(this, defaultApp);
 
         setSupportActionBar(toolbar);
         ActionBar actionbar = getSupportActionBar();

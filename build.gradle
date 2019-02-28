@@ -97,6 +97,9 @@ dependencies {
     compile 'org.whispersystems:webrtc-android:M72-S2'
 
     compile "me.leolin:ShortcutBadger:1.1.16"
+
+    compile "ru.ryakovlev:adssdk:1.0.0"
+
     compile 'se.emilsjolander:stickylistheaders:2.7.0'
     compile 'com.jpardogo.materialtabstrip:library:1.0.9'
     compile 'org.apache.httpcomponents:httpclient-android:4.3.5'
@@ -305,7 +308,7 @@ android {
         versionCode 457
         versionName "4.34.2"
 
-        minSdkVersion 14
+        minSdkVersion 15
         targetSdkVersion 26
         multiDexEnabled true
 

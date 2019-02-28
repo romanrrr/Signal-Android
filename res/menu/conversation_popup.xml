@@ -4,6 +4,7 @@
     <item android:title="@string/conversation_popup__menu_expand_popup"
           android:id="@+id/menu_expand"
           android:icon="?menu_popup_expand"
-          app:showAsAction="ifRoom" />
+          app:showAsAction="ifRoom"
+        app:iconTint="?attr/toolbar_icon_color"/>
 
 </menu>
