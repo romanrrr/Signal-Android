@@ -171,7 +171,7 @@ public class ConversationUpdateItem extends LinearLayout
   }
 
   private void setGroupRecord(MessageRecord messageRecord) {
-    icon.setImageResource(R.drawable.ic_group_grey600_24dp);
+    icon.setImageResource(R.drawable.ic_group_black_24dp);
     icon.clearColorFilter();
 
     GroupUtil.getDescription(getContext(), messageRecord.getBody()).addListener(this);
