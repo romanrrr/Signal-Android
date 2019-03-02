@@ -63,4 +63,10 @@ public class UiUtils {
             setLightStatusBar(activity);
         }
     }
+
+    public static boolean isDarkTheme(Context context){
+        String theme = TextSecurePreferences.getTheme(context);
+
+        return theme.equals(DARK);
+    }
 }

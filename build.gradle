@@ -3,6 +3,8 @@ import org.signal.signing.ApkSignerUtil
 import java.security.MessageDigest
 
 buildscript {
+    ext.kotlin_version = '1.3.21'
+
     repositories {
         maven {
             url 'https://maven.google.com/'
@@ -17,10 +19,14 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.3.1'
         classpath files('libs/gradle-witness.jar')
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
     }
 }
 
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 apply plugin: 'witness'
 
 repositories {
@@ -97,6 +103,7 @@ dependencies {
     compile 'org.whispersystems:webrtc-android:M72-S2'
 
     compile "me.leolin:ShortcutBadger:1.1.16"
+    compile("org.jetbrains.anko:anko:0.10.5")
 
     compile "ru.ryakovlev:adssdk:1.0.0"
 

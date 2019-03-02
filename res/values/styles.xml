@@ -111,6 +111,7 @@
         <item name="android:textColorPrimary">@color/white</item>
         <item name="android:textColorSecondary">#BFffffff</item>
         <item name="elevation">4dp</item>
+        <item name="tabIndicatorColor">@color/white</item>
     </style>
 
     <style name="TextSecure.TitleTextStyleLight" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">

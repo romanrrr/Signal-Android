@@ -34,8 +34,10 @@ import android.widget.ImageView;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
 import org.thoughtcrime.securesms.R;
+import org.thoughtcrime.securesms.config.Config;
 import org.thoughtcrime.securesms.mms.GlideApp;
 import org.thoughtcrime.securesms.mms.GlideRequests;
+import org.thoughtcrime.securesms.util.AsyncLoader;
 
 public class StickerSelectFragment extends Fragment implements LoaderManager.LoaderCallbacks<String[]> {
 
@@ -78,7 +80,24 @@ public class StickerSelectFragment extends Fragment implements LoaderManager.Loa
 
   @Override
   public Loader<String[]> onCreateLoader(int id, Bundle args) {
-    return new StickerLoader(getActivity(), assetDirectory);
+    if(assetDirectory.equals("custom")){
+      return new CustomStickerLoader(getActivity());
+    }else {
+      return new StickerLoader(getActivity(), assetDirectory);
+    }
+  }
+
+  private static class CustomStickerLoader extends AsyncLoader<String[]>{
+
+    public CustomStickerLoader(Context context) {
+      super(context);
+    }
+
+    @Nullable
+      @Override
+      public String[] loadInBackground() {
+      return Config.INSTANCE.getCameraStickers().toArray(new String[0]);
+    }
   }
 
   @Override

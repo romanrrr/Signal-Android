@@ -34,6 +34,7 @@ import android.view.MenuItem;
 
 import org.thoughtcrime.securesms.BaseActionBarActivity;
 import org.thoughtcrime.securesms.R;
+import org.thoughtcrime.securesms.config.Config;
 
 public class StickerSelectActivity extends FragmentActivity implements StickerSelectFragment.StickerSelectionListener {
 
@@ -46,7 +47,8 @@ public class StickerSelectActivity extends FragmentActivity implements StickerSe
       R.drawable.ic_work_white_24dp,
       R.drawable.ic_pets_white_24dp,
       R.drawable.ic_local_dining_white_24dp,
-      R.drawable.ic_wb_sunny_white_24dp
+      R.drawable.ic_wb_sunny_white_24dp,
+      R.drawable.ic_person_white_24dp
   };
 
   @Override
@@ -89,14 +91,24 @@ public class StickerSelectActivity extends FragmentActivity implements StickerSe
     StickerPagerAdapter(FragmentManager fm, StickerSelectFragment.StickerSelectionListener listener) {
       super(fm);
 
-      this.fragments = new Fragment[] {
-          StickerSelectFragment.newInstance("stickers/emoticons"),
-          StickerSelectFragment.newInstance("stickers/clothes"),
-          StickerSelectFragment.newInstance("stickers/animals"),
-          StickerSelectFragment.newInstance("stickers/food"),
-          StickerSelectFragment.newInstance("stickers/weather"),
-          };
-
+      if(Config.INSTANCE.getCameraStickers().isEmpty()) {
+        this.fragments = new Fragment[]{
+                StickerSelectFragment.newInstance("stickers/emoticons"),
+                StickerSelectFragment.newInstance("stickers/clothes"),
+                StickerSelectFragment.newInstance("stickers/animals"),
+                StickerSelectFragment.newInstance("stickers/food"),
+                StickerSelectFragment.newInstance("stickers/weather"),
+        };
+      }else {
+        this.fragments = new Fragment[]{
+                StickerSelectFragment.newInstance("stickers/emoticons"),
+                StickerSelectFragment.newInstance("stickers/clothes"),
+                StickerSelectFragment.newInstance("stickers/animals"),
+                StickerSelectFragment.newInstance("stickers/food"),
+                StickerSelectFragment.newInstance("stickers/weather"),
+                StickerSelectFragment.newInstance("custom"),
+        };
+      }
       for (Fragment fragment : fragments) {
         ((StickerSelectFragment)fragment).setListener(listener);
       }

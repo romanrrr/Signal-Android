@@ -30,6 +30,7 @@ import com.google.android.gms.security.ProviderInstaller;
 
 import org.thoughtcrime.securesms.components.TypingStatusRepository;
 import org.thoughtcrime.securesms.components.TypingStatusSender;
+import org.thoughtcrime.securesms.config.Config;
 import org.thoughtcrime.securesms.crypto.PRNGFixes;
 import org.thoughtcrime.securesms.database.DatabaseFactory;
 import org.thoughtcrime.securesms.database.helpers.SQLCipherOpenHelper;
@@ -121,6 +122,7 @@ public class ApplicationContext extends MultiDexApplication implements Dependenc
     initializeUnidentifiedDeliveryAbilityRefresh();
     NotificationChannels.create(this);
     ProcessLifecycleOwner.get().getLifecycle().addObserver(this);
+    Config.INSTANCE.init(getApplicationContext());
   }
 
   @Override

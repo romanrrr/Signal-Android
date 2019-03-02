@@ -1,0 +1,28 @@
+{
+  "chatLightBackgroundImage": "uploaded_data\/back.jpg",
+  "chatDarkBackgroundImage": "uploaded_data\/95f48b57-b91d-4ca5-a4de-71c700a652bb.jpg",
+
+  "cameraStickers": [
+    {
+      "path": "uploaded_data\/001lighticons-01.png"
+    },
+    {
+      "path": "uploaded_data\/001lighticons-02.png"
+    },
+    {
+      "path": "uploaded_data\/001lighticons-03.png"
+    },
+    {
+      "path": "uploaded_data\/Idle__000.png"
+    }
+  ],
+
+  "name": "AR shooter",
+  "template": "shooterAR",
+  "icon": "uploaded_data\/icon.png",
+  "themeColors": {
+    "colorPrimary": "#2196f3",
+    "colorPrimaryDark": "#1976D2",
+    "colorAccent": "#448aff"
+  }
+}

@@ -32,6 +32,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.PorterDuff.Mode;
 import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -65,6 +66,7 @@ import android.view.View.OnKeyListener;
 import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -120,6 +122,7 @@ import org.thoughtcrime.securesms.components.reminder.InviteReminder;
 import org.thoughtcrime.securesms.components.reminder.ReminderView;
 import org.thoughtcrime.securesms.components.reminder.ServiceOutageReminder;
 import org.thoughtcrime.securesms.components.reminder.UnauthorizedReminder;
+import org.thoughtcrime.securesms.config.Config;
 import org.thoughtcrime.securesms.contacts.ContactAccessor;
 import org.thoughtcrime.securesms.contacts.ContactAccessor.ContactData;
 import org.thoughtcrime.securesms.contactshare.Contact;
@@ -284,6 +287,7 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
   private   Button                     unblockButton;
   private   Button                     inviteButton;
   private   Button                     registerButton;
+  private ImageView background;
   private   InputAwareLayout           container;
   private   View                       composePanel;
   protected Stub<ReminderView>         reminderView;
@@ -333,12 +337,6 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
     supportRequestWindowFeature(WindowCompat.FEATURE_ACTION_BAR_OVERLAY);
     setContentView(R.layout.conversation_activity);
 
-    TypedArray typedArray = obtainStyledAttributes(new int[] {R.attr.conversation_background});
-    int color = typedArray.getColor(0, Color.WHITE);
-    typedArray.recycle();
-
-    getWindow().getDecorView().setBackgroundColor(color);
-
     fragment = initFragment(R.id.fragment_content, new ConversationFragment(), dynamicLanguage.getCurrentLocale());
 
     initializeReceivers();
@@ -373,6 +371,18 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
         });
       }
     });
+
+
+    TypedArray typedArray = obtainStyledAttributes(new int[] {R.attr.conversation_background});
+    int color = typedArray.getColor(0, Color.WHITE);
+    typedArray.recycle();
+    Drawable chatBackground = Config.INSTANCE.getChatBackgroundImage(this, UiUtils.isDarkTheme(this));
+    if(chatBackground != null && Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN){
+      background.setImageDrawable(chatBackground);
+    }else {
+      getWindow().getDecorView().setBackgroundColor(color);
+    }
+
     adView.setLocalId("small");
     adView.load();
   }
@@ -1512,7 +1522,8 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
     unblockButton          = ViewUtil.findById(this, R.id.unblock_button);
     inviteButton   =        ViewUtil.findById(this, R.id.invite_button);
     registerButton         = ViewUtil.findById(this, R.id.register_button);
-    composePanel           = ViewUtil.findById(this, R.id.bottom_panel);
+    background = ViewUtil.findById(this, R.id.background);
+      composePanel           = ViewUtil.findById(this, R.id.bottom_panel);
     container              = ViewUtil.findById(this, R.id.layout_container);
     reminderView           = ViewUtil.findStubById(this, R.id.reminder_stub);
     unverifiedBannerView   = ViewUtil.findStubById(this, R.id.unverified_banner_stub);
