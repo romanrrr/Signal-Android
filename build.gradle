@@ -315,7 +315,7 @@ android {
         versionCode 457
         versionName "4.34.2"
 
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 26
         multiDexEnabled true
 
@@ -459,7 +459,7 @@ def assembleWebsiteDescriptor = { variant, file ->
     }
 }
 
-def signProductionRelease = { variant ->
+/*def signProductionRelease = { variant ->
     String apkName    = variant.outputs[0].outputFile.name
     File   inputFile  = new File(variant.outputs[0].outputFile.path);
     File   outputFile = new File(variant.outputs[0].outputFile.parent, apkName.replace("-unsigned", ""));
@@ -486,20 +486,20 @@ task signProductionWebsiteRelease {
         File signedRelease = signProductionRelease(variant)
         assembleWebsiteDescriptor(variant, signedRelease);
     }
-}
+}*/
 
 tasks.whenTaskAdded { task ->
     if (task.name.equals("lint")) {
         task.enabled = false
     }
 
-    if (task.name.equals("assemblePlayRelease")) {
+    /*if (task.name.equals("assemblePlayRelease")) {
         task.finalizedBy signProductionPlayRelease
     }
 
     if (task.name.equals("assembleWebsiteRelease")) {
         task.finalizedBy signProductionWebsiteRelease
-    }
+    }*/
 }
 
 def getLastCommitTimestamp() {

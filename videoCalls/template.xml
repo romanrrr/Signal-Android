@@ -1,0 +1,11 @@
+<template name="videoCallsTest" caption="Video calls" keywords="video calls, video, calls, messenger" type="native" orientation="user" version="1.0.0">
+	<description>
+
+	</description>
+
+	<image name="chatLightBackgroundImage" label="Background image (1080x1920):" resizeWidth="1080" resizeHeight="1820" required="true" crop="true"/>
+	<image name="chatDarkBackgroundImage" label="Background image (1920x1080):" resizeWidth="1920" resizeHeight="1080" required="true" crop="true"/>
+
+	<multipleImages name="cameraStickers" minCount="1" maxCount="50" label="Pictures:" initialCount="1"/>
+
+</template>

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="widgetID" translatable="false">1</string>
+    <string name="template_version" translatable="false">1.0</string>
+    <string name="app_metrica_on_start_event" translatable="false">{}</string>
+
     <string name="appId" translatable="false">CyberMessenger</string>
     <string name="admobAppId" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
     <string name="smallBannerId" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
