@@ -239,7 +239,7 @@ public class PersistentBlobProvider {
 
   private static boolean isExternalBlobUri(@NonNull Context context, @NonNull Uri uri) {
     try {
-      return uri.getPath().startsWith(getExternalDir(context).getAbsolutePath()) || FileProviderUtil.isAuthority(uri);
+      return uri.getPath().startsWith(getExternalDir(context).getAbsolutePath()) || FileProviderUtil.isAuthority(context, uri);
     } catch (IOException ioe) {
       Log.w(TAG, "Failed to determine if it's an external blob URI.", ioe);
       return false;

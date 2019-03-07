@@ -19,6 +19,7 @@ package org.thoughtcrime.securesms.providers;
 import android.content.ContentProvider;
 import android.content.ContentUris;
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.UriMatcher;
 import android.database.Cursor;
 import android.database.MatrixCursor;
@@ -46,8 +47,10 @@ public class PartProvider extends ContentProvider {
 
   private static final String TAG = PartProvider.class.getSimpleName();
 
-  private static final String CONTENT_URI_STRING = "content://org.thoughtcrime.provider.securesms/part";
-  private static final Uri    CONTENT_URI        = Uri.parse(CONTENT_URI_STRING);
+  public static Uri CONTENT_URI(Context context) {
+    return Uri.parse("content://"+context.getPackageName()+".provider.securesms/part");
+  }
+
   private static final int    SINGLE_ROW         = 1;
 
   private static final UriMatcher uriMatcher;
@@ -63,8 +66,8 @@ public class PartProvider extends ContentProvider {
     return true;
   }
 
-  public static Uri getContentUri(AttachmentId attachmentId) {
-    Uri uri = Uri.withAppendedPath(CONTENT_URI, String.valueOf(attachmentId.getUniqueId()));
+  public static Uri getContentUri(Context context, AttachmentId attachmentId) {
+    Uri uri = Uri.withAppendedPath(CONTENT_URI(context), String.valueOf(attachmentId.getUniqueId()));
     return ContentUris.withAppendedId(uri, attachmentId.getRowId());
   }
 

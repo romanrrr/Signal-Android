@@ -44,29 +44,29 @@ public abstract class Database {
   }
 
   protected void notifyConversationListeners(long threadId) {
-    context.getContentResolver().notifyChange(DatabaseContentProviders.Conversation.getUriForThread(threadId), null);
+    context.getContentResolver().notifyChange(DatabaseContentProviders.Conversation.getUriForThread(context, threadId), null);
   }
 
   protected void notifyConversationListListeners() {
-    context.getContentResolver().notifyChange(DatabaseContentProviders.ConversationList.CONTENT_URI, null);
+    context.getContentResolver().notifyChange(DatabaseContentProviders.ConversationList.CONTENT_URI(context), null);
   }
 
   protected void setNotifyConverationListeners(Cursor cursor, long threadId) {
-    cursor.setNotificationUri(context.getContentResolver(), DatabaseContentProviders.Conversation.getUriForThread(threadId));
+    cursor.setNotificationUri(context.getContentResolver(), DatabaseContentProviders.Conversation.getUriForThread(context, threadId));
   }
 
   protected void setNotifyConverationListListeners(Cursor cursor) {
-    cursor.setNotificationUri(context.getContentResolver(), DatabaseContentProviders.ConversationList.CONTENT_URI);
+    cursor.setNotificationUri(context.getContentResolver(), DatabaseContentProviders.ConversationList.CONTENT_URI(context));
   }
 
   protected void registerAttachmentListeners(@NonNull ContentObserver observer) {
-    context.getContentResolver().registerContentObserver(DatabaseContentProviders.Attachment.CONTENT_URI,
+    context.getContentResolver().registerContentObserver(DatabaseContentProviders.Attachment.CONTENT_URI(context),
                                                          true,
                                                          observer);
   }
 
   protected void notifyAttachmentListeners() {
-    context.getContentResolver().notifyChange(DatabaseContentProviders.Attachment.CONTENT_URI, null);
+    context.getContentResolver().notifyChange(DatabaseContentProviders.Attachment.CONTENT_URI(context), null);
   }
 
   public void reset(SQLCipherOpenHelper databaseHelper) {

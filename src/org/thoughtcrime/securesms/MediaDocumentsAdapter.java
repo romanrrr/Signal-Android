@@ -63,7 +63,7 @@ public class MediaDocumentsAdapter extends CursorRecyclerViewAdapter<ViewHolder>
       viewHolder.documentView.setOnClickListener(view -> {
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-        intent.setDataAndType(PartAuthority.getAttachmentPublicUri(slide.getUri()), slide.getContentType());
+        intent.setDataAndType(PartAuthority.getAttachmentPublicUri(getContext(), slide.getUri()), slide.getContentType());
         try {
           getContext().startActivity(intent);
         } catch (ActivityNotFoundException anfe) {

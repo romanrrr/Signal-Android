@@ -11,19 +11,21 @@ import java.io.File;
 
 public class FileProviderUtil {
 
-  private static final String AUTHORITY = "org.thoughtcrime.securesms.fileprovider";
+  public static String AUTHORITY(Context context) {
+    return context.getPackageName()+".securesms.fileprovider";
+  }
 
   public static Uri getUriFor(@NonNull Context context, @NonNull File file) {
-    if (Build.VERSION.SDK_INT >= 24) return FileProvider.getUriForFile(context, AUTHORITY, file);
+    if (Build.VERSION.SDK_INT >= 24) return FileProvider.getUriForFile(context, AUTHORITY(context), file);
     else                             return Uri.fromFile(file);
   }
 
-  public static boolean isAuthority(@NonNull Uri uri) {
-    return AUTHORITY.equals(uri.getAuthority());
+  public static boolean isAuthority(Context context, @NonNull Uri uri) {
+    return AUTHORITY(context).equals(uri.getAuthority());
   }
 
   public static boolean delete(@NonNull Context context, @NonNull Uri uri) {
-    if (AUTHORITY.equals(uri.getAuthority())) {
+    if (AUTHORITY(context).equals(uri.getAuthority())) {
       return context.getContentResolver().delete(uri, null, null) > 0;
     }
     return new File(uri.getPath()).delete();

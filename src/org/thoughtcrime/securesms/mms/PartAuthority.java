@@ -111,9 +111,9 @@ public class PartAuthority {
     }
   }
 
-  public static Uri getAttachmentPublicUri(Uri uri) {
+  public static Uri getAttachmentPublicUri(Context context, Uri uri) {
     PartUriParser partUri = new PartUriParser(uri);
-    return PartProvider.getContentUri(partUri.getPartId());
+    return PartProvider.getContentUri(context, partUri.getPartId());
   }
 
   public static Uri getAttachmentDataUri(AttachmentId attachmentId) {

@@ -33,8 +33,12 @@ import java.io.OutputStream;
 
 public class MmsBodyProvider extends ContentProvider {
   private static final String TAG                = MmsBodyProvider.class.getSimpleName();
-  private static final String CONTENT_URI_STRING = "content://org.thoughtcrime.provider.securesms.mms/mms";
-  public  static final Uri    CONTENT_URI        = Uri.parse(CONTENT_URI_STRING);
+
+  public static Uri CONTENT_URI(Context context) {
+    return Uri.parse("content://"+context.getPackageName()+".provider.securesms.mms/mms");
+  }
+
+  private static final String CONTENT_URI_STRING = "content://org.thoughtcrime";
   private static final int    SINGLE_ROW         = 1;
 
   private static final UriMatcher uriMatcher;
@@ -109,7 +113,7 @@ public class MmsBodyProvider extends ContentProvider {
     return 0;
   }
   public static Pointer makeTemporaryPointer(Context context) {
-    return new Pointer(context, ContentUris.withAppendedId(MmsBodyProvider.CONTENT_URI, System.currentTimeMillis()));
+    return new Pointer(context, ContentUris.withAppendedId(MmsBodyProvider.CONTENT_URI(context), System.currentTimeMillis()));
   }
 
   public static class Pointer {

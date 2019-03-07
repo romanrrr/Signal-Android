@@ -1017,11 +1017,11 @@ public class ConversationItem extends LinearLayout
         context.startActivity(intent);
       } else if (slide.getUri() != null) {
         Log.i(TAG, "Clicked: " + slide.getUri() + " , " + slide.getContentType());
-        Uri publicUri = PartAuthority.getAttachmentPublicUri(slide.getUri());
+        Uri publicUri = PartAuthority.getAttachmentPublicUri(context, slide.getUri());
         Log.i(TAG, "Public URI: " + publicUri);
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-        intent.setDataAndType(PartAuthority.getAttachmentPublicUri(slide.getUri()), slide.getContentType());
+        intent.setDataAndType(PartAuthority.getAttachmentPublicUri(context, slide.getUri()), slide.getContentType());
         try {
           context.startActivity(intent);
         } catch (ActivityNotFoundException anfe) {
