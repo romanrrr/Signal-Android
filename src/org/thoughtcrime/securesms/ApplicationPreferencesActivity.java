@@ -200,13 +200,13 @@ public class ApplicationPreferencesActivity extends PassphraseRequiredActionBarA
 
     @TargetApi(11)
     private void tintIcons(Context context) {
-      Drawable sms           = DrawableCompat.wrap(ContextCompat.getDrawable(context, R.drawable.ic_textsms_white_24dp));
-      Drawable notifications = DrawableCompat.wrap(ContextCompat.getDrawable(context, R.drawable.ic_notifications_white_24dp));
-      Drawable privacy       = DrawableCompat.wrap(ContextCompat.getDrawable(context, R.drawable.ic_security_white_24dp));
-      Drawable appearance    = DrawableCompat.wrap(ContextCompat.getDrawable(context, R.drawable.ic_brightness_6_white_24dp));
-      Drawable chats         = DrawableCompat.wrap(ContextCompat.getDrawable(context, R.drawable.ic_forum_white_24dp));
-      Drawable devices       = DrawableCompat.wrap(ContextCompat.getDrawable(context, R.drawable.ic_laptop_white_24dp));
-      Drawable advanced      = DrawableCompat.wrap(ContextCompat.getDrawable(context, R.drawable.ic_advanced_white_24dp));
+      Drawable sms           = DrawableCompat.wrap(ContextCompat.getDrawable(context, R.drawable.outline_sms_24));
+      Drawable notifications = DrawableCompat.wrap(ContextCompat.getDrawable(context, R.drawable.outline_notifications_none_24));
+      Drawable privacy       = DrawableCompat.wrap(ContextCompat.getDrawable(context, R.drawable.outline_security_24));
+      Drawable appearance    = DrawableCompat.wrap(ContextCompat.getDrawable(context, R.drawable.outline_color_lens_24));
+      Drawable chats         = DrawableCompat.wrap(ContextCompat.getDrawable(context, R.drawable.outline_question_answer_24));
+      Drawable devices       = DrawableCompat.wrap(ContextCompat.getDrawable(context, R.drawable.outline_devices_24));
+      Drawable advanced      = DrawableCompat.wrap(ContextCompat.getDrawable(context, R.drawable.outline_more_24));
 
       int[]      tintAttr   = new int[]{R.attr.pref_icon_tint};
       TypedArray typedArray = context.obtainStyledAttributes(tintAttr);

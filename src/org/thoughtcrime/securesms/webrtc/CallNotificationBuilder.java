@@ -42,7 +42,7 @@ public class CallNotificationBuilder {
     PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, contentIntent, 0);
 
     NotificationCompat.Builder builder = new NotificationCompat.Builder(context, NotificationChannels.CALLS)
-        .setSmallIcon(R.drawable.ic_call_secure_white_24dp)
+        .setSmallIcon(R.drawable.outline_phone_locked_24)
         .setContentIntent(pendingIntent)
         .setOngoing(true)
         .setContentTitle(recipient.getName());

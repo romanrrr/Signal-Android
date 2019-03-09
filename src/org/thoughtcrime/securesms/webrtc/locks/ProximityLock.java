@@ -33,7 +33,7 @@ class ProximityLock {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
       if (pm.isWakeLockLevelSupported(PowerManager.PROXIMITY_SCREEN_OFF_WAKE_LOCK)) {
         return Optional.fromNullable(pm.newWakeLock(PowerManager.PROXIMITY_SCREEN_OFF_WAKE_LOCK,
-                                                    "APPNAME Proximity Lock"));
+                                                    "Cyber Proximity Lock"));
       } else {
         return Optional.absent();
       }

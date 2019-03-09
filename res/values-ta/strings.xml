@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
-  <string name="app_name">APPNAME</string>
+  <string name="app_name">Cyber</string>
   <string name="yes">ஆம்</string>
   <string name="no">இல்லை</string>
   <string name="delete">நீக்கு</string>
@@ -15,8 +15,8 @@
   <string name="ApplicationPreferencesActivity_disable_passphrase">கடவுச்சொல்லை முடக்கு</string>
   <string name="ApplicationPreferencesActivity_disable">முடக்கு</string>
   <string name="ApplicationPreferencesActivity_unregistering">பதிவுநீக்குதல்</string>
-  <string name="ApplicationPreferencesActivity_unregistering_from_signal_messages_and_calls">APPNAME குறுஞ்செய்தி மற்றும் அழைப்பு பதிவுநீக்கப்படுகிறது ...</string>
-  <string name="ApplicationPreferencesActivity_disable_signal_messages_and_calls">APPNAME குறுஞ்செய்தி மற்றும் அழைப்பை முடக்கு ?</string>
+  <string name="ApplicationPreferencesActivity_unregistering_from_signal_messages_and_calls">Cyber குறுஞ்செய்தி மற்றும் அழைப்பு பதிவுநீக்கப்படுகிறது ...</string>
+  <string name="ApplicationPreferencesActivity_disable_signal_messages_and_calls">Cyber குறுஞ்செய்தி மற்றும் அழைப்பை முடக்கு ?</string>
   <string name="ApplicationPreferencesActivity_error_connecting_to_server">சர்வருடன் இணைவதில் பிழை!</string>
   <string name="ApplicationPreferencesActivity_sms_enabled">குறுஞ்செய்தி செயல்படுத்தப்பட்டது</string>
   <string name="ApplicationPreferencesActivity_touch_to_change_your_default_sms_app">இதை உங்கள் இயல்புநிலை SMS மென்பொருளாக்க தொடவும் </string>
@@ -82,7 +82,7 @@
   <string name="ConversationActivity_are_you_sure_you_want_to_leave_this_group">நீங்கள் குழுவை விட்டு நிச்சயமாக விலகவேண்டுமா?</string>
   <string name="ConversationActivity_transport_insecure_sms">பாதுகாப்பற்ற SMS</string>
   <string name="ConversationActivity_transport_insecure_mms">பாதுகாப்பற்ற MMS</string>
-  <string name="ConversationActivity_transport_signal">APPNAME</string>
+  <string name="ConversationActivity_transport_signal">Cyber</string>
   <string name="ConversationActivity_lets_switch_to_signal">%1$s நாம் சமிக்ஞைக்கு மாறுவோம்</string>
   <string name="ConversationActivity_lets_use_this_to_chat">நாம் அரட்டையடிக்க இதை பயன்படுத்துவோம்: %1$s</string>
   <string name="ConversationActivity_specify_recipient">தயவு செய்து ஒரு தொடர்பை தேர்ந்தெடு</string>
@@ -102,7 +102,7 @@
   <string name="ConversationFragment_save_to_sd_card">சேமிப்பில் சேர்க்கவேண்டுமா?</string>
   <string name="ConversationFragment_unable_to_write_to_sd_card_exclamation">சேமிப்பில் சேர்க இயலவில்லை!</string>
   <string name="ConversationFragment_pending">நிலுவையில் உள்ளது...</string>
-  <string name="ConversationFragment_push">தரவு (APPNAME)</string>
+  <string name="ConversationFragment_push">தரவு (Cyber)</string>
   <string name="ConversationFragment_mms">MMS</string>
   <string name="ConversationFragment_sms">SMS</string>
   <string name="ConversationFragment_deleting">நீக்கப்படுகிறது</string>
@@ -153,7 +153,7 @@
   <!--ExperienceUpgradeActivity-->
   <string name="ExperienceUpgradeActivity_welcome_to_signal_dgaf">சமிக்ஞைக்கு வரவேற்கிறது.</string>
   <string name="ExperienceUpgradeActivity_welcome_to_signal_excited">சமிக்ஞைக்கு வரவேற்கிறது!</string>
-  <string name="ExperienceUpgradeActivity_textsecure_is_now_signal">TextSecure தற்ப்போது APPNAME</string>
+  <string name="ExperienceUpgradeActivity_textsecure_is_now_signal">TextSecure தற்ப்போது Cyber</string>
   <!--ExportFragment-->
   <string name="ExportFragment_export">ஏற்றுமதி செய்</string>
   <string name="ExportFragment_cancel">ரத்து</string>
@@ -204,15 +204,15 @@
   <!--MessageDetailsRecipient-->
   <string name="MessageDetailsRecipient_failed_to_send">அனுப்ப முடியவில்லை</string>
   <!--MessageRetrievalService-->
-  <string name="MessageRetrievalService_signal">APPNAME</string>
+  <string name="MessageRetrievalService_signal">Cyber</string>
   <!--MmsDownloader-->
   <!--MediaOverviewActivity-->
   <string name="MediaOverviewActivity_Media_delete_progress_title">நீக்கப்படுகிறது</string>
   <string name="MediaOverviewActivity_Media_delete_progress_message">செய்திகள் நீக்கப்படுகிறது...</string>
   <!--- NotificationBarManager-->
-  <string name="NotificationBarManager_signal_call_in_progress">APPNAME அழைப்புப் போய்க்கொண்டிருக்கிறது</string>
-  <string name="NotificationBarManager__establishing_signal_call">APPNAME அழைப்பு நிறுவுப்படுகிறது</string>
-  <string name="NotificationBarManager__incoming_signal_call">உள்வரும் APPNAME அழைப்பு</string>
+  <string name="NotificationBarManager_signal_call_in_progress">Cyber அழைப்புப் போய்க்கொண்டிருக்கிறது</string>
+  <string name="NotificationBarManager__establishing_signal_call">Cyber அழைப்பு நிறுவுப்படுகிறது</string>
+  <string name="NotificationBarManager__incoming_signal_call">உள்வரும் Cyber அழைப்பு</string>
   <string name="NotificationBarManager__deny_call">அழைப்பை மறுதளி</string>
   <string name="NotificationBarManager__answer_call">அழைப்பை எடு</string>
   <string name="NotificationBarManager__end_call">அழைப்பைத் துண்டி</string>
@@ -347,7 +347,7 @@
   <!--SearchToolbar-->
   <string name="SearchToolbar_search">தேடல்</string>
   <!--SingleRecipientNotificationBuilder-->
-  <string name="SingleRecipientNotificationBuilder_signal">APPNAME</string>
+  <string name="SingleRecipientNotificationBuilder_signal">Cyber</string>
   <string name="SingleRecipientNotificationBuilder_new_message">புதிய செய்தி</string>
   <!--UnauthorizedReminder-->
   <!--VideoPlayer-->
@@ -563,7 +563,7 @@
   <!--conversation_callable_insecure-->
   <string name="conversation_callable_insecure__menu_call">அழை</string>
   <!--conversation_callable_secure-->
-  <string name="conversation_callable_secure__menu_call">APPNAME அழைப்பு</string>
+  <string name="conversation_callable_secure__menu_call">Cyber அழைப்பு</string>
   <!--conversation_context-->
   <string name="conversation_context__menu_message_details">செய்தி விவரங்கள்</string>
   <string name="conversation_context__menu_copy_text">உரை நகலெடு</string>

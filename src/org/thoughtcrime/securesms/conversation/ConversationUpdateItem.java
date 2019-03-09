@@ -149,7 +149,7 @@ public class ConversationUpdateItem extends LinearLayout
   }
 
   private void setIdentityRecord(final MessageRecord messageRecord) {
-    icon.setImageResource(R.drawable.ic_security_white_24dp);
+    icon.setImageResource(R.drawable.outline_security_24);
     icon.setColorFilter(new PorterDuffColorFilter(Color.parseColor("#757575"), PorterDuff.Mode.MULTIPLY));
     body.setText(messageRecord.getDisplayBody());
 
@@ -171,7 +171,7 @@ public class ConversationUpdateItem extends LinearLayout
   }
 
   private void setGroupRecord(MessageRecord messageRecord) {
-    icon.setImageResource(R.drawable.ic_group_black_24dp);
+    icon.setImageResource(R.drawable.outline_group_24);
     icon.clearColorFilter();
 
     GroupUtil.getDescription(getContext(), messageRecord.getBody()).addListener(this);
@@ -183,7 +183,7 @@ public class ConversationUpdateItem extends LinearLayout
   }
 
   private void setJoinedRecord(MessageRecord messageRecord) {
-    icon.setImageResource(R.drawable.ic_favorite_grey600_24dp);
+    icon.setImageResource(R.drawable.outline_favorite_border_24);
     icon.clearColorFilter();
     body.setText(messageRecord.getDisplayBody());
 

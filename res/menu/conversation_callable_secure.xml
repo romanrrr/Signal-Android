@@ -4,7 +4,7 @@
 
     <item android:title="@string/conversation_callable_secure__menu_call"
           android:id="@+id/menu_call_secure"
-          android:icon="@drawable/ic_call_secure_white_24dp"
+          android:icon="@drawable/outline_phone_locked_24"
           app:showAsAction="always"
         app:iconTint="?attr/toolbar_icon_color"/>
 

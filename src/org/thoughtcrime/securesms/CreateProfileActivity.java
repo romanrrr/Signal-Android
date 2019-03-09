@@ -162,7 +162,7 @@ public class CreateProfileActivity extends BaseActionBarActivity implements Inje
 
           if (data != null && data.getBooleanExtra("delete", false)) {
             avatarBytes = null;
-            avatar.setImageDrawable(new ResourceContactPhoto(R.drawable.ic_camera_alt_white_24dp).asDrawable(this, getResources().getColor(R.color.grey_400)));
+            avatar.setImageDrawable(new ResourceContactPhoto(R.drawable.outline_photo_camera_24).asDrawable(this, getResources().getColor(R.color.grey_400)));
           } else {
             new Crop(inputFile).output(outputFile).asSquare().start(this);
           }
@@ -216,7 +216,7 @@ public class CreateProfileActivity extends BaseActionBarActivity implements Inje
     this.reveal       = ViewUtil.findById(this, R.id.reveal);
     this.nextIntent   = getIntent().getParcelableExtra(NEXT_INTENT);
 
-    this.avatar.setImageDrawable(new ResourceContactPhoto(R.drawable.ic_camera_alt_white_24dp).asDrawable(this, getResources().getColor(R.color.grey_400)));
+    this.avatar.setImageDrawable(new ResourceContactPhoto(R.drawable.outline_photo_camera_24).asDrawable(this, getResources().getColor(R.color.grey_400)));
 
     this.avatar.setOnClickListener(view -> Permissions.with(this)
                                                       .request(Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE)

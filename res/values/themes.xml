@@ -164,9 +164,9 @@
         <item name="conversation_transport_popup_background">@color/white</item>
         <item name="conversation_emoji_toggle">@drawable/ic_mood_grey600_24dp</item>
         <item name="conversation_keyboard_toggle">@drawable/ic_keyboard_grey600_24dp</item>
-        <item name="conversation_attach_camera">@drawable/ic_photo_camera_light</item>
-        <item name="conversation_attach_image">@drawable/ic_image_light</item>
-        <item name="conversation_attach_video">@drawable/ic_movie_creation_light</item>
+        <item name="conversation_attach_camera">@drawable/outline_photo_camera_24</item>
+        <item name="conversation_attach_image">@drawable/outline_crop_original_24</item>
+        <item name="conversation_attach_video">@drawable/outline_movie_creation_24</item>
         <item name="conversation_attach_sound">@drawable/ic_volume_up_light</item>
         <item name="conversation_attach_contact_info">@drawable/ic_account_box_light</item>
         <item name="conversation_attach">@drawable/ic_attach_grey600_24dp</item>
@@ -212,8 +212,8 @@
         <item name="conversation_item_sticky_date_text_color">@color/core_grey_60</item>
         <item name="conversation_item_image_outline_color">@color/transparent_black_30</item>
 
-        <item name="quick_camera_icon">@drawable/quick_camera_light</item>
-        <item name="quick_mic_icon">@drawable/ic_mic_grey600_24dp</item>
+        <item name="quick_camera_icon">@drawable/outline_photo_camera_24</item>
+        <item name="quick_mic_icon">@drawable/outline_mic_none_24</item>
 
         <item name="conversation_item_sent_indicator_text_background">@drawable/conversation_item_sent_indicator_text_shape</item>
 
@@ -235,7 +235,7 @@
         <item name="linkpreview_divider_color">@color/core_grey_25</item>
 
         <item name="menu_new_conversation_icon">@drawable/ic_add_white_24dp</item>
-        <item name="menu_group_icon">@drawable/ic_group_black_24dp</item>
+        <item name="menu_group_icon">@drawable/outline_group_24</item>
         <item name="menu_search_icon">@drawable/ic_search_white_24dp</item>
         <item name="menu_call_icon">@drawable/ic_call_white_24dp</item>
         <item name="menu_popup_expand">@drawable/ic_launch_white_24dp</item>
@@ -264,7 +264,7 @@
 
         <item name="quote_missing_icon_color">@color/core_grey_60</item>
 
-        <item name="group_members_dialog_icon">@drawable/ic_group_black_24dp</item>
+        <item name="group_members_dialog_icon">@drawable/outline_group_24</item>
         <item name="preferenceTheme">@style/PreferenceThemeOverlay.Fix</item>
 
         <item name="search_toolbar_background">@color/white</item>
@@ -366,9 +366,9 @@
         <item name="conversation_transport_popup_background">@color/black</item>
         <item name="conversation_emoji_toggle">@drawable/ic_mood_white_24dp</item>
         <item name="conversation_keyboard_toggle">@drawable/ic_keyboard_white_24dp</item>
-        <item name="conversation_attach_camera">@drawable/ic_photo_camera_dark</item>
-        <item name="conversation_attach_image">@drawable/ic_image_dark</item>
-        <item name="conversation_attach_video">@drawable/ic_movie_creation_dark</item>
+        <item name="conversation_attach_camera">@drawable/outline_photo_camera_24</item>
+        <item name="conversation_attach_image">@drawable/outline_crop_original_24</item>
+        <item name="conversation_attach_video">@drawable/outline_movie_creation_24</item>
         <item name="conversation_attach_sound">@drawable/ic_volume_up_dark</item>
         <item name="conversation_attach_contact_info">@drawable/ic_account_box_dark</item>
         <item name="conversation_attach">@drawable/ic_attach_white_24dp</item>
@@ -399,13 +399,13 @@
         <item name="linkpreview_secondary_text_color">@color/core_grey_25</item>
         <item name="linkpreview_divider_color">@color/core_grey_60</item>
 
-        <item name="quick_camera_icon">@drawable/quick_camera_dark</item>
-        <item name="quick_mic_icon">@drawable/ic_mic_white_24dp</item>
+        <item name="quick_camera_icon">@drawable/outline_photo_camera_24</item>
+        <item name="quick_mic_icon">@drawable/outline_mic_none_24</item>
 
         <item name="menu_new_conversation_icon">@drawable/ic_add_white_24dp</item>
-        <item name="menu_group_icon">@drawable/ic_group_white_24dp</item>
+        <item name="menu_group_icon">@drawable/outline_group_24</item>
         <item name="menu_search_icon">@drawable/ic_search_white_24dp</item>
-        <item name="menu_call_icon">@drawable/ic_call_white_24dp</item>
+        <item name="menu_call_icon">@drawable/outline_phone_locked_24</item>
         <item name="menu_popup_expand">@drawable/ic_launch_white_24dp</item>
         <item name="menu_unlock_icon">@drawable/ic_unlocked_white_24dp</item>
         <item name="menu_lock_icon">@drawable/ic_lock_white_24dp</item>
@@ -432,7 +432,7 @@
 
         <item name="quote_missing_icon_color">@color/core_grey_05</item>
 
-        <item name="group_members_dialog_icon">@drawable/ic_group_white_24dp</item>
+        <item name="group_members_dialog_icon">@drawable/outline_group_24</item>
         <item name="preferenceTheme">@style/PreferenceThemeOverlay.Fix</item>
         <item name="search_toolbar_background">@color/black</item>
         <item name="search_background">@color/black</item>

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
-  <string name="app_name">APPNAME</string>
+  <string name="app_name">Cyber</string>
   <string name="yes">Bai</string>
   <string name="no">Ez</string>
   <string name="delete">Ezabatu</string>
@@ -24,17 +24,17 @@
   </plurals>
   <string name="ApplicationPreferencesActivity_delete">Ezabatu</string>
   <string name="ApplicationPreferencesActivity_disable_passphrase">Desgaitu pasahitza?</string>
-  <string name="ApplicationPreferencesActivity_this_will_permanently_unlock_signal_and_message_notifications">APPNAME eta mezu jakinarazpenak iraunkorki desbloketuako dira.</string>
+  <string name="ApplicationPreferencesActivity_this_will_permanently_unlock_signal_and_message_notifications">Cyber eta mezu jakinarazpenak iraunkorki desbloketuako dira.</string>
   <string name="ApplicationPreferencesActivity_disable">Desgaitu</string>
   <string name="ApplicationPreferencesActivity_unregistering">Deserregistratzen</string>
-  <string name="ApplicationPreferencesActivity_unregistering_from_signal_messages_and_calls">Deserregistratzen APPNAME mezu eta deietatik...</string>
-  <string name="ApplicationPreferencesActivity_disable_signal_messages_and_calls">APPNAME mezu eta deiak desgaitu?</string>
-  <string name="ApplicationPreferencesActivity_disable_signal_messages_and_calls_by_unregistering">Desgaitu APPNAME mezu eta deiak zerbitzaritik deserregistratuz. Zure telefono zenbakia bererregistratu beharko duzu mezu eta deiak berriro erabili ahal izateko.</string>
+  <string name="ApplicationPreferencesActivity_unregistering_from_signal_messages_and_calls">Deserregistratzen Cyber mezu eta deietatik...</string>
+  <string name="ApplicationPreferencesActivity_disable_signal_messages_and_calls">Cyber mezu eta deiak desgaitu?</string>
+  <string name="ApplicationPreferencesActivity_disable_signal_messages_and_calls_by_unregistering">Desgaitu Cyber mezu eta deiak zerbitzaritik deserregistratuz. Zure telefono zenbakia bererregistratu beharko duzu mezu eta deiak berriro erabili ahal izateko.</string>
   <string name="ApplicationPreferencesActivity_error_connecting_to_server">Errorea zerbitzariarekin konektatzerakoan!</string>
   <string name="ApplicationPreferencesActivity_sms_enabled">SMS Gaituta</string>
   <string name="ApplicationPreferencesActivity_touch_to_change_your_default_sms_app">Ukitu zure SMS aplikazio lehenetsia aldatzeko</string>
   <string name="ApplicationPreferencesActivity_sms_disabled">SMS Desgaituta</string>
-  <string name="ApplicationPreferencesActivity_touch_to_make_signal_your_default_sms_app">APPNAME zure SMS aplikazio lehenetsia izan dadin, ukitu.</string>
+  <string name="ApplicationPreferencesActivity_touch_to_make_signal_your_default_sms_app">Cyber zure SMS aplikazio lehenetsia izan dadin, ukitu.</string>
   <string name="ApplicationPreferencesActivity_on">piztuta</string>
   <string name="ApplicationPreferencesActivity_On">Aktibatuta</string>
   <string name="ApplicationPreferencesActivity_off">desaktibatuta</string>
@@ -79,7 +79,7 @@
   <!--CommunicationActions-->
   <string name="CommunicationActions_no_browser_found">Ezin izan da nabigatzailerik aurkitu.</string>
   <!--ConfirmIdentityDialog-->
-  <string name="ConfirmIdentityDialog_your_safety_number_with_s_has_changed">%1$s-en segurtasun zenbakia aldatu egin da. Honek norbait zure komunikazioa eragozten saiatzen ari dela edo %2$s-k APPNAME aplikazioa berrinstalatu duela adierazi dezake.</string>
+  <string name="ConfirmIdentityDialog_your_safety_number_with_s_has_changed">%1$s-en segurtasun zenbakia aldatu egin da. Honek norbait zure komunikazioa eragozten saiatzen ari dela edo %2$s-k Cyber aplikazioa berrinstalatu duela adierazi dezake.</string>
   <string name="ConfirmIdentityDialog_you_may_wish_to_verify_your_safety_number_with_this_contact">Agian zure segurasun zenbakia kontatu honekin baieztatu nahi duzu.</string>
   <string name="ConfirmIdentityDialog_accept">Onartu</string>
   <!--ContactsCursorLoader-->
@@ -88,7 +88,7 @@
   <string name="ContactsCursorLoader_groups">Taldeak</string>
   <!--ContactsDatabase-->
   <string name="ContactsDatabase_message_s">Mezu %s</string>
-  <string name="ContactsDatabase_signal_call_s">APPNAME Dei %s</string>
+  <string name="ContactsDatabase_signal_call_s">Cyber Dei %s</string>
   <!--ContactNameEditActivity-->
   <string name="ContactNameEditActivity_given_name">Izen tipia</string>
   <string name="ContactNameEditActivity_family_name">Abizena</string>
@@ -108,7 +108,7 @@
   <string name="ConversationItem_click_to_approve_unencrypted">Bidalketak huts egin du, tap egin segurtasunik gabeko alternatibarako</string>
   <string name="ConversationItem_click_to_approve_unencrypted_sms_dialog_title">Enkriptatu gabeko SMSaz baliatu?</string>
   <string name="ConversationItem_click_to_approve_unencrypted_mms_dialog_title">Enkriptatu gabeko MMSaz baliatu?</string>
-  <string name="ConversationItem_click_to_approve_unencrypted_dialog_message">Mezu hau <b>ez</b> da zifratuko jadanik hartzailea ez delako APPNAME erabiltzailea.\n\nSegurtasunik gabeko mezua bidali?</string>
+  <string name="ConversationItem_click_to_approve_unencrypted_dialog_message">Mezu hau <b>ez</b> da zifratuko jadanik hartzailea ez delako Cyber erabiltzailea.\n\nSegurtasunik gabeko mezua bidali?</string>
   <string name="ConversationItem_unable_to_open_media">Ez da euskarri hau irekitzeko gai den aplikaziorik aurkitu.</string>
   <string name="ConversationItem_copied_text">Kopiatuta %s</string>
   <string name="ConversationItem_from_s">%s-(e)tik</string>
@@ -132,7 +132,7 @@
   <string name="ConversationActivity_are_you_sure_you_want_to_leave_this_group">Ziur zaude talde hau utzi nahi izateaz?</string>
   <string name="ConversationActivity_transport_insecure_sms">SMS ez segurua</string>
   <string name="ConversationActivity_transport_insecure_mms">MMS ez segurua</string>
-  <string name="ConversationActivity_transport_signal">APPNAME</string>
+  <string name="ConversationActivity_transport_signal">Cyber</string>
   <string name="ConversationActivity_lets_switch_to_signal">Signalera aldatu dezagun %1$s</string>
   <string name="ConversationActivity_lets_use_this_to_chat">Erabili dezagun hau txatarako: %1$s</string>
   <string name="ConversationActivity_error_leaving_group">Taldetik irteterakoan huts egin du</string>
@@ -191,7 +191,7 @@
     <item quantity="other">Eraskinak (%1$d) biltegian gordetzen...</item>
   </plurals>
   <string name="ConversationFragment_pending">Zain...</string>
-  <string name="ConversationFragment_push">Datuak (APPNAME)</string>
+  <string name="ConversationFragment_push">Datuak (Cyber)</string>
   <string name="ConversationFragment_mms">MMS</string>
   <string name="ConversationFragment_sms">SMS</string>
   <string name="ConversationFragment_deleting">Ezabatzen</string>
@@ -262,22 +262,22 @@
   <string name="DocumentView_unknown_file">Artxibo ezezaguna</string>
   <!--DozeReminder-->
   <string name="DozeReminder_optimize_for_missing_play_services">Optimizatu Google Play-ren zerbitzuetarko</string>
-  <string name="DozeReminder_this_device_does_not_support_play_services_tap_to_disable_system_battery">Gailu honek ez dauka Play Services erabiltzerik. APPNAME ezgaituta dagoenean, sistemaren bateria optimizazioek galarazten diote mezuak jasotzea. Ukitu sistemaren bateria optimizazioak ezgaitzeko.</string>
+  <string name="DozeReminder_this_device_does_not_support_play_services_tap_to_disable_system_battery">Gailu honek ez dauka Play Services erabiltzerik. Cyber ezgaituta dagoenean, sistemaren bateria optimizazioek galarazten diote mezuak jasotzea. Ukitu sistemaren bateria optimizazioak ezgaitzeko.</string>
   <!--ShareActivity-->
   <string name="ShareActivity_share_with">Norekin konpartitu</string>
   <!--ExperienceUpgradeActivity-->
   <string name="ExperienceUpgradeActivity_welcome_to_signal_dgaf">Ongi etorri Signalera!</string>
   <string name="ExperienceUpgradeActivity_textsecure_is_now_called_signal">TextSecure eta RedPhone mezulari pribatua bakar bat dira orain, edozein egoeratako.</string>
   <string name="ExperienceUpgradeActivity_welcome_to_signal_excited">Ongi etorri Signalera!</string>
-  <string name="ExperienceUpgradeActivity_textsecure_is_now_signal">TextSecure orain APPNAME da.</string>
-  <string name="ExperienceUpgradeActivity_textsecure_is_now_signal_long">TextSecure eta RedPhone aplikazio bera da orain: APPNAME.  Ukitu arakatzeko.</string>
+  <string name="ExperienceUpgradeActivity_textsecure_is_now_signal">TextSecure orain Cyber da.</string>
+  <string name="ExperienceUpgradeActivity_textsecure_is_now_signal_long">TextSecure eta RedPhone aplikazio bera da orain: Cyber.  Ukitu arakatzeko.</string>
   <string name="ExperienceUpgradeActivity_say_hello_to_video_calls">Kaixo esan bideodei seguruei</string>
-  <string name="ExperienceUpgradeActivity_signal_now_supports_secure_video_calls">APPNAME orain bideodei seguruak egiteko gai da. Besterik gabe, hasi  APPNAME dei normal bat, ukitu bideo botoia eta kaixo esan.</string>
-  <string name="ExperienceUpgradeActivity_signal_now_supports_secure_video_calling">APPNAME orain bideodei seguruak egiteko gai da.</string>
-  <string name="ExperienceUpgradeActivity_signal_now_supports_secure_video_calling_long">APPNAME orain bideodei seguruak egiteko gai da. Ukitu argibide gehiago lortzeko.</string>
+  <string name="ExperienceUpgradeActivity_signal_now_supports_secure_video_calls">Cyber orain bideodei seguruak egiteko gai da. Besterik gabe, hasi  Cyber dei normal bat, ukitu bideo botoia eta kaixo esan.</string>
+  <string name="ExperienceUpgradeActivity_signal_now_supports_secure_video_calling">Cyber orain bideodei seguruak egiteko gai da.</string>
+  <string name="ExperienceUpgradeActivity_signal_now_supports_secure_video_calling_long">Cyber orain bideodei seguruak egiteko gai da. Ukitu argibide gehiago lortzeko.</string>
   <string name="ExperienceUpgradeActivity_ready_for_your_closeup">Prest zaude zure gertuko argazkia hartzeko?</string>
   <string name="ExperienceUpgradeActivity_now_you_can_share_a_profile_photo_and_name_with_friends_on_signal">Signaleko zure lagunekin profileko argazkia eta izena partekatu ditzakezu</string>
-  <string name="ExperienceUpgradeActivity_signal_profiles_are_here">APPNAME profilak heldu dira</string>
+  <string name="ExperienceUpgradeActivity_signal_profiles_are_here">Cyber profilak heldu dira</string>
   <string name="ExperienceUpgradeActivity_introducing_typing_indicators">Idazketa jakinarazleak aurkezten.</string>
   <string name="ExperienceUpgradeActivity_now_you_can_optionally_see_and_share_when_messages_are_being_typed">Orain aukeran mezuak idazten ari direla erakutsi eta ikusi dezakezu.</string>
   <string name="ExperienceUpgradeActivity_would_you_like_to_enable_them_now">Aktibatu nahi al duzu?</string>
@@ -292,8 +292,8 @@
   <!--GcmBroadcastReceiver-->
   <string name="GcmBroadcastReceiver_retrieving_a_message">Mezu bat berreskuratzen...</string>
   <!--GcmRefreshJob-->
-  <string name="GcmRefreshJob_Permanent_Signal_communication_failure">APPNAME behin betiko komunikazio hutsegitea!</string>
-  <string name="GcmRefreshJob_Signal_was_unable_to_register_with_Google_Play_Services">APPNAME ez da gai izan Google Play Zerbitzuekin erregistratzeko. APPNAME mezu eta deiak desgaitu egin dira, mesedez saiatu bererregistratzen Ezarpenak &gt; Aurreratua menuan.</string>
+  <string name="GcmRefreshJob_Permanent_Signal_communication_failure">Cyber behin betiko komunikazio hutsegitea!</string>
+  <string name="GcmRefreshJob_Signal_was_unable_to_register_with_Google_Play_Services">Cyber ez da gai izan Google Play Zerbitzuekin erregistratzeko. Cyber mezu eta deiak desgaitu egin dira, mesedez saiatu bererregistratzen Ezarpenak &gt; Aurreratua menuan.</string>
   <!--GiphyActivity-->
   <string name="GiphyActivity_error_while_retrieving_full_resolution_gif">Errorea bereizmen osoko GIFa eskuratzerakoan</string>
   <!--GiphyFragmentPageAdapter-->
@@ -304,15 +304,15 @@
   <string name="GroupCreateActivity_actionbar_edit_title">Taldea editatu</string>
   <string name="GroupCreateActivity_group_name_hint">Taldearen izena</string>
   <string name="GroupCreateActivity_actionbar_mms_title">MMS talde berria</string>
-  <string name="GroupCreateActivity_contacts_dont_support_push">APPNAME taldeak onartzen ez duen kontaktu bat aukeratu duzu; beraz, talde hau MMS izango da.</string>
-  <string name="GroupCreateActivity_youre_not_registered_for_signal">APPNAME zerbitzuan izena eman ez duzunez, APPNAME taldeak desaktibatuta daude.  Saiatu izena ematen Ezarpenak &gt; Aurreratua menutik mesedez.</string>
+  <string name="GroupCreateActivity_contacts_dont_support_push">Cyber taldeak onartzen ez duen kontaktu bat aukeratu duzu; beraz, talde hau MMS izango da.</string>
+  <string name="GroupCreateActivity_youre_not_registered_for_signal">Cyber zerbitzuan izena eman ez duzunez, Cyber taldeak desaktibatuta daude.  Saiatu izena ematen Ezarpenak &gt; Aurreratua menutik mesedez.</string>
   <string name="GroupCreateActivity_contacts_no_members">Gutxienez pertsona bat behar duzu zure taldean!</string>
   <string name="GroupCreateActivity_contacts_invalid_number">Zure taldeko partaide batek ondo irakurri ezin daitekeen zenbaki bat dauka. Konpondu edo ezabatu kontaktua eta saiatu berriro mesedez.</string>
   <string name="GroupCreateActivity_avatar_content_description">Taldearen abatarra</string>
   <string name="GroupCreateActivity_menu_apply_button">Aplikatu</string>
   <string name="GroupCreateActivity_creating_group">Sortzen %1$s...</string>
   <string name="GroupCreateActivity_updating_group">Eguneratzen: %1$s...</string>
-  <string name="GroupCreateActivity_cannot_add_non_push_to_existing_group">Ezin izan da %1$s gehitu APPNAME erabiltzailea ez delako.</string>
+  <string name="GroupCreateActivity_cannot_add_non_push_to_existing_group">Ezin izan da %1$s gehitu Cyber erabiltzailea ez delako.</string>
   <string name="GroupCreateActivity_loading_group_details">Taldearen detaileak kargatzen...</string>
   <string name="GroupCreateActivity_youre_already_in_the_group">Dagoeneko zaude taldean.</string>
   <!--GroupShareProfileView-->
@@ -330,7 +330,7 @@
   <string name="InviteActivity_sending">Bidaltzen...</string>
   <string name="InviteActivity_heart_content_description">Bihotza</string>
   <string name="InviteActivity_invitations_sent">Gonbidapenak bidali dira!</string>
-  <string name="InviteActivity_invite_to_signal">Gonbidatu APPNAME erabiltzera</string>
+  <string name="InviteActivity_invite_to_signal">Gonbidatu Cyber erabiltzera</string>
   <plurals name="InviteActivity_send_sms_to_friends">
     <item quantity="one">BIDALI SMS MEZUA LAGUN %dI</item>
     <item quantity="other">BIDALI SMS MEZUA %d LAGUNI</item>
@@ -348,7 +348,7 @@
   <string name="MessageDetailsRecipient_failed_to_send">Bidalketak huts egin du</string>
   <string name="MessageDetailsRecipient_new_safety_number">Segurtasun zenbaki berria</string>
   <!--MessageRetrievalService-->
-  <string name="MessageRetrievalService_signal">APPNAME</string>
+  <string name="MessageRetrievalService_signal">Cyber</string>
   <string name="MessageRetrievalService_background_connection_enabled">Atzeko planoko konexioa gaituta</string>
   <!--MmsDownloader-->
   <string name="MmsDownloader_error_reading_mms_settings">Errorea hari gabeko hornitzailearen MMS ezarpenak irakurtzerakoan</string>
@@ -368,9 +368,9 @@
   <string name="MediaOverviewActivity_Select_all">Denak hautatu</string>
   <string name="MediaOverviewActivity_collecting_attachments">Eranskinak biltzen...</string>
   <!--- NotificationBarManager-->
-  <string name="NotificationBarManager_signal_call_in_progress">Uneko APPNAME deia</string>
-  <string name="NotificationBarManager__establishing_signal_call">APPNAME deia finkatzen</string>
-  <string name="NotificationBarManager__incoming_signal_call">Sarrerako APPNAME deia</string>
+  <string name="NotificationBarManager_signal_call_in_progress">Uneko Cyber deia</string>
+  <string name="NotificationBarManager__establishing_signal_call">Cyber deia finkatzen</string>
+  <string name="NotificationBarManager__incoming_signal_call">Sarrerako Cyber deia</string>
   <string name="NotificationBarManager__deny_call">Ukatu deia</string>
   <string name="NotificationBarManager__answer_call">Erantzun deia</string>
   <string name="NotificationBarManager__end_call">Amaitu deia</string>
@@ -392,7 +392,7 @@
   <!--MediaRepository-->
   <string name="MediaRepository_all_media">Euskarri guztiak</string>
   <!--MessageRecord-->
-  <string name="MessageRecord_message_encrypted_with_a_legacy_protocol_version_that_is_no_longer_supported">APPNAME bertsio zaharregitik jaso da mezu zifratua.  Eskatu igorleari birbidaltzeko mesedez bere APPNAME egiaztatu ondoren.</string>
+  <string name="MessageRecord_message_encrypted_with_a_legacy_protocol_version_that_is_no_longer_supported">Cyber bertsio zaharregitik jaso da mezu zifratua.  Eskatu igorleari birbidaltzeko mesedez bere Cyber egiaztatu ondoren.</string>
   <string name="MessageRecord_left_group">Taldea utzi duzu.</string>
   <string name="MessageRecord_you_updated_group">Taldea eguneratu duzu</string>
   <string name="MessageRecord_you_called">Deitu duzu</string>
@@ -433,8 +433,8 @@
   <string name="DeviceProvisioningActivity_content_progress_key_error">Baliogabeko QR kodea.</string>
   <string name="DeviceProvisioningActivity_sorry_you_have_too_many_devices_linked_already">Zoritxarrez, gailu gehiegi dauzkazu lotuta, saia zaitez batzuk ezabatzen</string>
   <string name="DeviceActivity_sorry_this_is_not_a_valid_device_link_qr_code">Barkatu, hau ez da gailua lotzeko baliozko QR kodea.</string>
-  <string name="DeviceProvisioningActivity_link_a_signal_device">Lotu APPNAME gailu bat?</string>
-  <string name="DeviceProvisioningActivity_it_looks_like_youre_trying_to_link_a_signal_device_using_a_3rd_party_scanner">Signalez kanpoko eskaner batez parekatzen omen duzu APPNAME gailu bat.  Zure segurtasunerako, eskaneatu kodea Signaletik mesedez.</string>
+  <string name="DeviceProvisioningActivity_link_a_signal_device">Lotu Cyber gailu bat?</string>
+  <string name="DeviceProvisioningActivity_it_looks_like_youre_trying_to_link_a_signal_device_using_a_3rd_party_scanner">Signalez kanpoko eskaner batez parekatzen omen duzu Cyber gailu bat.  Zure segurtasunerako, eskaneatu kodea Signaletik mesedez.</string>
   <string name="DeviceActivity_signal_needs_the_camera_permission_in_order_to_scan_a_qr_code">Signalek Kamera baimena behar du QR kodea eskaneatzeko baina ukatu egin diozu. Joan aplikazioaren ezarpenetara, aukeratu \"Baimenak\" eta aktibatu \"Kamera\".</string>
   <string name="DeviceActivity_unable_to_scan_a_qr_code_without_the_camera_permission">Ezin da QR koderik eskaneatu Kamera baimen gabe</string>
   <!--ExpirationDialog-->
@@ -443,7 +443,7 @@
   <string name="ExpirationDialog_your_messages_will_disappear_s_after_they_have_been_seen">Solasaldi honetan jaso eta bidalitako mezuak ikusi eta %s gero desagertuko dira.</string>
   <!--PassphrasePromptActivity-->
   <string name="PassphrasePromptActivity_enter_passphrase">Pasahitza sartu</string>
-  <string name="PassphrasePromptActivity_watermark_content_description">APPNAME ikonoa</string>
+  <string name="PassphrasePromptActivity_watermark_content_description">Cyber ikonoa</string>
   <string name="PassphrasePromptActivity_ok_button_content_description">Bidali pasahitza</string>
   <string name="PassphrasePromptActivity_invalid_passphrase_exclamation">Pasahitz baliogabea!</string>
   <!--PlayServicesProblemFragment-->
@@ -500,7 +500,7 @@ zehaztu behar duzu
 zenbakia (%s) baliogabea da.
 </string>
   <string name="RegistrationActivity_missing_google_play_services">Ez dira topatzen Google Play-ren zerbitzuak </string>
-  <string name="RegistrationActivity_this_device_is_missing_google_play_services">Ez dago Google Play Services-ik gailu honetan. APPNAME erabili dezakezu, baina konfigurazio honek fidagarritasuna edo errendimendua gutxiagotu dezake.\n\nErabiltzaile aurreratua ez bazara, jatorrizkoa ez den Android ROM bat erabiltzen ari ez bazara edo hau errore bat dela uste baduzu, mesedez jarri zaitez harremanetan support@signal.org helbidean.</string>
+  <string name="RegistrationActivity_this_device_is_missing_google_play_services">Ez dago Google Play Services-ik gailu honetan. Cyber erabili dezakezu, baina konfigurazio honek fidagarritasuna edo errendimendua gutxiagotu dezake.\n\nErabiltzaile aurreratua ez bazara, jatorrizkoa ez den Android ROM bat erabiltzen ari ez bazara edo hau errore bat dela uste baduzu, mesedez jarri zaitez harremanetan support@signal.org helbidean.</string>
   <string name="RegistrationActivity_i_understand">Ulertzen dut</string>
   <string name="RegistrationActivity_play_services_error">Play Services-en Errorea</string>
   <string name="RegistrationActivity_google_play_services_is_updating_or_unavailable">Google Play Services eguneratzen ari da edo tenporalki ez dago erabilgarri. Mesedez, berriro saia zaitez.</string>
@@ -526,13 +526,13 @@ zenbakia (%s) baliogabea da.
   <string name="SendJob_sending_a_message">Mezu bat bidaltzen...</string>
   <!--SharedContactDetailsActivity-->
   <string name="SharedContactDetailsActivity_add_to_contacts">Gehitu kontaktu-zerrendan</string>
-  <string name="SharedContactDetailsActivity_invite_to_signal">Gonbidatu APPNAME erabiltzera</string>
-  <string name="SharedContactDetailsActivity_signal_message">APPNAME mezua</string>
-  <string name="SharedContactDetailsActivity_signal_call">APPNAME deia</string>
+  <string name="SharedContactDetailsActivity_invite_to_signal">Gonbidatu Cyber erabiltzera</string>
+  <string name="SharedContactDetailsActivity_signal_message">Cyber mezua</string>
+  <string name="SharedContactDetailsActivity_signal_call">Cyber deia</string>
   <!--SharedContactView-->
   <string name="SharedContactView_add_to_contacts">Gehitu kontaktu-zerrendan</string>
-  <string name="SharedContactView_invite_to_signal">Gonbidatu APPNAME erabiltzera</string>
-  <string name="SharedContactView_message">APPNAME mezua</string>
+  <string name="SharedContactView_invite_to_signal">Gonbidatu Cyber erabiltzera</string>
+  <string name="SharedContactView_message">Cyber mezua</string>
   <!--Slide-->
   <string name="Slide_image">Irudia</string>
   <string name="Slide_audio">Audioa</string>
@@ -565,7 +565,7 @@ Gakoaren elkar-trukeraro mezua jaso da protokoloaren bertsio baliogabe baterako.
   <string name="ThreadRecord_you_marked_verified">Egiaztatutzat markatu duzu</string>
   <string name="ThreadRecord_you_marked_unverified">Ez egiaztatutzat markatu duzu</string>
   <!--UpdateApkReadyListener-->
-  <string name="UpdateApkReadyListener_Signal_update">APPNAME eguneratu</string>
+  <string name="UpdateApkReadyListener_Signal_update">Cyber eguneratu</string>
   <string name="UpdateApkReadyListener_a_new_version_of_signal_is_available_tap_to_update">Signalaren bertsio berria dago, sakatu eguneratzeko</string>
   <!--UnknownSenderView-->
   <string name="UnknownSenderView_block_s">%s blokeatu?</string>
@@ -581,11 +581,11 @@ Gakoaren elkar-trukeraro mezua jaso da protokoloaren bertsio baliogabe baterako.
   <string name="UnverifiedSendDialog_send_message">Mezua bidali?</string>
   <string name="UnverifiedSendDialog_send">Bidali</string>
   <!--VerifyIdentityActivity-->
-  <string name="VerifyIdentityActivity_your_contact_is_running_an_old_version_of_signal">Zure kontaktua APPNAME-en bertsio zahar bat erabiltzen ari da. Mesedez, eskatu iezaiozu eguneratzeko zure segurtasun zenbaki berria egiaztatu baino lehenago.</string>
-  <string name="VerifyIdentityActivity_your_contact_is_running_a_newer_version_of_Signal">Zure kontaktua APPNAME aplikazioaren bertsio berriago bat erabiltzen ari da eta horrek QR kode formatua eguneratu du. Eguneratu konparazioa egiteko.</string>
+  <string name="VerifyIdentityActivity_your_contact_is_running_an_old_version_of_signal">Zure kontaktua Cyber-en bertsio zahar bat erabiltzen ari da. Mesedez, eskatu iezaiozu eguneratzeko zure segurtasun zenbaki berria egiaztatu baino lehenago.</string>
+  <string name="VerifyIdentityActivity_your_contact_is_running_a_newer_version_of_Signal">Zure kontaktua Cyber aplikazioaren bertsio berriago bat erabiltzen ari da eta horrek QR kode formatua eguneratu du. Eguneratu konparazioa egiteko.</string>
   <string name="VerifyIdentityActivity_the_scanned_qr_code_is_not_a_correctly_formatted_safety_number">Eskaneatutako QR kodea ez da formato zuzena duen segurtasun berifikazio kode batena. Mesedez, saia zaitez berriro eskaneatzen.</string>
   <string name="VerifyIdentityActivity_share_safety_number_via">Segurtasun zenbakia partekatu honen bidez...</string>
-  <string name="VerifyIdentityActivity_our_signal_safety_number">Gure APPNAME-en segurtasun zenbakia:</string>
+  <string name="VerifyIdentityActivity_our_signal_safety_number">Gure Cyber-en segurtasun zenbakia:</string>
   <string name="VerifyIdentityActivity_no_app_to_share_to">Dirudienez ez duzu partekatzeko aplikazio bakar bat ere.</string>
   <string name="VerifyIdentityActivity_no_safety_number_to_compare_was_found_in_the_clipboard">Ez da aurkitu konparantzeko segurtasun zenbakirik arbelean</string>
   <string name="VerifyIdentityActivity_signal_needs_the_camera_permission_in_order_to_scan_a_qr_code_but_it_has_been_permanently_denied">Signalek Kamera baimena behar du QR kodea eskaneatzeko baina ukatu egin diozu. Joan aplikazioaren ezarpenetara, aukeratu \"Baimenak\" eta aktibatu \"Kamera\".</string>
@@ -608,8 +608,8 @@ Gakoaren elkar-trukeraro mezua jaso da protokoloaren bertsio baliogabe baterako.
   <!--KeyCachingService-->
   <string name="KeyCachingService_signal_passphrase_cached">Ukitu irekitzeko.</string>
   <string name="KeyCachingService_signal_passphrase_cached_with_lock">Ukitu irekitzeko, edo sarraila ukitu ixteko.</string>
-  <string name="KeyCachingService_passphrase_cached">APPNAME desblokeatuta dago</string>
-  <string name="KeyCachingService_lock">Blokeatu APPNAME</string>
+  <string name="KeyCachingService_passphrase_cached">Cyber desblokeatuta dago</string>
+  <string name="KeyCachingService_lock">Blokeatu Cyber</string>
   <!--MediaPreviewActivity-->
   <string name="MediaPreviewActivity_you">Zu</string>
   <string name="MediaPreviewActivity_unssuported_media_type">Euskarri mota ez-onartua</string>
@@ -631,7 +631,7 @@ Gakoaren elkar-trukeraro mezua jaso da protokoloaren bertsio baliogabe baterako.
   <string name="MessageNotifier_media_message">Multimedia mezua</string>
   <string name="MessageNotifier_reply">Erantzun</string>
   <string name="MessageNotifier_pending_signal_messages">Falta diren Signalen mezuak</string>
-  <string name="MessageNotifier_you_have_pending_signal_messages">APPNAME mezuak  zain dauzkazu, ukitu irekitzeko eta jasotzeko.</string>
+  <string name="MessageNotifier_you_have_pending_signal_messages">Cyber mezuak  zain dauzkazu, ukitu irekitzeko eta jasotzeko.</string>
   <string name="MessageNotifier_contact_message">%1$s%2$s</string>
   <string name="MessageNotifier_unknown_contact_message">Kontaktua</string>
   <!--Notification Channels-->
@@ -645,7 +645,7 @@ Gakoaren elkar-trukeraro mezua jaso da protokoloaren bertsio baliogabe baterako.
   <string name="NotificationChannel_group_messages">Mezuak</string>
   <string name="NotificationChannel_missing_display_name">Ezezaguna</string>
   <!--QuickResponseService-->
-  <string name="QuickResponseService_quick_response_unavailable_when_Signal_is_locked">Erantzun bizkorra eskuraezina APPNAME blokeatuta badago!</string>
+  <string name="QuickResponseService_quick_response_unavailable_when_Signal_is_locked">Erantzun bizkorra eskuraezina Cyber blokeatuta badago!</string>
   <string name="QuickResponseService_problem_sending_message">Arazoa mezua bidaltzen!</string>
   <!--SaveAttachmentTask-->
   <string name="SaveAttachmentTask_saved_to">%s helbidean gordeta</string>
@@ -656,7 +656,7 @@ Gakoaren elkar-trukeraro mezua jaso da protokoloaren bertsio baliogabe baterako.
   <!--ShortcutLauncherActivity-->
   <string name="ShortcutLauncherActivity_invalid_shortcut">Lasterbide baliogabea</string>
   <!--SingleRecipientNotificationBuilder-->
-  <string name="SingleRecipientNotificationBuilder_signal">APPNAME</string>
+  <string name="SingleRecipientNotificationBuilder_signal">Cyber</string>
   <string name="SingleRecipientNotificationBuilder_new_message">Mezu berria</string>
   <!--TransferControlView-->
   <plurals name="TransferControlView_n_items">
@@ -672,7 +672,7 @@ Gakoaren elkar-trukeraro mezua jaso da protokoloaren bertsio baliogabe baterako.
   <string name="WebRtcCallActivity_to_answer_the_call_from_s_give_signal_access_to_your_microphone">%s-ren deiari erantzuteko, eman Signali mikrofonoa erabiltzeko baimena.</string>
   <string name="WebRtcCallActivity_signal_requires_microphone_and_camera_permissions_in_order_to_make_or_receive_calls">Signalek Mikronofoa eta Kamera baimenak behar ditu deiak egin edo jasotzeko baina ukatu egin dizkiozu. Joan aplikazioaren ezarpenetara, aukeratu \"Baimenak\" eta aktibatu \"Mikrofonoa\" eta \"Kamera\"</string>
   <!--WebRtcCallScreen-->
-  <string name="WebRtcCallScreen_new_safety_numbers">%1$serabiltzailearekin duzun solasaldirako segurtasun zenbakia aldatu da. Agian norbait zure komunikazioa atzematen saiatzen ari da edo %2$s erabiltzaileak APPNAME berrinstalatu du.</string>
+  <string name="WebRtcCallScreen_new_safety_numbers">%1$serabiltzailearekin duzun solasaldirako segurtasun zenbakia aldatu da. Agian norbait zure komunikazioa atzematen saiatzen ari da edo %2$s erabiltzaileak Cyber berrinstalatu du.</string>
   <string name="WebRtcCallScreen_you_may_wish_to_verify_this_contact">Agian zure segurasun zenbakia kontatu honekin baieztatu nahi duzu.</string>
   <string name="WebRtcCallScreen_new_safety_number_title">Segurtasun zenbaki berria</string>
   <string name="WebRtcCallScreen_accept">Onartu</string>
@@ -715,7 +715,7 @@ Gakoaren elkar-trukeraro mezua jaso da protokoloaren bertsio baliogabe baterako.
   <string name="contact_selection_list_fragment__signal_needs_access_to_your_contacts_in_order_to_display_them">Singalek zure kontaktuak lortzeko baimena behar du erakutsi ahal izateko.</string>
   <string name="contact_selection_list_fragment__show_contacts">Kontaktuak erakutsi</string>
   <!--conversation_activity-->
-  <string name="conversation_activity__type_message_push">APPNAME mezua</string>
+  <string name="conversation_activity__type_message_push">Cyber mezua</string>
   <string name="conversation_activity__type_message_sms_insecure">SMS ez segurua</string>
   <string name="conversation_activity__type_message_mms_insecure">MMS ez segurua</string>
   <string name="conversation_activity__from_sim_name">%1$s-(e)tik</string>
@@ -725,7 +725,7 @@ Gakoaren elkar-trukeraro mezua jaso da protokoloaren bertsio baliogabe baterako.
   <string name="conversation_activity__attachment_thumbnail">Eranskinerako koadro txikia</string>
   <string name="conversation_activity__quick_attachment_drawer_toggle_camera_description">Gaitu/ezgaitu kamara arinaren eranskinen tiradera</string>
   <string name="conversation_activity__quick_attachment_drawer_record_and_send_audio_description">Audio eranskina grabatu eta bidali</string>
-  <string name="conversation_activity__enable_signal_for_sms">Aktibatu APPNAME SMSetarako</string>
+  <string name="conversation_activity__enable_signal_for_sms">Aktibatu Cyber SMSetarako</string>
   <!--conversation_input_panel-->
   <string name="conversation_input_panel__slide_to_cancel">LERRATU UZTEKO</string>
   <!--conversation_item-->
@@ -797,9 +797,9 @@ Gakoaren elkar-trukeraro mezua jaso da protokoloaren bertsio baliogabe baterako.
   <string name="IdentityUtil_unverified_banner_one">%srekin duzun segurtasun zenbakia aldatu da eta egiaztatu gabe dago</string>
   <string name="IdentityUtil_unverified_banner_two">%1$seta %2$serabiltzaileekin duzun segurtasun zenbakiak egiaztatu gabe daude</string>
   <string name="IdentityUtil_unverified_banner_many">%1$s, %2$s eta %3$s erabiltzaileekin duzun segurtasun zenbakiak egiaztatu gabe daude</string>
-  <string name="IdentityUtil_unverified_dialog_one">%1$s erabiltzailearekin duzun segurtasun zenbakia egiaztatu gabe dago. Agian norbait zure komunikazioa atzematen saiatzen ari da edo %1$s erabiltzaileak APPNAME berrinstalatu du.</string>
-  <string name="IdentityUtil_unverified_dialog_two">%1$s eta %2$s erabiltzaileekin duzun segurtasun zenbakiak egiaztatu gabe daude. Agian norbait zure komunikazioa atzematen saiatzen ari da edo aipatutako erabiltzaileok APPNAME berrinstalatu dute.</string>
-  <string name="IdentityUtil_unverified_dialog_many">%1$s, %2$s, eta %3$serabiltzaileekin duzun segurtasun zenbakiak egiaztatu gabe daude. Agian norbait zure komunikazioa atzematen saiatzen ari da edo aipatutako erabiltzaileok APPNAME berrinstalatu dute.</string>
+  <string name="IdentityUtil_unverified_dialog_one">%1$s erabiltzailearekin duzun segurtasun zenbakia egiaztatu gabe dago. Agian norbait zure komunikazioa atzematen saiatzen ari da edo %1$s erabiltzaileak Cyber berrinstalatu du.</string>
+  <string name="IdentityUtil_unverified_dialog_two">%1$s eta %2$s erabiltzaileekin duzun segurtasun zenbakiak egiaztatu gabe daude. Agian norbait zure komunikazioa atzematen saiatzen ari da edo aipatutako erabiltzaileok Cyber berrinstalatu dute.</string>
+  <string name="IdentityUtil_unverified_dialog_many">%1$s, %2$s, eta %3$serabiltzaileekin duzun segurtasun zenbakiak egiaztatu gabe daude. Agian norbait zure komunikazioa atzematen saiatzen ari da edo aipatutako erabiltzaileok Cyber berrinstalatu dute.</string>
   <string name="IdentityUtil_untrusted_dialog_one">%srekin duzun segurtasun mezua aldatu berri da.</string>
   <string name="IdentityUtil_untrusted_dialog_two">%1$s eta %2$serabiltzaileekin duzun segurtasun zenbakiak aldatu berri dira.</string>
   <string name="IdentityUtil_untrusted_dialog_many">%1$s, %2$s eta %3$s erabiltzaileekin duzun segurtasun zenbakiak aldatu berri dira.</string>
@@ -886,7 +886,7 @@ Inportatu \'SMSBackup and Restorekin\' bateragarria den zifratu gabeko babeskopi
   <string name="recipient_preferences__call_settings">Dei-ezarpenak</string>
   <string name="recipient_preferences__ringtone">dei-hots tonua</string>
   <!--- redphone_call_controls-->
-  <string name="redphone_call_card__signal_call">APPNAME deia</string>
+  <string name="redphone_call_card__signal_call">Cyber deia</string>
   <string name="redphone_call_controls__mute">Isildu</string>
   <string name="redphone_call_controls__flip_camera_rear">Aldatu kamera</string>
   <!--registration_activity-->
@@ -968,8 +968,8 @@ Inportatu \'SMSBackup and Restorekin\' bateragarria den zifratu gabeko babeskopi
   <string name="preferences__sms_mms">SMS eta MMS</string>
   <string name="preferences__pref_all_sms_title">Jaso SMS guztiak</string>
   <string name="preferences__pref_all_mms_title">Jaso MMS guztiak</string>
-  <string name="preferences__use_signal_for_viewing_and_storing_all_incoming_text_messages">Erabili APPNAME etorriko diren testu mezu guztiak jasotzeko</string>
-  <string name="preferences__use_signal_for_viewing_and_storing_all_incoming_multimedia_messages">Erabili APPNAME etorriko diren multimedia mezu guztiak jasotzeko</string>
+  <string name="preferences__use_signal_for_viewing_and_storing_all_incoming_text_messages">Erabili Cyber etorriko diren testu mezu guztiak jasotzeko</string>
+  <string name="preferences__use_signal_for_viewing_and_storing_all_incoming_multimedia_messages">Erabili Cyber etorriko diren multimedia mezu guztiak jasotzeko</string>
   <string name="preferences__pref_enter_sends_title">Enter teklak bidaltzen duena</string>
   <string name="preferences__pressing_the_enter_key_will_send_text_messages">Enter tekla sakatzeak testu mezuak bidaliko ditu</string>
   <string name="preferences__send_link_previews">Loturen aurrebistak bidali</string>
@@ -982,7 +982,7 @@ Inportatu \'SMSBackup and Restorekin\' bateragarria den zifratu gabeko babeskopi
   <string name="preferences__lock_signal_and_message_notifications_with_a_passphrase">Blokeatu pantaila eta jakinarazpenak pasahitz batekin</string>
   <string name="preferences__screen_security">Pantailaren segurtasuna</string>
   <string name="preferences__disable_screen_security_to_allow_screen_shots">Blokeatu pantailazoak arestikoen zerrendan eta aplikazioaren barruan</string>
-  <string name="preferences__auto_lock_signal_after_a_specified_time_interval_of_inactivity">Blokeatu APPNAME automatikoki jarduerarik gabe denbora tarte bat pasa eta gero.</string>
+  <string name="preferences__auto_lock_signal_after_a_specified_time_interval_of_inactivity">Blokeatu Cyber automatikoki jarduerarik gabe denbora tarte bat pasa eta gero.</string>
   <string name="preferences__inactivity_timeout_passphrase">Jarduerarik gabeko denbora tarte pasahitza</string>
   <string name="preferences__inactivity_timeout_interval">Jarduerarik gabeko denbora tartea</string>
   <string name="preferences__notifications">Jakinarazpenak</string>
@@ -1035,8 +1035,8 @@ Inportatu \'SMSBackup and Restorekin\' bateragarria den zifratu gabeko babeskopi
   <string name="preferences__theme">Gaia</string>
   <string name="preferences__default">Lehenetsia</string>
   <string name="preferences__language">Hizkuntza</string>
-  <string name="preferences__signal_messages_and_calls">APPNAME mezu eta deiak</string>
-  <string name="preferences__free_private_messages_and_calls">Mezu eta dei pribatu doanak APPNAME erabiltzaileri.</string>
+  <string name="preferences__signal_messages_and_calls">Cyber mezu eta deiak</string>
+  <string name="preferences__free_private_messages_and_calls">Mezu eta dei pribatu doanak Cyber erabiltzaileri.</string>
   <string name="preferences__submit_debug_log">Arazketaren log-a bidali</string>
   <string name="preferences__support_wifi_calling">\'\"WiFi Calling\' modu bateragarria</string>
   <string name="preferences__enable_if_your_device_supports_sms_mms_delivery_over_wifi">Aktibatu zure gailuak WiFi bidezko SMS/MMS banaketa erabiltzen badu (bakarrik aktibatu \'WiFi Calling\' aktibatuta badago zure gailuan).</string>
@@ -1054,7 +1054,7 @@ Inportatu \'SMSBackup and Restorekin\' bateragarria den zifratu gabeko babeskopi
   <string name="preferences_chats__message_trimming">Mezu murrizketa </string>
   <string name="preferences_advanced__use_system_emoji">Erabili sistemako emojiak</string>
   <string name="preferences_advanced__disable_signal_built_in_emoji_support">Desaktibatu Signalen emoji integratuak</string>
-  <string name="preferences_advanced__relay_all_calls_through_the_signal_server_to_avoid_revealing_your_ip_address">APPNAME zerbizariren bitartez birtransmititu dei guztiak; horrela ez diozu erakutsiko zure IP helbidea kontaktuari. Gaitzeak deiaren kalitatea gutxiagotuko du.</string>
+  <string name="preferences_advanced__relay_all_calls_through_the_signal_server_to_avoid_revealing_your_ip_address">Cyber zerbizariren bitartez birtransmititu dei guztiak; horrela ez diozu erakutsiko zure IP helbidea kontaktuari. Gaitzeak deiaren kalitatea gutxiagotuko du.</string>
   <string name="preferences_advanced__always_relay_calls">Deiak  beti birtransmititu</string>
   <string name="preferences_app_protection__app_access">App-erako sarrera</string>
   <string name="preferences_app_protection__communication">Komunikazioa</string>
@@ -1066,7 +1066,7 @@ Inportatu \'SMSBackup and Restorekin\' bateragarria den zifratu gabeko babeskopi
   <string name="preferences_notifications__calls">Deiak</string>
   <string name="preferences_notifications__ringtone">dei-hots tonua</string>
   <string name="preferences_chats__show_invitation_prompts">Gonbidapenen mezuak erakutsi</string>
-  <string name="preferences_chats__display_invitation_prompts_for_contacts_without_signal">APPNAME ez duten kontaktuei gonbidapen mezuak erakutsi</string>
+  <string name="preferences_chats__display_invitation_prompts_for_contacts_without_signal">Cyber ez duten kontaktuei gonbidapen mezuak erakutsi</string>
   <string name="preferences_chats__message_text_size">Mezuaren letra-tipoaren tamaina</string>
   <string name="preferences_events__contact_joined_signal">Kontaktua orain Signalen dago</string>
   <string name="preferences_notifications__priority">Lehentasuna</string>
@@ -1084,7 +1084,7 @@ Inportatu \'SMSBackup and Restorekin\' bateragarria den zifratu gabeko babeskopi
   <!--conversation_callable_insecure-->
   <string name="conversation_callable_insecure__menu_call">Deitu</string>
   <!--conversation_callable_secure-->
-  <string name="conversation_callable_secure__menu_call">APPNAME deia</string>
+  <string name="conversation_callable_secure__menu_call">Cyber deia</string>
   <!--conversation_context-->
   <string name="conversation_context__menu_message_details">Mezuaren detaileak</string>
   <string name="conversation_context__menu_copy_text">Testua kopiatu</string>
@@ -1147,25 +1147,25 @@ Inportatu \'SMSBackup and Restorekin\' bateragarria den zifratu gabeko babeskopi
   <string name="verify_display_fragment_context_menu__copy_to_clipboard">Kopiatu arbelera</string>
   <string name="verify_display_fragment_context_menu__compare_with_clipboard">Arbelarekin konparatu</string>
   <!--reminder_header-->
-  <string name="reminder_header_outdated_build">Zure APPNAME bertsioa zaharkitua dago</string>
+  <string name="reminder_header_outdated_build">Zure Cyber bertsioa zaharkitua dago</string>
   <plurals name="reminder_header_outdated_build_details">
-    <item quantity="one">Zure APPNAME-en bertsioa egun %d barru iraungiko da. Sakatu azkenengo bertsiora eguneratzeko.</item>
-    <item quantity="other">Zure APPNAME-en bertsioa %d egun barru iraungiko da. Sakatu azkenengo bertsiora eguneratzeko.</item>
+    <item quantity="one">Zure Cyber-en bertsioa egun %d barru iraungiko da. Sakatu azkenengo bertsiora eguneratzeko.</item>
+    <item quantity="other">Zure Cyber-en bertsioa %d egun barru iraungiko da. Sakatu azkenengo bertsiora eguneratzeko.</item>
   </plurals>
-  <string name="reminder_header_outdated_build_details_today">Gaur amaituko da zure APPNAME bertsioa erabiltzeko epea. Ukitu azken bertsioara eguneratzeko.</string>
-  <string name="reminder_header_expired_build">Amaitu da zure APPNAME bertsioa erabiltzeko epea!</string>
+  <string name="reminder_header_outdated_build_details_today">Gaur amaituko da zure Cyber bertsioa erabiltzeko epea. Ukitu azken bertsioara eguneratzeko.</string>
+  <string name="reminder_header_expired_build">Amaitu da zure Cyber bertsioa erabiltzeko epea!</string>
   <string name="reminder_header_expired_build_details">Mezuak ezingo dira bidali.  Ukitu azken bertsiora eguneratzeko.</string>
   <string name="reminder_header_sms_default_title">Lehenetsitako SMS aplikazio gisa erabili</string>
-  <string name="reminder_header_sms_default_text">Ukitu APPNAME zure SMS aplikazio lehenetsia bihurtzeko</string>
+  <string name="reminder_header_sms_default_text">Ukitu Cyber zure SMS aplikazio lehenetsia bihurtzeko</string>
   <string name="reminder_header_sms_import_title">Importatu sistemaren SMS mezuak</string>
   <string name="reminder_header_sms_import_text">Ukitu telefonoaren zifratu gabeko SMS mezuak Signalen datu-base zifratura kopiatzeko.</string>
-  <string name="reminder_header_push_title">Aktibatu APPNAME mezu eta deiak</string>
+  <string name="reminder_header_push_title">Aktibatu Cyber mezu eta deiak</string>
   <string name="reminder_header_push_text">Berritu zure komunikazio-esperientzia.</string>
-  <string name="reminder_header_invite_title">APPNAME erabilitzera gonbidatu</string>
+  <string name="reminder_header_invite_title">Cyber erabilitzera gonbidatu</string>
   <string name="reminder_header_invite_text">Hobetu zure %1$s-(e)kiko solasaldia.</string>
   <string name="reminder_header_share_title">Gonbidatu zure lagunak!</string>
   <string name="reminder_header_share_text">Zenbat eta Signalen adiskide gehiago izan, hobe.</string>
-  <string name="reminder_header_service_outage_text">APPNAME arazo teknikoak izaten ari da. Gogor ari gara lanean zerbitzua ahal bezain laster berriro martxan jartzeko.</string>
+  <string name="reminder_header_service_outage_text">Cyber arazo teknikoak izaten ari da. Gogor ari gara lanean zerbitzua ahal bezain laster berriro martxan jartzeko.</string>
   <!--media_preview-->
   <string name="media_preview__save_title">Gorde</string>
   <string name="media_preview__forward_title">Birbidali</string>
@@ -1191,11 +1191,11 @@ Inportatu \'SMSBackup and Restorekin\' bateragarria den zifratu gabeko babeskopi
   <string name="Permissions_not_now">Orain ez</string>
   <string name="ConversationListActivity_signal_needs_contacts_permission_in_order_to_search_your_contacts_but_it_has_been_permanently_denied">Singnalek Kontaktuen baimena behar du kontaktuak bilatzeko baina ukatu egin diozu. Joan aplikazioaren ezarpenetara, aukeratu \"Baimenak\" eta aktibatu \"Kontaktuak\".</string>
   <string name="conversation_activity__enable_signal_messages">GAITU SIGNAL MEZUAK</string>
-  <string name="SQLCipherMigrationHelper_migrating_signal_database">APPNAME-en datu-basea migratzen</string>
+  <string name="SQLCipherMigrationHelper_migrating_signal_database">Cyber-en datu-basea migratzen</string>
   <string name="PushDecryptJob_new_locked_message">Blokeatutako mezu berria</string>
   <string name="PushDecryptJob_unlock_to_view_pending_messages">Desblokeatu begiratu gabeko mezuak ikusteko</string>
   <string name="ExperienceUpgradeActivity_unlock_to_complete_update">Desblokeatu eguneratzea burutzeko</string>
-  <string name="ExperienceUpgradeActivity_please_unlock_signal_to_complete_update">Desblokeatu APPNAME eguneratzea burutzeko</string>
+  <string name="ExperienceUpgradeActivity_please_unlock_signal_to_complete_update">Desblokeatu Cyber eguneratzea burutzeko</string>
   <string name="enter_backup_passphrase_dialog__backup_passphrase">Babeskopiaren pasaesaldia</string>
   <string name="backup_enable_dialog__backups_will_be_saved_to_external_storage_and_encrypted_with_the_passphrase_below_you_must_have_this_passphrase_in_order_to_restore_a_backup">Babeskopiak kanpoko memoria batean gordeko dira beheko pasaesaldiarekin enkriptatuta. Pasaesaldi hau eduki behar duzu babeskopia bat berrezartzeko.</string>
   <string name="backup_enable_dialog__i_have_written_down_this_passphrase">Pasaesaldia gorde dut. Hori gabe, ezin izango dut babeskopia bat berrezarri.</string>
@@ -1207,7 +1207,7 @@ Inportatu \'SMSBackup and Restorekin\' bateragarria den zifratu gabeko babeskopi
   <string name="preferences_chats__create_backup">Sortu babeskopia</string>
   <string name="RegistrationActivity_enter_backup_passphrase">Sartu babeskopiaren pasaesaldia</string>
   <string name="RegistrationActivity_restore">Leheneratu</string>
-  <string name="RegistrationActivity_backup_failure_downgrade">Ezin dira babeskopiak inportatu APPNAME-en bertsio berriagoetatik</string>
+  <string name="RegistrationActivity_backup_failure_downgrade">Ezin dira babeskopiak inportatu Cyber-en bertsio berriagoetatik</string>
   <string name="RegistrationActivity_incorrect_backup_passphrase">Babeskopiaren pasaesaldia okerra da</string>
   <string name="RegistrationActivity_checking">Egiaztatzen...</string>
   <string name="RegistrationActivity_d_messages_so_far">%d mezu orain arte...</string>
@@ -1222,7 +1222,7 @@ Inportatu \'SMSBackup and Restorekin\' bateragarria den zifratu gabeko babeskopi
   <string name="BackupDialog_disable_and_delete_all_local_backups">Babeskopia lokal guztiak desgaitu eta ezabatu?</string>
   <string name="BackupDialog_delete_backups_statement">Ezabatu babeskopiak</string>
   <string name="BackupDialog_copied_to_clipboard">Arbelera kopiatuta</string>
-  <string name="ChatsPreferenceFragment_signal_requires_external_storage_permission_in_order_to_create_backups">APPNAME-ek kanpoko memorian gordetzeko baimena behar du babeskopiak egin ahal izateko baina baimena ukatuta izan du beti. Joan aplikazioaren ezarpenetara, aukeratu \"Baimenak\" eta gaitu \"Biltegiratzea\".</string>
+  <string name="ChatsPreferenceFragment_signal_requires_external_storage_permission_in_order_to_create_backups">Cyber-ek kanpoko memorian gordetzeko baimena behar du babeskopiak egin ahal izateko baina baimena ukatuta izan du beti. Joan aplikazioaren ezarpenetara, aukeratu \"Baimenak\" eta gaitu \"Biltegiratzea\".</string>
   <string name="ChatsPreferenceFragment_last_backup_s">Azken babeskopia: %s</string>
   <string name="ChatsPreferenceFragment_in_progress">Martxan</string>
   <string name="LocalBackupJob_creating_backup">Babeskopia sortzen...</string>
@@ -1235,7 +1235,7 @@ Inportatu \'SMSBackup and Restorekin\' bateragarria den zifratu gabeko babeskopi
   <string name="BackupUtil_never">Inoiz ez</string>
   <string name="BackupUtil_unknown">Ezezaguna</string>
   <string name="preferences_app_protection__screen_lock">Blokeo-pantaila</string>
-  <string name="preferences_app_protection__lock_signal_access_with_android_screen_lock_or_fingerprint">Blokeatu APPNAME-era sarbidea Android pantaila-blokeoarekin edo hatz-markarekin</string>
+  <string name="preferences_app_protection__lock_signal_access_with_android_screen_lock_or_fingerprint">Blokeatu Cyber-era sarbidea Android pantaila-blokeoarekin edo hatz-markarekin</string>
   <string name="preferences_app_protection__screen_lock_inactivity_timeout">Blokeo-pantailaren inaktibitate denbora-muga</string>
   <string name="AppProtectionPreferenceFragment_none">Bat ere ez</string>
   <string name="registration_activity__the_registration_lock_pin_is_not_the_same_as_the_sms_verification_code_you_just_received_please_enter_the_pin_you_previously_configured_in_the_application">Erregistratzea blokeatzeko PINa ez da jaso berri duzun SMS bidezko egiaztapen-kodearen berdina. Sartu aurrez aplikazioan konfiguratu duzun PINa.</string>
@@ -1246,7 +1246,7 @@ Inportatu \'SMSBackup and Restorekin\' bateragarria den zifratu gabeko babeskopi
   <string name="registration_lock_dialog_view__confirm_pin">Berretsi PINa</string>
   <string name="registration_lock_reminder_view__enter_your_registration_lock_pin">Sartu erregistratzea blokeatzeko zure PINa</string>
   <string name="registration_lock_reminder_view__enter_pin">Sartu PINa</string>
-  <string name="preferences_app_protection__enable_a_registration_lock_pin_that_will_be_required">Gaitu erregistratzea blokeatzeko PINa telefono-zenbaki hau APPNAME-en berriro erregistratu nahi denerako.</string>
+  <string name="preferences_app_protection__enable_a_registration_lock_pin_that_will_be_required">Gaitu erregistratzea blokeatzeko PINa telefono-zenbaki hau Cyber-en berriro erregistratu nahi denerako.</string>
   <string name="preferences_app_protection__registration_lock_pin">Erregistratzea blokeatzeko PINa</string>
   <string name="preferences_app_protection__registration_lock">Erregistratze-blokeoa</string>
   <string name="RegistrationActivity_you_must_enter_your_registration_lock_PIN">Erregistratzea blokeatzeko zure PINa sartu behar duzu</string>
@@ -1255,13 +1255,13 @@ Inportatu \'SMSBackup and Restorekin\' bateragarria den zifratu gabeko babeskopi
   <string name="RegistrationActivity_you_have_made_too_many_incorrect_registration_lock_pin_attempts_please_try_again_in_a_day">Erregistratzea blokeatzeko PINarekin okerreko saiakera gehiegi egin dituzu. Saiatu berriro egun bat barru.</string>
   <string name="RegistrationActivity_error_connecting_to_service">Akatsa zerbitzura konektatzean</string>
   <string name="RegistrationActivity_oh_no">Ez ba!</string>
-  <string name="RegistrationActivity_registration_of_this_phone_number_will_be_possible_without_your_registration_lock_pin_after_seven_days_have_passed">Erregistratzea blokeatzeko PINik gabe telefono-zenbaki hau erregistratu ahal izango duzu betiere telefono-zenbaki hau APPNAME-en aktibo egon zen azken alditik 7 egun igaro ondoren. %d egun gelditzen zaizkizu.</string>
+  <string name="RegistrationActivity_registration_of_this_phone_number_will_be_possible_without_your_registration_lock_pin_after_seven_days_have_passed">Erregistratzea blokeatzeko PINik gabe telefono-zenbaki hau erregistratu ahal izango duzu betiere telefono-zenbaki hau Cyber-en aktibo egon zen azken alditik 7 egun igaro ondoren. %d egun gelditzen zaizkizu.</string>
   <string name="RegistrationActivity_registration_lock_pin">Erregistratzea blokeatzeko PINa</string>
   <string name="RegistrationActivity_this_phone_number_has_registration_lock_enabled_please_enter_the_registration_lock_pin">Telefono-zenbaki honek gaituta du erregistratzea blokeatzeko aukera. Sartu erregistratzea blokeatzeko PINa.</string>
-  <string name="RegistrationLockDialog_registration_lock_is_enabled_for_your_phone_number">Erregistratzea blokeatzeko aukera gaituta dago zure telefono-zenbakiarentzat. Erregistratzea blokeatzeko PINa buruz ikasten laguntzeko, APPNAME-ek aldian-aldian berau baieztatzea eskatuko dizu.</string>
+  <string name="RegistrationLockDialog_registration_lock_is_enabled_for_your_phone_number">Erregistratzea blokeatzeko aukera gaituta dago zure telefono-zenbakiarentzat. Erregistratzea blokeatzeko PINa buruz ikasten laguntzeko, Cyber-ek aldian-aldian berau baieztatzea eskatuko dizu.</string>
   <string name="RegistrationLockDialog_i_forgot_my_pin">Nire PINa ahaztu dut.</string>
   <string name="RegistrationLockDialog_forgotten_pin">PINa ahaztu al duzu?</string>
-  <string name="RegistrationLockDialog_registration_lock_helps_protect_your_phone_number_from_unauthorized_registration_attempts">Erregistratzea blokeatzeko aukerak zure telefono-zenbakia baimenik gabe erregistratzeko saiakeretatik babesten du. Aukera hau nahi duzunean desgaitu daiteke APPNAME-eko pribatutasun-ezarpenetan</string>
+  <string name="RegistrationLockDialog_registration_lock_helps_protect_your_phone_number_from_unauthorized_registration_attempts">Erregistratzea blokeatzeko aukerak zure telefono-zenbakia baimenik gabe erregistratzeko saiakeretatik babesten du. Aukera hau nahi duzunean desgaitu daiteke Cyber-eko pribatutasun-ezarpenetan</string>
   <string name="RegistrationLockDialog_registration_lock">Erregistratze-blokeoa</string>
   <string name="RegistrationLockDialog_enable">Gaitu</string>
   <string name="RegistrationLockDialog_the_registration_lock_pin_must_be_at_least_four_digits">Erregistratzea blokeatzeko PINak 4 digitu izan behar ditu gutxienez.</string>
@@ -1271,7 +1271,7 @@ Inportatu \'SMSBackup and Restorekin\' bateragarria den zifratu gabeko babeskopi
   <string name="RegistrationLockDialog_disable">Desgaitu</string>
   <string name="RegistrationActivity_continue">Jarraitu</string>
   <string name="preferences_chats__backups">Babes-kopiak</string>
-  <string name="prompt_passphrase_activity__signal_is_locked">APPNAME blokeatuta dago</string>
+  <string name="prompt_passphrase_activity__signal_is_locked">Cyber blokeatuta dago</string>
   <string name="prompt_passphrase_activity__tap_to_unlock">SAKATU DESBLOKEATZEKO</string>
   <string name="RegistrationLockDialog_reminder">Oroigarria:</string>
   <string name="recipient_preferences__about">Honi buruz</string>
