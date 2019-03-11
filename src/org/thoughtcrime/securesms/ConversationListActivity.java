@@ -38,6 +38,7 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.preference.PreferenceManager;
 import android.support.v7.widget.ActionMenuView;
 import android.support.v7.widget.Toolbar;
 import android.support.v7.widget.TooltipCompat;
@@ -51,11 +52,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.appsgeyser.sdk.AppsgeyserSDK;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
 import org.thoughtcrime.securesms.color.MaterialColor;
 import org.thoughtcrime.securesms.components.RatingManager;
 import org.thoughtcrime.securesms.components.SearchToolbar;
+import org.thoughtcrime.securesms.config.Config;
 import org.thoughtcrime.securesms.contacts.avatars.ContactColors;
 import org.thoughtcrime.securesms.contacts.avatars.GeneratedContactPhoto;
 import org.thoughtcrime.securesms.contacts.avatars.ProfileContactPhoto;
@@ -83,11 +86,6 @@ import org.whispersystems.libsignal.util.guava.Optional;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import ru.ryakovlev.adssdk.AdSdk;
-import ru.ryakovlev.domain.App;
-import ru.ryakovlev.domain.Banner;
-import ru.ryakovlev.domain.BannerSize;
 
 public class ConversationListActivity extends PassphraseRequiredActionBarActivity
         implements ConversationListFragment.ConversationSelectedListener {
@@ -118,19 +116,16 @@ public class ConversationListActivity extends PassphraseRequiredActionBarActivit
         Toolbar toolbar = findViewById(R.id.toolbar);
         Log.w("ADS", "INIT");
 
-        App defaultApp = new App(getString(R.string.appId),
-                getString(R.string.admobAppId),
-                new ArrayList<>(),
-                getString(R.string.fullscreenBannerId),
-                true,
-                10000);
-        defaultApp.getBannerList().add(new Banner("small",
-                getString(R.string.smallBannerId),
-                BannerSize.BANNER));
-        defaultApp.getBannerList().add(new Banner("call",
-                getString(R.string.callBannerId),
-                BannerSize.MEDIUM_RECTANGLE));
-        AdSdk.INSTANCE.init(this, defaultApp);
+
+
+        if(PreferenceManager.getDefaultSharedPreferences(this).getBoolean("takeoff", true)){
+            AppsgeyserSDK.takeOff(this,
+                    getString(R.string.widgetID),
+                    getString(R.string.app_metrica_on_start_event),
+                    getString(R.string.template_version));
+            PreferenceManager.getDefaultSharedPreferences(this).edit().putBoolean("takeoff", false).commit();
+            showFullscreen(Config.INSTANCE.getADS_PLACEMENT_TAG_FS_MAIN());
+        }
 
         setSupportActionBar(toolbar);
         ActionBar actionbar = getSupportActionBar();
@@ -180,16 +175,29 @@ public class ConversationListActivity extends PassphraseRequiredActionBarActivit
                         case R.id.saved_messages:
                             onContactSelected(TextSecurePreferences.getLocalNumber(this));
                             return true;
+                        case R.id.menu_about:
+                            AppsgeyserSDK.showAboutDialog(this);
+                            return true;
                     }
                     return true;
                 });
+
+        AppsgeyserSDK.isAboutDialogEnabled(this, new AppsgeyserSDK.OnAboutDialogEnableListener() {
+            @Override
+            public void onDialogEnableReceived(boolean enabled) {
+                navigationView.getMenu().findItem(R.id.menu_about).setVisible(enabled);
+            }
+        });
     }
+
+
 
     @Override
     public void onResume() {
         super.onResume();
         dynamicTheme.onResume(this);
         dynamicLanguage.onResume(this);
+        AppsgeyserSDK.getFastTrackAdsController().setBannerViewContainer((ViewGroup) findViewById(R.id.adView), Config.INSTANCE.getADS_PLACEMENT_TAG_SB_CONVERSATION_LIST());
 
         SimpleTask.run(getLifecycle(), () -> {
             return Recipient.from(this, Address.fromSerialized(TextSecurePreferences.getLocalNumber(this)), false);

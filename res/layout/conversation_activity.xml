@@ -49,11 +49,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
-            <ru.ryakovlev.adssdk.AdBannerView
+            <RelativeLayout
+                android:id="@+id/adView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/adView"/>
-
+                android:gravity="center"/>
 
             <FrameLayout android:id="@+id/fragment_content"
                 android:layout_width="match_parent"

@@ -28,12 +28,18 @@
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarStyle">
         </android.support.v7.widget.Toolbar>
+        <RelativeLayout
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@id/toolbar"/>
 
         <FrameLayout
             android:id="@+id/fragment_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/toolbar" />
+            android:layout_below="@id/adView" />
 
         <org.thoughtcrime.securesms.components.SearchToolbar
             android:id="@+id/search_toolbar"

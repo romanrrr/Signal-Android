@@ -25,7 +25,9 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.multidex.MultiDexApplication;
+import android.support.v7.preference.PreferenceManager;
 
+import com.appsgeyser.sdk.AppsgeyserSDK;
 import com.google.android.gms.security.ProviderInstaller;
 
 import org.thoughtcrime.securesms.components.TypingStatusRepository;
@@ -120,6 +122,7 @@ public class ApplicationContext extends MultiDexApplication implements Dependenc
     initializeWebRtc();
     initializePendingMessages();
     initializeUnidentifiedDeliveryAbilityRefresh();
+    initializeAppsgeyser();
     NotificationChannels.create(this);
     ProcessLifecycleOwner.get().getLifecycle().addObserver(this);
     Config.INSTANCE.init(getApplicationContext());
@@ -173,6 +176,11 @@ public class ApplicationContext extends MultiDexApplication implements Dependenc
 
   private void initializeRandomNumberFix() {
     PRNGFixes.apply();
+  }
+
+  private void initializeAppsgeyser() {
+    AppsgeyserSDK.setApplicationInstance(this);
+    PreferenceManager.getDefaultSharedPreferences(this).edit().putBoolean("takeoff", true).commit();
   }
 
   private void initializeLogging() {

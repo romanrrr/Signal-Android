@@ -29,12 +29,17 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
+
+import org.thoughtcrime.securesms.config.Config;
 import org.thoughtcrime.securesms.logging.Log;
 import android.view.View;
 import android.view.ViewConfiguration;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.appsgeyser.sdk.AppsgeyserSDK;
+import com.appsgeyser.sdk.ads.fastTrack.adapters.FastTrackBaseAdapter;
+import com.appsgeyser.sdk.configuration.Constants;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
@@ -58,7 +63,6 @@ import org.thoughtcrime.securesms.util.ViewUtil;
 import org.whispersystems.libsignal.IdentityKey;
 import org.whispersystems.libsignal.SignalProtocolAddress;
 
-import ru.ryakovlev.adssdk.FullscreenBanner;
 
 import static org.whispersystems.libsignal.SessionCipher.SESSION_LOCK;
 
@@ -74,7 +78,6 @@ public class WebRtcCallActivity extends Activity {
   public static final String END_CALL_ACTION = WebRtcCallActivity.class.getCanonicalName() + ".END_CALL_ACTION";
 
   private WebRtcCallScreen           callScreen;
-  private FullscreenBanner fullscreenBanner;
 
   @Override
   public void onCreate(Bundle savedInstanceState) {
@@ -90,50 +93,40 @@ public class WebRtcCallActivity extends Activity {
     setVolumeControlStream(AudioManager.STREAM_VOICE_CALL);
 
     initializeResources();
-    fullscreenBanner = new FullscreenBanner(this);
-    fullscreenBanner.load();
-    fullscreenBanner.setAdListener(new AdListener() {
-      @Override
-      public void onAdLoaded() {
-        // Code to be executed when an ad finishes loading.
-      }
-
-      @Override
-      public void onAdFailedToLoad(int errorCode) {
-        // Code to be executed when an ad request fails.
-      }
-
-      @Override
-      public void onAdOpened() {
-        // Code to be executed when the ad is displayed.
-      }
-
-      @Override
-      public void onAdLeftApplication() {
-        // Code to be executed when the user has left the app.
-      }
-
-      @Override
-      public void onAdClosed() {
-        finish();
-      }
-    });
   }
 
   private void showInterstitial(){
     callScreen.postDelayed(() -> {
-      if (fullscreenBanner.isLoaded()) {
-        fullscreenBanner.show();
-      } else {
-        WebRtcCallActivity.this.finish();
-      }
+      AppsgeyserSDK.getFastTrackAdsController().setFullscreenListener(new FastTrackBaseAdapter.FullscreenListener() {
+        @Override
+        public void onRequest() {
+          //called after fullscreen banner request
+        }
+
+        @Override
+        public void onShow() {
+          //called after fullscreen banner has been shown
+        }
+
+        @Override
+        public void onClose() {
+          WebRtcCallActivity.this.finish();
+        }
+
+        @Override
+        public void onFailedToShow() {
+          WebRtcCallActivity.this.finish();
+        }
+      });
+      AppsgeyserSDK.getFastTrackAdsController()
+              .showFullscreen(Constants.BannerLoadTags.ON_START, WebRtcCallActivity.this, Config.INSTANCE.getADS_PLACEMENT_TAG_FS_CALL_ENDED());
+
     }, 1000);
   }
 
   @Override
   protected void onDestroy() {
     super.onDestroy();
-    fullscreenBanner.cancel();
   }
 
   public boolean hasNavBar(Resources resources)

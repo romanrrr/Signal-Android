@@ -63,6 +63,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnFocusChangeListener;
 import android.view.View.OnKeyListener;
+import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
@@ -73,6 +74,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.appsgeyser.sdk.AppsgeyserSDK;
 import com.google.android.gms.location.places.ui.PlacePicker;
 
 import org.greenrobot.eventbus.EventBus;
@@ -225,8 +227,6 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import ru.ryakovlev.adssdk.AdBannerView;
-
 import static org.thoughtcrime.securesms.TransportOption.Type;
 import static org.thoughtcrime.securesms.database.GroupDatabase.GroupRecord;
 import static org.whispersystems.libsignal.SessionCipher.SESSION_LOCK;
@@ -306,7 +306,6 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
   protected HidingLinearLayout     inlineAttachmentToggle;
   private   QuickAttachmentDrawer  quickAttachmentDrawer;
   private   InputPanel             inputPanel;
-  private AdBannerView adView;
 
   private LinkPreviewViewModel        linkPreviewViewModel;
   private ConversationSearchViewModel searchViewModel;
@@ -382,9 +381,8 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
     }else {
       getWindow().getDecorView().setBackgroundColor(color);
     }
+    showFullscreen(Config.INSTANCE.getADS_PLACEMENT_TAG_FS_CONVERSATION());
 
-    adView.setLocalId("small");
-    adView.load();
   }
 
   @Override
@@ -443,6 +441,8 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
     MessageNotifier.setVisibleThread(threadId);
     markThreadAsRead();
 
+    AppsgeyserSDK.getFastTrackAdsController().setBannerViewContainer((ViewGroup) findViewById(R.id.adView), Config.INSTANCE.getADS_PLACEMENT_TAG_SB_CONVERSATION());
+
     Log.i(TAG, "onResume() Finished: " + (System.currentTimeMillis() - getIntent().getLongExtra(TIMING_EXTRA, 0)));
   }
 
@@ -476,7 +476,6 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
     if (emojiDrawerStub.resolved() && container.getCurrentInput() == emojiDrawerStub.get()) {
       container.hideAttachedInput(true);
     }
-    adView.reload();
   }
 
   @Override
@@ -1533,8 +1532,6 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
     inlineAttachmentToggle = ViewUtil.findById(this, R.id.inline_attachment_container);
     inputPanel             = ViewUtil.findById(this, R.id.bottom_panel);
     searchNav              = ViewUtil.findById(this, R.id.conversation_search_nav);
-    adView              = ViewUtil.findById(this, R.id.adView);
-
 
     ImageButton quickCameraToggle      = ViewUtil.findById(this, R.id.quick_camera_toggle);
     ImageButton inlineAttachmentButton = ViewUtil.findById(this, R.id.inline_attachment_button);

@@ -15,6 +15,11 @@ import android.view.View;
 import android.view.ViewConfiguration;
 import android.view.WindowManager;
 
+import com.appsgeyser.sdk.AppsgeyserSDK;
+import com.appsgeyser.sdk.ads.fastTrack.adapters.FastTrackBaseAdapter;
+import com.appsgeyser.sdk.configuration.Constants;
+
+import org.thoughtcrime.securesms.config.Config;
 import org.thoughtcrime.securesms.logging.Log;
 import org.thoughtcrime.securesms.util.TextSecurePreferences;
 import org.thoughtcrime.securesms.util.UiUtils;
@@ -38,6 +43,18 @@ public abstract class BaseActionBarActivity extends AppCompatActivity {
   protected void onResume() {
     super.onResume();
     initializeScreenshotSecurity();
+    AppsgeyserSDK.onResume(this);
+  }
+
+  @Override
+  protected void onPause() {
+    super.onPause();
+    AppsgeyserSDK.onPause(this);
+  }
+
+  public void showFullscreen(String bannerTag){
+    AppsgeyserSDK.getFastTrackAdsController()
+            .showFullscreen(Constants.BannerLoadTags.ON_START, this, bannerTag);
   }
 
   @Override

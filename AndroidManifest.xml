@@ -194,9 +194,9 @@
             </intent-filter>
 
             <meta-data android:name="com.sec.minimode.icon.portrait.normal"
-                android:resource="@mipmap/ic_launcher" />
+                android:resource="@drawable/app_icon" />
             <meta-data android:name="com.sec.minimode.icon.landscape.normal"
-                android:resource="@mipmap/ic_launcher" />
+                android:resource="@drawable/app_icon" />
 
         </activity-alias>
 
