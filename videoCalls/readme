@@ -2,4 +2,5 @@
 3) add placeholders to colors
     <color name="signal_primary">%COLOR_PRIMARY%</color>
     <color name="signal_primary_dark">%COLOR_PRIMARY_DARK%</color>
+    <color name="status_bar_light_color">%COLOR_PRIMARY_DARK%</color>
     <color name="conversation_list_toolbar_color">%TOOLBAR_COLOR%</color>

@@ -35,9 +35,9 @@ public class UiUtils {
 
     public static void setLightStatusBar(Activity activity){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            int flags = activity.getWindow().getDecorView().getSystemUiVisibility(); // get current flag
+            /*int flags = activity.getWindow().getDecorView().getSystemUiVisibility(); // get current flag
             flags |= View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;   // add LIGHT_STATUS_BAR to flag
-            activity.getWindow().getDecorView().setSystemUiVisibility(flags);
+            activity.getWindow().getDecorView().setSystemUiVisibility(flags);*/
             activity.getWindow().setStatusBarColor(UiUtils.themeAttributeToColor(R.attr.mainStatusBarColor, activity, R.color.status_bar_light_color)); // optional
         }
     }

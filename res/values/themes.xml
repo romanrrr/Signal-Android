@@ -128,8 +128,8 @@
         <item name="android:alertDialogTheme">@style/AppCompatDialogStyleLight</item>
         <!--<item name="android:windowContentOverlay">@drawable/compat_actionbar_shadow_background</item>-->
         <item name="mainStatusBarColor">@color/status_bar_light_color</item>
-        <item name="colorControlNormal">@color/appbar_icon_light_color</item>
-        <item name="toolbar_icon_color">@color/appbar_icon_light_color</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="toolbar_icon_color">@color/white</item>
         <item name="android:textColor">@color/appbar_icon_light_color</item>
         <item name="android:textColorSecondary">@color/appbar_icon_light_color_hint</item>
         <item name="drawerArrowStyle">@style/DrawerArrowStyleLight</item>
