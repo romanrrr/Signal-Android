@@ -53,6 +53,7 @@ import org.thoughtcrime.securesms.util.DynamicTheme;
 import org.thoughtcrime.securesms.util.FileProviderUtil;
 import org.thoughtcrime.securesms.util.IntentUtils;
 import org.thoughtcrime.securesms.util.TextSecurePreferences;
+import org.thoughtcrime.securesms.util.UiUtils;
 import org.thoughtcrime.securesms.util.Util;
 import org.thoughtcrime.securesms.util.ViewUtil;
 import org.thoughtcrime.securesms.util.concurrent.ListenableFuture;
@@ -124,6 +125,8 @@ public class CreateProfileActivity extends BaseActionBarActivity implements Inje
     super.onResume();
     dynamicTheme.onResume(this);
     dynamicLanguage.onResume(this);
+    UiUtils.setThemedStatusBar(this);
+
   }
 
   @Override
@@ -335,6 +338,7 @@ public class CreateProfileActivity extends BaseActionBarActivity implements Inje
 
   private void initializeEmojiInput() {
     this.emojiToggle.attach(emojiDrawer);
+    emojiToggle.setColorFilter(UiUtils.themeAttributeToColor(R.attr.toolbar_icon_color, this, R.color.white));
 
     this.emojiToggle.setOnClickListener(v -> {
       if (container.getCurrentInput() == emojiDrawer) {

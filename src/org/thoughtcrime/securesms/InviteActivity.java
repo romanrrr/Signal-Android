@@ -65,6 +65,12 @@ public class InviteActivity extends PassphraseRequiredActionBarActivity implemen
     initializeResources();
   }
 
+  @Override
+  protected void onResume() {
+    super.onResume();
+    UiUtils.setLightStatusBar(this);
+  }
+
   private void initializeResources() {
     slideInAnimation  = loadAnimation(R.anim.slide_from_bottom);
     slideOutAnimation = loadAnimation(R.anim.slide_to_bottom);

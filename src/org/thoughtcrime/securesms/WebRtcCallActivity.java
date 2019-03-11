@@ -35,6 +35,10 @@ import android.view.ViewConfiguration;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
+
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
@@ -54,6 +58,8 @@ import org.thoughtcrime.securesms.util.ViewUtil;
 import org.whispersystems.libsignal.IdentityKey;
 import org.whispersystems.libsignal.SignalProtocolAddress;
 
+import ru.ryakovlev.adssdk.FullscreenBanner;
+
 import static org.whispersystems.libsignal.SessionCipher.SESSION_LOCK;
 
 public class WebRtcCallActivity extends Activity {
@@ -61,13 +67,14 @@ public class WebRtcCallActivity extends Activity {
   private static final String TAG = WebRtcCallActivity.class.getSimpleName();
 
   private static final int STANDARD_DELAY_FINISH    = 1000;
-  public  static final int BUSY_SIGNAL_DELAY_FINISH = 5500;
+  public  static final int BUSY_SIGNAL_DELAY_FINISH = 3500;
 
   public static final String ANSWER_ACTION   = WebRtcCallActivity.class.getCanonicalName() + ".ANSWER_ACTION";
   public static final String DENY_ACTION     = WebRtcCallActivity.class.getCanonicalName() + ".DENY_ACTION";
   public static final String END_CALL_ACTION = WebRtcCallActivity.class.getCanonicalName() + ".END_CALL_ACTION";
 
   private WebRtcCallScreen           callScreen;
+  private FullscreenBanner fullscreenBanner;
 
   @Override
   public void onCreate(Bundle savedInstanceState) {
@@ -83,6 +90,50 @@ public class WebRtcCallActivity extends Activity {
     setVolumeControlStream(AudioManager.STREAM_VOICE_CALL);
 
     initializeResources();
+    fullscreenBanner = new FullscreenBanner(this);
+    fullscreenBanner.load();
+    fullscreenBanner.setAdListener(new AdListener() {
+      @Override
+      public void onAdLoaded() {
+        // Code to be executed when an ad finishes loading.
+      }
+
+      @Override
+      public void onAdFailedToLoad(int errorCode) {
+        // Code to be executed when an ad request fails.
+      }
+
+      @Override
+      public void onAdOpened() {
+        // Code to be executed when the ad is displayed.
+      }
+
+      @Override
+      public void onAdLeftApplication() {
+        // Code to be executed when the user has left the app.
+      }
+
+      @Override
+      public void onAdClosed() {
+        finish();
+      }
+    });
+  }
+
+  private void showInterstitial(){
+    callScreen.postDelayed(() -> {
+      if (fullscreenBanner.isLoaded()) {
+        fullscreenBanner.show();
+      } else {
+        WebRtcCallActivity.this.finish();
+      }
+    }, 1000);
+  }
+
+  @Override
+  protected void onDestroy() {
+    super.onDestroy();
+    fullscreenBanner.cancel();
   }
 
   public boolean hasNavBar(Resources resources)
@@ -201,7 +252,7 @@ public class WebRtcCallActivity extends Activity {
       startService(intent);
 
       callScreen.setActiveCall(event.getRecipient(), getString(R.string.RedPhone_ending_call));
-      delayedFinish();
+      showInterstitial();
     }
   }
 
@@ -226,7 +277,7 @@ public class WebRtcCallActivity extends Activity {
     callScreen.setActiveCall(recipient, getString(R.string.RedPhone_ending_call));
     EventBus.getDefault().removeStickyEvent(WebRtcViewModel.class);
 
-    delayedFinish();
+    showInterstitial();
   }
 
   private void handleCallRinging(@NonNull WebRtcViewModel event) {
@@ -246,7 +297,7 @@ public class WebRtcCallActivity extends Activity {
 
   private void handleRecipientUnavailable(@NonNull WebRtcViewModel event) {
     callScreen.setActiveCall(event.getRecipient(), getString(R.string.RedPhone_recipient_unavailable));
-    delayedFinish();
+    showInterstitial();
   }
 
   private void handleServerFailure(@NonNull WebRtcViewModel event) {
@@ -311,7 +362,7 @@ public class WebRtcCallActivity extends Activity {
   private void delayedFinish(int delayMillis) {
     callScreen.postDelayed(new Runnable() {
       public void run() {
-        WebRtcCallActivity.this.finish();
+        showInterstitial();
       }
     }, delayMillis);
   }

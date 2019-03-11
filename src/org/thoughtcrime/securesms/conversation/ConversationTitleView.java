@@ -59,6 +59,7 @@ public class ConversationTitleView extends RelativeLayout {
     ViewUtil.setTextViewGravityStart(this.title, getContext());
     ViewUtil.setTextViewGravityStart(this.subtitle, getContext());
     back.setColorFilter(UiUtils.themeAttributeToColor(R.attr.toolbar_icon_color, getContext(), R.color.white));
+    verified.setColorFilter(UiUtils.themeAttributeToColor(R.attr.toolbar_icon_color, getContext(), R.color.white));
   }
 
   public void setTitle(@NonNull GlideRequests glideRequests, @Nullable Recipient recipient) {

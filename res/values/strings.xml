@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Cyber</string>
+    <string name="appId" translatable="false">CyberMessenger</string>
+    <string name="admobAppId" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="smallBannerId" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="callBannerId" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="fullscreenBannerId" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="delete">Delete</string>
