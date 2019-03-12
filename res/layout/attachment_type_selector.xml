@@ -1,235 +1,260 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
-    <View android:layout_width="match_parent"
-          android:layout_height="4dp"
-          android:background="@drawable/attachment_selector_shadow"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@drawable/attachment_selector_shadow" />
 
-    <LinearLayout android:orientation="vertical"
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:background="?attachment_type_selector_background">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attachment_type_selector_background"
+        android:orientation="vertical">
 
         <org.thoughtcrime.securesms.components.RecentPhotoViewRail
-                android:id="@+id/recent_photos"
+            android:id="@+id/recent_photos"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:padding="4dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="90dp"
-                android:padding="4dp"/>
-
-        <LinearLayout android:orientation="horizontal"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:layout_marginLeft="16dp"
-                      android:layout_marginRight="16dp"
-                      android:layout_marginTop="16dp"
-                      android:weightSum="4">
-
-            <LinearLayout android:layout_width="match_parent"
-                          android:layout_height="wrap_content"
-                          android:layout_weight="1"
-                          android:gravity="center"
-                          android:orientation="vertical">
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <org.thoughtcrime.securesms.components.CircleColorImageView
-                        android:id="@+id/gallery_button"
-                        android:layout_width="53dp"
-                        android:layout_height="53dp"
-                        android:src="@drawable/ic_image_white_24dp"
-                        android:scaleType="center"
-                        android:contentDescription="@string/attachment_type_selector__gallery_description"
-                        app:circleColor="@color/purple_400"/>
+                    android:id="@+id/gallery_button"
+                    android:layout_width="53dp"
+                    android:layout_height="53dp"
+                    android:contentDescription="@string/attachment_type_selector__gallery_description"
+                    android:scaleType="center"
+                    android:src="@drawable/outline_crop_original_24"
+                    android:tint="@color/white"
+                    app:circleColor="@color/purple_400" />
 
-                <TextView android:layout_marginTop="10dp"
-                          style="@style/AttachmentTypeLabel"
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          android:text="@string/attachment_type_selector__gallery"/>
-
-            </LinearLayout>
-
-            <LinearLayout android:layout_width="match_parent"
-                          android:layout_height="wrap_content"
-                          android:gravity="center"
-                          android:layout_weight="1"
-                          android:orientation="vertical">
-
-                <org.thoughtcrime.securesms.components.CircleColorImageView
-                        android:id="@+id/audio_button"
-                        android:layout_width="53dp"
-                        android:layout_height="53dp"
-                        android:src="@drawable/ic_headset_white_24dp"
-                        android:scaleType="center"
-                        android:contentDescription="@string/attachment_type_selector__audio_description"
-                        app:circleColor="@color/orange_400"/>
-
-                <TextView android:layout_marginTop="10dp"
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          style="@style/AttachmentTypeLabel"
-                          android:text="@string/attachment_type_selector__audio"/>
-
-            </LinearLayout>
-
-            <LinearLayout android:layout_width="match_parent"
-                          android:layout_height="wrap_content"
-                          android:gravity="center"
-                          android:layout_weight="1"
-                          android:orientation="vertical">
-
-                <org.thoughtcrime.securesms.components.CircleColorImageView
-                        android:id="@+id/document_button"
-                        android:layout_width="53dp"
-                        android:layout_height="53dp"
-                        android:src="@drawable/ic_insert_drive_file_white_24dp"
-                        android:scaleType="center"
-                        android:contentDescription="@string/attachment_type_selector__file_description"
-                        app:circleColor="@color/red_400"/>
-
-                <TextView android:layout_marginTop="10dp"
-                          style="@style/AttachmentTypeLabel"
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          android:text="@string/attachment_type_selector__file"/>
-
-            </LinearLayout>
-
-            <LinearLayout android:layout_width="match_parent"
-                          android:layout_height="wrap_content"
-                          android:gravity="center"
-                          android:orientation="vertical"
-                          android:layout_weight="1">
-
-                <org.thoughtcrime.securesms.components.CircleColorImageView
-                        android:id="@+id/contact_button"
-                        android:layout_width="53dp"
-                        android:layout_height="53dp"
-                        android:src="@drawable/ic_person_white_24dp"
-                        android:scaleType="center"
-                        android:contentDescription="@string/attachment_type_selector__contact_description"
-                        app:circleColor="@color/blue_400"/>
-
-                <TextView android:layout_marginTop="10dp"
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          style="@style/AttachmentTypeLabel"
-                          android:text="@string/attachment_type_selector__contact"/>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout android:orientation="horizontal"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:layout_marginTop="16dp"
-                      android:layout_marginLeft="16dp"
-                      android:layout_marginRight="16dp"
-                      android:layout_marginBottom="16dp"
-                      android:weightSum="4">
-
-            <LinearLayout android:layout_width="match_parent"
-                          android:layout_height="wrap_content"
-                          android:layout_weight="1"
-                          android:gravity="center"
-                          android:orientation="vertical">
-
-                <org.thoughtcrime.securesms.components.CircleColorImageView
-                        android:id="@+id/camera_button"
-                        android:layout_width="53dp"
-                        android:layout_height="53dp"
-                        android:src="@drawable/ic_camera_white_24dp"
-                        android:scaleType="center"
-                        android:contentDescription="@string/attachment_type_selector__camera_description"
-                        app:circleColor="@color/green_400"/>
-
-                <TextView android:layout_marginTop="10dp"
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          android:gravity="center"
-                          style="@style/AttachmentTypeLabel"
-                          android:text="@string/attachment_type_selector__camera"/>
+                <TextView
+                    style="@style/AttachmentTypeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/attachment_type_selector__gallery" />
 
             </LinearLayout>
 
             <LinearLayout
-                          android:layout_width="match_parent"
-                          android:layout_height="wrap_content"
-                          android:layout_weight="1"
-                          android:gravity="center"
-                          android:orientation="vertical">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <org.thoughtcrime.securesms.components.CircleColorImageView
-                        android:id="@+id/video_button"
-                        android:layout_width="53dp"
-                        android:layout_height="53dp"
-                        android:src="@drawable/ic_video"
-                        android:scaleType="center"
-                        android:contentDescription="@string/attachment_type_selector__video_description"
-                        app:circleColor="@color/blue_grey_400"/>
+                    android:id="@+id/audio_button"
+                    android:layout_width="53dp"
+                    android:layout_height="53dp"
+                    android:contentDescription="@string/attachment_type_selector__audio_description"
+                    android:scaleType="center"
+                    android:src="@drawable/outline_headset_24"
+                    android:tint="@color/white"
+                    app:circleColor="@color/orange_400" />
 
-                <TextView android:layout_marginTop="10dp"
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          style="@style/AttachmentTypeLabel"
-                          android:text="@string/attachment_type_selector__video"/>
+                <TextView
+                    style="@style/AttachmentTypeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/attachment_type_selector__audio" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <org.thoughtcrime.securesms.components.CircleColorImageView
+                    android:id="@+id/document_button"
+                    android:layout_width="53dp"
+                    android:layout_height="53dp"
+                    android:contentDescription="@string/attachment_type_selector__file_description"
+                    android:scaleType="center"
+                    android:src="@drawable/outline_insert_drive_file_24"
+                    android:tint="@color/white"
+                    app:circleColor="@color/red_400" />
+
+                <TextView
+                    style="@style/AttachmentTypeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/attachment_type_selector__file" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <org.thoughtcrime.securesms.components.CircleColorImageView
+                    android:id="@+id/contact_button"
+                    android:layout_width="53dp"
+                    android:layout_height="53dp"
+                    android:contentDescription="@string/attachment_type_selector__contact_description"
+                    android:scaleType="center"
+                    android:src="@drawable/outline_person_outline_24"
+                    android:tint="@color/white"
+                    app:circleColor="@color/blue_400" />
+
+                <TextView
+                    style="@style/AttachmentTypeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/attachment_type_selector__contact" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <org.thoughtcrime.securesms.components.CircleColorImageView
+                    android:id="@+id/camera_button"
+                    android:layout_width="53dp"
+                    android:layout_height="53dp"
+                    android:contentDescription="@string/attachment_type_selector__camera_description"
+                    android:scaleType="center"
+                    android:src="@drawable/outline_camera_24"
+                    android:tint="@color/white"
+                    app:circleColor="@color/green_400" />
+
+                <TextView
+                    style="@style/AttachmentTypeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/attachment_type_selector__camera" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <org.thoughtcrime.securesms.components.CircleColorImageView
+                    android:id="@+id/video_button"
+                    android:layout_width="53dp"
+                    android:layout_height="53dp"
+                    android:contentDescription="@string/attachment_type_selector__video_description"
+                    android:scaleType="center"
+                    android:src="@drawable/outline_videocam_24"
+                    android:tint="@color/white"
+                    app:circleColor="@color/blue_grey_400" />
+
+                <TextView
+                    style="@style/AttachmentTypeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/attachment_type_selector__video" />
 
             </LinearLayout>
 
 
-            <LinearLayout android:layout_width="match_parent"
-                          android:layout_height="wrap_content"
-                          android:layout_weight="1"
-                          android:gravity="center"
-                          android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <org.thoughtcrime.securesms.components.CircleColorImageView
-                        android:id="@+id/giphy_button"
-                        android:layout_width="53dp"
-                        android:layout_height="53dp"
-                        android:src="@drawable/ic_gif_white_24dp"
-                        android:scaleType="center"
-                        android:contentDescription="@string/attachment_type_selector__gif_description"
-                        app:circleColor="@color/cyan_400"/>
+                    android:id="@+id/giphy_button"
+                    android:layout_width="53dp"
+                    android:layout_height="53dp"
+                    android:contentDescription="@string/attachment_type_selector__gif_description"
+                    android:scaleType="center"
+                    android:src="@drawable/outline_gif_24"
+                    android:tint="@color/white"
+                    app:circleColor="@color/cyan_400" />
 
-                <TextView android:layout_marginTop="10dp"
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          style="@style/AttachmentTypeLabel"
-                          android:text="@string/attachment_type_selector__gif"/>
+                <TextView
+                    style="@style/AttachmentTypeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/attachment_type_selector__gif" />
 
             </LinearLayout>
 
-            <LinearLayout android:layout_width="match_parent"
-                          android:layout_height="wrap_content"
-                          android:layout_weight="1"
-                          android:gravity="center"
-                          android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <org.thoughtcrime.securesms.components.CircleColorImageView
-                        android:id="@+id/close_button"
-                        android:layout_width="53dp"
-                        android:layout_height="53dp"
-                        android:src="@drawable/ic_keyboard_arrow_down_white_24dp"
-                        android:scaleType="center"
-                        android:contentDescription="@string/attachment_type_selector__drawer_description"
-                        app:circleColor="@color/gray50"/>
+                    android:id="@+id/close_button"
+                    android:layout_width="53dp"
+                    android:layout_height="53dp"
+                    android:contentDescription="@string/attachment_type_selector__drawer_description"
+                    android:scaleType="center"
+                    android:src="@drawable/outline_keyboard_arrow_down_24"
+                    android:tint="@color/white"
+                    app:circleColor="@color/gray50" />
 
-                <TextView android:layout_marginTop="10dp"
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          style="@style/AttachmentTypeLabel"
-                          android:text=" "/>
+                <TextView
+                    style="@style/AttachmentTypeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text=" " />
 
             </LinearLayout>
 
 
         </LinearLayout>
-
     </LinearLayout>
-
 </LinearLayout>

@@ -12,6 +12,7 @@ import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
+import org.thoughtcrime.securesms.R;
 import org.thoughtcrime.securesms.jobmanager.SafeData;
 import org.thoughtcrime.securesms.logging.Log;
 
@@ -156,8 +157,8 @@ public class UpdateApkJob extends ContextJob {
     DownloadManager.Request downloadRequest = new DownloadManager.Request(Uri.parse(uri));
 
     downloadRequest.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI);
-    downloadRequest.setTitle("Downloading APPNAME update");
-    downloadRequest.setDescription("Downloading APPNAME " + versionName);
+    downloadRequest.setTitle(context.getString(R.string.download_update));
+    downloadRequest.setDescription(context.getString(R.string.download_update_version, versionName));
     downloadRequest.setVisibleInDownloadsUi(false);
     downloadRequest.setDestinationInExternalFilesDir(context, null, "signal-update.apk");
 

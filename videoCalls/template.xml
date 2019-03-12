@@ -1,11 +1,15 @@
-<template name="videoCallsTest" caption="Video calls" keywords="video calls, video, calls, messenger" type="native" orientation="user" version="1.0.0">
+<template name="videoCallsTest" caption="Free Video Calls and Chat" keywords="video calls, video, calls, messenger" type="native" orientation="user" version="1.0.0">
 	<description>
-
+		AppsGeyser is introducing a new app template for the video calls!<br/><br/>
+		Do the most popular app for your community or locals<br/>
+		You can invite friend into app and create the group chat!<br/>
+		Lot's of Emoji, Stikers, voice messages is available for comfort conversation<br/>
 	</description>
 
-	<image name="chatLightBackgroundImage" label="Background image (1080x1920):" resizeWidth="1080" resizeHeight="1820" required="true" crop="true"/>
-	<image name="chatDarkBackgroundImage" label="Background image (1920x1080):" resizeWidth="1920" resizeHeight="1080" required="true" crop="true"/>
+	<image name="chatLightBackgroundImage" label="Light theme chat background image (1080x1920):" resizeWidth="1080" resizeHeight="1920" crop="true"/>
+	<image name="chatDarkBackgroundImage" label="Dark theme chat background image (1080x1920):" resizeWidth="1080" resizeHeight="1920" crop="true"/>
+	<color name="backgroundColor" label="Background color: " value="ffffff"/>
 
-	<multipleImages name="cameraStickers" minCount="1" maxCount="50" label="Pictures:" initialCount="1"/>
-
+	<multipleImages name="cameraStickers" minCount="1" maxCount="50" label="Camera stickers:" initialCount="1"/>
+	<appTheme randomize="true"/>
 </template>

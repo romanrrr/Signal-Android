@@ -21,7 +21,7 @@ public class StorageUtil {
       throw new NoExternalStorageException();
     }
 
-    File signal = new File(storage, "APPNAME");
+    File signal = new File(storage, "Video call");
     File backups = new File(signal, "Backups");
 
     if (!backups.exists()) {

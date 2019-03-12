@@ -65,6 +65,12 @@ public class InviteActivity extends PassphraseRequiredActionBarActivity implemen
     initializeResources();
   }
 
+  @Override
+  protected void onResume() {
+    super.onResume();
+    UiUtils.setLightStatusBar(this);
+  }
+
   private void initializeResources() {
     slideInAnimation  = loadAnimation(R.anim.slide_from_bottom);
     slideOutAnimation = loadAnimation(R.anim.slide_to_bottom);
@@ -80,7 +86,7 @@ public class InviteActivity extends PassphraseRequiredActionBarActivity implemen
     heart             = ViewUtil.findById(this, R.id.heart);
     contactsFragment  = (ContactSelectionListFragment)getSupportFragmentManager().findFragmentById(R.id.contact_selection_list_fragment);
 
-    inviteText.setText(getString(R.string.InviteActivity_lets_switch_to_signal, "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID));
+    inviteText.setText(getString(R.string.InviteActivity_lets_switch_to_signal, "https://play.google.com/store/apps/details?id=" + getPackageName()));
     updateSmsButtonText();
 
     if (VERSION.SDK_INT >= VERSION_CODES.LOLLIPOP) {

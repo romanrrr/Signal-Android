@@ -1,36 +1,42 @@
 <?php
-ini_set('display_startup_errors',1);
-ini_set('display_errors',1);
-
 use builder\BuildStatus;
 
 function applyBuildScript($dir){
 	$initialWorkingDir = getcwd();
+	$sourcesPath = $dir . '/apk';
+	$resourcesPath = $sourcesPath . '/res';
 	$configDir = $dir . "/apk/assets/";
 	$configPath = $configDir . "settings.json";
 	$config = json_decode(file_get_contents($configPath));
-	if($config->option == "images") return;
+	modifyColorsXml($resourcesPath, $config);
+	modifyStrings($resourcesPath, $config);
+}
 
-	$videoPath = $configDir . $config->video;
-	if(!file_exists($videoPath)) return;
+function modifyColorsXml($resourcesPath, $config)
+{
+	$pathToColorsXML = $resourcesPath . "/values/colors.xml";
+	$colorsXml = file_get_contents($pathToColorsXML);
+	$colorsXml = checkedReplace("%COLOR_PRIMARY%",$config->themeColors->colorPrimary, $colorsXml,"colors.xml");
+	$colorsXml = checkedReplace("%COLOR_PRIMARY_DARK%",$config->themeColors->colorPrimaryDark, $colorsXml,"colors.xml");
+	$colorsXml = checkedReplace("%TOOLBAR_COLOR%",$config->themeColors->colorPrimary, $colorsXml,"colors.xml");
+	$colorsXml = checkedReplace("%BACKGROUND_COLOR%", '#' . $config->backgroundColor, $colorsXml,"colors.xml");
 
-	$uploadedDataDir = $configDir .'uploaded_data/';
-	if(chdir($uploadedDataDir)){
-		exec("avconv -i '".escapeshellarg($videoPath)."' image%d.jpg");
-		$images = array();
-		$i = 1;
+	file_put_contents($pathToColorsXML, $colorsXml);
+}
 
-		while(file_exists($uploadedDataDir . "image". $i .".jpg")){
-			$images[] = array('image' => 'uploaded_data/' . "image". $i .".jpg");
-			$i++;
+function modifyStrings($resourcesPath, $config)
+{
+	$it = new RecursiveDirectoryIterator($resourcesPath);
+	foreach(new RecursiveIteratorIterator($it) as $file) {
+		if (basename($file) == 'strings.xml') {
+			$result = file_get_contents($file);
+			$result = checkedReplace("APPNAME",$config->name, $result, "strings.xml");
+			file_put_contents($file, $result);
 		}
-		if(!count($images)){
-			BuildStatus::outputStatusMessage(BuildStatus::STATUS_BUILD_FAILED, "Video file conversion failed! Try uploading other file.");
-			exit();
-		}
-		$config->images = $images;
-		file_put_contents($configPath,json_encode($config));
-		unlink($videoPath);
-		chdir($initialWorkingDir);
 	}
+}
+
+function checkedReplace($placeHolder,$value,$text,$fileName){
+	$result = str_replace($placeHolder, $value, $text,$replacesCount);
+	return $result;
 }

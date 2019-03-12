@@ -12,6 +12,7 @@
     <string name="fullscreenBannerId" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
 
     <string name="app_name">APPNAME</string>
+    <string name="inviteLink" translatable="false">Let\'s switch to APPNAME</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="delete">Delete</string>
@@ -1512,5 +1513,10 @@
     <!-- EOF -->
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
+    <string name="unlock_app">Unlock APPNAME</string>
+    <string name="lock_reminder">Reminder: Registration Lock is enabled for your phone number. To help you memorize your Registration Lock PIN, APPNAME will periodically ask you to confirm it. I forgot my PIN.</string>
+    <string name="download_update">Downloading APPNAME update</string>
+    <string name="download_update_version">Download APPNAME %1$s</string>
+    <string name="safety">The safety numbers for your conversation with Masha have changed. This could either mean that someone is trying to intercept your communication, or that Masha simply re-installed APPNAME. You may wish to verify safety numbers for this contact.</string>
 
 </resources>

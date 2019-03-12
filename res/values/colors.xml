@@ -73,5 +73,6 @@
     <color name="appbar_icon_light_color">@color/black</color>
     <color name="appbar_icon_dark_color">@color/white</color>
     <color name="appbar_icon_light_color_hint">@color/black</color>
+    <color name="lightWindowsBackground">@color/white</color>
 
 </resources>

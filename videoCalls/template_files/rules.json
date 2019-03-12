@@ -1,31 +1,3 @@
 {
-  "backgroundImage": "required",
-  "logo": "required",
-  "playButton": "not_empty",
-  "backButton": "not_empty",
-  "soundButton": "not_empty",
-  "rateButton": "not_empty",
-  "cancelButton": "not_empty",
-  "settingsButton": "not_empty",
-  "timeBar": "not_empty",
-  "settingsPopup": "not_empty",
-  "levelPopup": "not_empty",
-  "panel": "not_empty",
-  "wonPanel": "not_empty",
-  "levels": [
-    "required",
-    {
-      "list_of_objects": [
-        {
-          "name": "required",
-          "levelLogo": "required",
-          "tileBack": "required",
-          "tileFront": "required",
-          "tiles": [
-            "required"
-          ]
-        }
-      ]
-    }
-  ]
+
 }

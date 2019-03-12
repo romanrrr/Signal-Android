@@ -333,7 +333,7 @@ public class RegistrationActivity extends BaseActionBarActivity implements Verif
                         Manifest.permission.READ_PHONE_STATE)
                .ifNecessary()
                .withRationaleDialog(getString(R.string.RegistrationActivity_signal_needs_access_to_your_contacts_and_media_in_order_to_connect_with_friends),
-                                    R.drawable.ic_contacts_white_48dp, R.drawable.ic_folder_white_48dp)
+                                    R.drawable.outline_contacts_24, R.drawable.outline_folder_24)
                .onSomeGranted(permissions -> {
                  if (permissions.contains(Manifest.permission.READ_PHONE_STATE)) {
                    initializeNumber();
@@ -950,7 +950,7 @@ public class RegistrationActivity extends BaseActionBarActivity implements Verif
       @Override
       public void onAnimationEnd(Animator animation) {
         fab.clearAnimation();
-        fab.setImageResource(R.drawable.ic_textsms_24dp);
+        fab.setImageResource(R.drawable.outline_sms_24);
         fab.animate().rotationBy(-375f).setDuration(SCENE_TRANSITION_DURATION).setListener(null).start();
       }
     }).start();

@@ -130,7 +130,7 @@ public class ConversationListActivity extends PassphraseRequiredActionBarActivit
         setSupportActionBar(toolbar);
         ActionBar actionbar = getSupportActionBar();
         actionbar.setDisplayHomeAsUpEnabled(true);
-        Drawable drawable = ContextCompat.getDrawable(this, R.drawable.ic_menu_white_24dp);
+        Drawable drawable = ContextCompat.getDrawable(this, R.drawable.ic_menu);
         drawable.setColorFilter(UiUtils.themeAttributeToColor(R.attr.toolbar_icon_color, this, R.color.white), PorterDuff.Mode.SRC_ATOP);
         actionbar.setHomeAsUpIndicator(drawable);
 
@@ -270,7 +270,7 @@ public class ConversationListActivity extends PassphraseRequiredActionBarActivit
             fallbackColor = ContactColors.generateFor(name);
         }
 
-        Drawable fallback = new GeneratedContactPhoto(name, R.drawable.ic_profile_default).asDrawable(this, fallbackColor.toAvatarColor(this));
+        Drawable fallback = new GeneratedContactPhoto(name, R.drawable.outline_account_circle_24).asDrawable(this, fallbackColor.toAvatarColor(this));
 
         GlideApp.with(this)
                 .load(new ProfileContactPhoto(recipient.getAddress(), String.valueOf(TextSecurePreferences.getProfileAvatarId(this))))

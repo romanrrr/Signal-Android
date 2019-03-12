@@ -189,7 +189,7 @@ public class GroupCreateActivity extends PassphraseRequiredActionBarActivity
     recipientsEditor.setHint(R.string.recipients_panel__add_members);
     recipientsPanel.setPanelChangeListener(this);
     findViewById(R.id.contacts_button).setOnClickListener(new AddRecipientButtonListener());
-    avatar.setImageDrawable(new ResourceContactPhoto(R.drawable.ic_group_grey600_24dp).asDrawable(this, ContactColors.UNKNOWN_COLOR.toConversationColor(this)));
+    avatar.setImageDrawable(new ResourceContactPhoto(R.drawable.outline_group_24).asDrawable(this, ContactColors.UNKNOWN_COLOR.toConversationColor(this)));
     avatar.setOnClickListener(view -> Crop.pickImage(GroupCreateActivity.this));
   }
 

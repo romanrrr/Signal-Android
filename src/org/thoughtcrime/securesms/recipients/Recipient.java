@@ -468,14 +468,14 @@ public class Recipient implements RecipientModifiedListener {
 
     public synchronized @NonNull
     FallbackContactPhoto getFallbackContactPhoto() {
-        if (isLocalNumber) return new ResourceContactPhoto(R.drawable.ic_note_to_self, R.drawable.ic_note_to_self_large);
+        if (isLocalNumber) return new ResourceContactPhoto(R.drawable.outline_bookmark_border_24, R.drawable.outline_bookmark_border_24);
         if (isResolving()) return new TransparentContactPhoto();
         else if (isGroupRecipient())
-            return new ResourceContactPhoto(R.drawable.ic_group_grey600_24dp, R.drawable.ic_group_large);
+            return new ResourceContactPhoto(R.drawable.outline_group_24, R.drawable.ic_people_outline_black_large);
         else if (!TextUtils.isEmpty(name))
-            return new GeneratedContactPhoto(name, R.drawable.ic_profile_default);
+            return new GeneratedContactPhoto(name, R.drawable.outline_account_circle_24);
         else
-            return new ResourceContactPhoto(R.drawable.ic_profile_default, R.drawable.ic_profile_default);
+            return new ResourceContactPhoto(R.drawable.outline_account_circle_24, R.drawable.outline_account_circle_24);
     }
 
     public synchronized @Nullable

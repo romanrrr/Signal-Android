@@ -432,7 +432,7 @@
   <string name="RegistrationActivity_invalid_number">နံပါတ် မှားနေသည်</string>
   <string name="RegistrationActivity_the_number_you_specified_s_is_invalid">သင်ထည့်လိုက်သော နံပါတ် ( %s) သည်မှားယွင်းနေသည်။</string>
   <string name="RegistrationActivity_missing_google_play_services">Google Play မရှိပါ</string>
-  <string name="RegistrationActivity_this_device_is_missing_google_play_services">သင့်ဖုန်းတွင် Google Play Services လိုအပ်နေပါသည်။ သင် APPNAME ကို အသုံးပြုနိုင်ပါတယ် 
+  <string name="RegistrationActivity_this_device_is_missing_google_play_services">သင့်ဖုန်းတွင် Google Play Services လိုအပ်နေပါသည်။ သင် APPNAME ကို အသုံးပြုနိုင်ပါတယ်
 ဒီဖွဲ့စည်းပုံအကျိုးရလဒ်ကယုံကြည်ဖို့အတွက် ဒါမှမဟုတ် စွမ်းဆောင်ရည် ကောင်းဖို့အတွက်ဖြစ်နိုင်ပါတယ်။
 \n\n သင်က  ကျွမ်းကျင်အဆင့် မဟုတ်လျှင် Android Rom market ကို သွားရန် မလိုပါ။ သို့မဟုတ် အမှားတစ်ခုခုဟု ထင်ပါက ဖြေရှင်းပေးနိုင်ဖို့အတွက် support@signal.org သို့ ဆက်သွယ်ပေးပါ။</string>
   <string name="RegistrationActivity_i_understand">နားလည် လက်ခံပါသည်</string>

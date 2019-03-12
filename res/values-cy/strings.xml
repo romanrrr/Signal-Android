@@ -114,7 +114,7 @@
   <string name="ConversationItem_click_to_approve_unencrypted">Methodd yr anfon, tapiwch am gam nôl anniogel</string>
   <string name="ConversationItem_click_to_approve_unencrypted_sms_dialog_title">Nôl i SMS heb ei amgryptio?</string>
   <string name="ConversationItem_click_to_approve_unencrypted_mms_dialog_title">Nôl i MMS heb ei amgryptio?</string>
-  <string name="ConversationItem_click_to_approve_unencrypted_dialog_message"><b>Ni</b> fydd y neges yn cael ei amgryptio am nad yw\'r derbynnydd yn ddefnyddiwr APPNAME bellach. 
+  <string name="ConversationItem_click_to_approve_unencrypted_dialog_message"><b>Ni</b> fydd y neges yn cael ei amgryptio am nad yw\'r derbynnydd yn ddefnyddiwr APPNAME bellach.
  
 Send neges heb ei ddiogelu?</string>
   <string name="ConversationItem_unable_to_open_media">Methu canfod app sy\'n gallu agor y cyfryngau hwn.</string>

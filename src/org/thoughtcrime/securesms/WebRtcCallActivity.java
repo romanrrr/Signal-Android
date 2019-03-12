@@ -222,7 +222,7 @@ public class WebRtcCallActivity extends Activity {
                  .request(Manifest.permission.RECORD_AUDIO, Manifest.permission.CAMERA)
                  .ifNecessary()
                  .withRationaleDialog(getString(R.string.WebRtcCallActivity_to_answer_the_call_from_s_give_signal_access_to_your_microphone, event.getRecipient().toShortString()),
-                                      R.drawable.ic_mic_white_48dp, R.drawable.ic_videocam_white_48dp)
+                                      R.drawable.outline_mic_none_24, R.drawable.outline_videocam_24)
                  .withPermanentDenialDialog(getString(R.string.WebRtcCallActivity_signal_requires_microphone_and_camera_permissions_in_order_to_make_or_receive_calls))
                  .onAllGranted(() -> {
                    callScreen.setActiveCall(event.getRecipient(), getString(R.string.RedPhone_answering));

@@ -216,7 +216,7 @@ public class RecipientPreferenceActivity extends PassphraseRequiredActionBarActi
   private void setHeader(@NonNull Recipient recipient) {
     ContactPhoto         contactPhoto  = recipient.isLocalNumber() ? new ProfileContactPhoto(recipient.getAddress(), String.valueOf(TextSecurePreferences.getProfileAvatarId(this)))
                                                                    : recipient.getContactPhoto();
-    FallbackContactPhoto fallbackPhoto = recipient.isLocalNumber() ? new ResourceContactPhoto(R.drawable.ic_profile_default, R.drawable.ic_person_large)
+    FallbackContactPhoto fallbackPhoto = recipient.isLocalNumber() ? new ResourceContactPhoto(R.drawable.outline_account_circle_24, R.drawable.ic_person_large)
                                                                    : recipient.getFallbackContactPhoto();
 
     glideRequests.load(contactPhoto)

@@ -95,7 +95,7 @@ public class AvatarImageView extends AppCompatImageView {
                     .into(this);
       setAvatarClickHandler(recipient, quickContactEnabled);
     } else {
-      setImageDrawable(new ResourceContactPhoto(R.drawable.ic_profile_default).asDrawable(getContext(), ContactColors.UNKNOWN_COLOR.toConversationColor(getContext()), inverted));
+      setImageDrawable(new ResourceContactPhoto(R.drawable.outline_account_circle_24).asDrawable(getContext(), ContactColors.UNKNOWN_COLOR.toConversationColor(getContext()), inverted));
       super.setOnClickListener(listener);
     }
   }
