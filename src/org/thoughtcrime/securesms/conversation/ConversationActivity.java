@@ -71,8 +71,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.location.places.ui.PlacePicker;
-
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
@@ -2407,7 +2405,7 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
       Permissions.with(ConversationActivity.this)
                  .request(Manifest.permission.CAMERA)
                  .ifNecessary()
-                 .withRationaleDialog(getString(R.string.ConversationActivity_to_capture_photos_and_video_allow_signal_access_to_the_camera), R.drawable.outline_photo_camera_24)
+                 .withRationaleDialog(getString(R.string.ConversationActivity_to_capture_photos_and_video_allow_signal_access_to_the_camera), R.drawable.outline_photo_camera_white_24)
                  .withPermanentDenialDialog(getString(R.string.ConversationActivity_signal_needs_the_camera_permission_to_take_photos_or_video))
                  .onAllGranted(() -> {
                    composeText.clearFocus();

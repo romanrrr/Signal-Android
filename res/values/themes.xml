@@ -164,7 +164,7 @@
         <item name="conversation_transport_popup_background">@color/white</item>
         <item name="conversation_emoji_toggle">@drawable/ic_mood_grey600_24dp</item>
         <item name="conversation_keyboard_toggle">@drawable/ic_keyboard_grey600_24dp</item>
-        <item name="conversation_attach_camera">@drawable/outline_photo_camera_24</item>
+        <item name="conversation_attach_camera">@drawable/outline_photo_camera_white_24</item>
         <item name="conversation_attach_image">@drawable/outline_crop_original_24</item>
         <item name="conversation_attach_video">@drawable/outline_movie_creation_24</item>
         <item name="conversation_attach_sound">@drawable/ic_volume_up_light</item>
@@ -212,7 +212,7 @@
         <item name="conversation_item_sticky_date_text_color">@color/core_grey_60</item>
         <item name="conversation_item_image_outline_color">@color/transparent_black_30</item>
 
-        <item name="quick_camera_icon">@drawable/outline_photo_camera_24</item>
+        <item name="quick_camera_icon">@drawable/outline_photo_camera_white_24</item>
         <item name="quick_mic_icon">@drawable/outline_mic_none_24</item>
 
         <item name="conversation_item_sent_indicator_text_background">@drawable/conversation_item_sent_indicator_text_shape</item>
@@ -366,7 +366,7 @@
         <item name="conversation_transport_popup_background">@color/black</item>
         <item name="conversation_emoji_toggle">@drawable/ic_mood_white_24dp</item>
         <item name="conversation_keyboard_toggle">@drawable/ic_keyboard_white_24dp</item>
-        <item name="conversation_attach_camera">@drawable/outline_photo_camera_24</item>
+        <item name="conversation_attach_camera">@drawable/outline_photo_camera_white_24</item>
         <item name="conversation_attach_image">@drawable/outline_crop_original_24</item>
         <item name="conversation_attach_video">@drawable/outline_movie_creation_24</item>
         <item name="conversation_attach_sound">@drawable/ic_volume_up_dark</item>
@@ -399,7 +399,7 @@
         <item name="linkpreview_secondary_text_color">@color/core_grey_25</item>
         <item name="linkpreview_divider_color">@color/core_grey_60</item>
 
-        <item name="quick_camera_icon">@drawable/outline_photo_camera_24</item>
+        <item name="quick_camera_icon">@drawable/outline_photo_camera_white_24</item>
         <item name="quick_mic_icon">@drawable/outline_mic_none_24</item>
 
         <item name="menu_new_conversation_icon">@drawable/ic_add_white_24dp</item>

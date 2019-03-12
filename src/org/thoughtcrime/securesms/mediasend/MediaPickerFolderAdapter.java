@@ -75,7 +75,7 @@ class MediaPickerFolderAdapter extends RecyclerView.Adapter<MediaPickerFolderAda
     void bind(@NonNull MediaFolder folder, @NonNull GlideRequests glideRequests, @NonNull EventListener eventListener) {
       title.setText(folder.getTitle());
       count.setText(String.valueOf(folder.getItemCount()));
-      icon.setImageResource(folder.getFolderType() == MediaFolder.FolderType.CAMERA ? R.drawable.outline_photo_camera_24 : R.drawable.outline_folder_24);
+      icon.setImageResource(folder.getFolderType() == MediaFolder.FolderType.CAMERA ? R.drawable.outline_photo_camera_white_24 : R.drawable.outline_folder_24);
 
       glideRequests.load(folder.getThumbnailUri())
                    .diskCacheStrategy(DiskCacheStrategy.NONE)
