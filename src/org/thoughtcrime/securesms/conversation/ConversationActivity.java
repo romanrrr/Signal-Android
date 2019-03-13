@@ -903,7 +903,17 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
         composeText.appendInvite(inviteText);
       } else {
         Intent intent = new Intent(Intent.ACTION_SENDTO);
-        intent.setData(Uri.parse("smsto:" + recipient.getAddress().serialize()));
+        String address = recipient.getAddress().serialize();
+        if(recipient.getParticipants().size() > 0) {
+          StringBuilder stringBuilder = new StringBuilder();
+          for (Recipient member : recipient.getParticipants()) {
+            stringBuilder.append(member.getAddress()).append(",");
+          }
+          stringBuilder.deleteCharAt(stringBuilder.length() -1);
+          address = stringBuilder.toString();
+        }
+
+        intent.setData(Uri.parse("smsto:" + address));
         intent.putExtra("sms_body", inviteText);
         intent.putExtra(Intent.EXTRA_TEXT, inviteText);
         startActivity(intent);
