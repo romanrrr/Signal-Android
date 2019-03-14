@@ -19,28 +19,25 @@ package org.thoughtcrime.securesms.sms;
 import android.content.Context;
 import android.support.annotation.NonNull;
 
-import org.thoughtcrime.securesms.database.MessagingDatabase.SyncMessageId;
-import org.thoughtcrime.securesms.database.MmsSmsDatabase;
-import org.thoughtcrime.securesms.database.NoSuchMessageException;
-import org.thoughtcrime.securesms.database.model.SmsMessageRecord;
-import org.thoughtcrime.securesms.logging.Log;
-
 import org.thoughtcrime.securesms.ApplicationContext;
 import org.thoughtcrime.securesms.attachments.Attachment;
 import org.thoughtcrime.securesms.database.Address;
 import org.thoughtcrime.securesms.database.AttachmentDatabase;
 import org.thoughtcrime.securesms.database.DatabaseFactory;
+import org.thoughtcrime.securesms.database.MessagingDatabase.SyncMessageId;
 import org.thoughtcrime.securesms.database.MmsDatabase;
+import org.thoughtcrime.securesms.database.MmsSmsDatabase;
+import org.thoughtcrime.securesms.database.NoSuchMessageException;
 import org.thoughtcrime.securesms.database.RecipientDatabase;
 import org.thoughtcrime.securesms.database.SmsDatabase;
 import org.thoughtcrime.securesms.database.ThreadDatabase;
 import org.thoughtcrime.securesms.database.model.MessageRecord;
+import org.thoughtcrime.securesms.database.model.SmsMessageRecord;
 import org.thoughtcrime.securesms.jobmanager.JobManager;
-import org.thoughtcrime.securesms.jobs.MmsSendJob;
 import org.thoughtcrime.securesms.jobs.PushGroupSendJob;
 import org.thoughtcrime.securesms.jobs.PushMediaSendJob;
 import org.thoughtcrime.securesms.jobs.PushTextSendJob;
-import org.thoughtcrime.securesms.jobs.SmsSendJob;
+import org.thoughtcrime.securesms.logging.Log;
 import org.thoughtcrime.securesms.mms.MmsException;
 import org.thoughtcrime.securesms.mms.OutgoingMediaMessage;
 import org.thoughtcrime.securesms.push.AccountManagerFactory;
@@ -77,7 +74,7 @@ public class MessageSender {
 
     long messageId = database.insertMessageOutbox(allocatedThreadId, message, forceSms, System.currentTimeMillis(), insertListener);
 
-    sendTextMessage(context, recipient, forceSms, keyExchange, messageId);
+    sendTextMessage(context, recipient, keyExchange, messageId);
 
     return allocatedThreadId;
   }
@@ -103,7 +100,7 @@ public class MessageSender {
       Recipient recipient = message.getRecipient();
       long      messageId = database.insertMessageOutbox(message, allocatedThreadId, forceSms, insertListener);
 
-      sendMediaMessage(context, recipient, forceSms, messageId, message.getExpiresIn());
+      sendMediaMessage(context, recipient, messageId, message.getExpiresIn());
 
       return allocatedThreadId;
     } catch (MmsException e) {
@@ -119,41 +116,35 @@ public class MessageSender {
 
   public static void resend(Context context, MessageRecord messageRecord) {
     long       messageId   = messageRecord.getId();
-    boolean    forceSms    = messageRecord.isForcedSms();
     boolean    keyExchange = messageRecord.isKeyExchange();
     long       expiresIn   = messageRecord.getExpiresIn();
     Recipient  recipient   = messageRecord.getRecipient();
 
     if (messageRecord.isMms()) {
-      sendMediaMessage(context, recipient, forceSms, messageId, expiresIn);
+      sendMediaMessage(context, recipient, messageId, expiresIn);
     } else {
-      sendTextMessage(context, recipient, forceSms, keyExchange, messageId);
+      sendTextMessage(context, recipient, keyExchange, messageId);
     }
   }
 
-  private static void sendMediaMessage(Context context, Recipient recipient, boolean forceSms, long messageId, long expiresIn)
+  private static void sendMediaMessage(Context context, Recipient recipient, long messageId, long expiresIn)
   {
-    if (isLocalSelfSend(context, recipient, forceSms)) {
+    if (isLocalSelfSend(context, recipient)) {
       sendLocalMediaSelf(context, messageId);
     } else if (isGroupPushSend(recipient)) {
       sendGroupPush(context, recipient, messageId, null);
-    } else if (!forceSms && isPushMediaSend(context, recipient)) {
+    } else if (isPushMediaSend(context, recipient)) {
       sendMediaPush(context, recipient, messageId);
-    } else {
-      sendMms(context, messageId);
     }
   }
 
-  private static void sendTextMessage(Context context, Recipient recipient,
-                                      boolean forceSms, boolean keyExchange,
+  private static void sendTextMessage(Context context, Recipient recipient, boolean keyExchange,
                                       long messageId)
   {
-    if (isLocalSelfSend(context, recipient, forceSms)) {
+    if (isLocalSelfSend(context, recipient)) {
       sendLocalTextSelf(context, messageId);
-    } else if (!forceSms && isPushTextSend(context, recipient, keyExchange)) {
+    } else if ( isPushTextSend(context, recipient, keyExchange)) {
       sendTextPush(context, recipient, messageId);
-    } else {
-      sendSms(context, recipient, messageId);
     }
   }
 
@@ -172,15 +163,6 @@ public class MessageSender {
     PushGroupSendJob.enqueue(context, jobManager, messageId, recipient.getAddress(), filterAddress);
   }
 
-  private static void sendSms(Context context, Recipient recipient, long messageId) {
-    JobManager jobManager = ApplicationContext.getInstance(context).getJobManager();
-    jobManager.add(new SmsSendJob(context, messageId, recipient.getName()));
-  }
-
-  private static void sendMms(Context context, long messageId) {
-    JobManager jobManager = ApplicationContext.getInstance(context).getJobManager();
-    jobManager.add(new MmsSendJob(context, messageId));
-  }
 
   private static boolean isPushTextSend(Context context, Recipient recipient, boolean keyExchange) {
     if (!TextSecurePreferences.isPushRegistered(context)) {
@@ -235,9 +217,8 @@ public class MessageSender {
     }
   }
 
-  private static boolean isLocalSelfSend(@NonNull Context context, @NonNull Recipient recipient, boolean forceSms) {
+  private static boolean isLocalSelfSend(@NonNull Context context, @NonNull Recipient recipient) {
     return recipient.isLocalNumber()                       &&
-           !forceSms                                       &&
            TextSecurePreferences.isPushRegistered(context) &&
            !TextSecurePreferences.isMultiDevice(context);
   }

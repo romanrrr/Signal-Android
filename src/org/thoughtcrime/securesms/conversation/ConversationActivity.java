@@ -2113,7 +2113,7 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
 
     Permissions.with(this)
                .request(Manifest.permission.SEND_SMS, Manifest.permission.READ_SMS)
-               .ifNecessary(!isSecureText || forceSms)
+               .ifNecessary(false)
                .withPermanentDenialDialog(getString(R.string.ConversationActivity_signal_needs_sms_permission_in_order_to_send_an_sms))
                .onAllGranted(() -> {
                  inputPanel.clearQuote();
@@ -2166,7 +2166,7 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
 
     Permissions.with(this)
                .request(Manifest.permission.SEND_SMS)
-               .ifNecessary(forceSms || !isSecureText)
+               .ifNecessary(false)
                .withPermanentDenialDialog(getString(R.string.ConversationActivity_signal_needs_sms_permission_in_order_to_send_an_sms))
                .onAllGranted(() -> {
                  silentlySetComposeText("");

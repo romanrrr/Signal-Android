@@ -76,7 +76,6 @@ public class InviteActivity extends PassphraseRequiredActionBarActivity implemen
     slideOutAnimation = loadAnimation(R.anim.slide_to_bottom);
 
     View                 shareButton     = ViewUtil.findById(this, R.id.share_button);
-    View                 smsButton       = ViewUtil.findById(this, R.id.sms_button);
     Button               smsCancelButton = ViewUtil.findById(this, R.id.cancel_sms_button);
     ContactFilterToolbar contactFilter   = ViewUtil.findById(this, R.id.contact_filter);
 
@@ -94,7 +93,6 @@ public class InviteActivity extends PassphraseRequiredActionBarActivity implemen
     }
     contactsFragment.setOnContactSelectedListener(this);
     shareButton.setOnClickListener(new ShareClickListener());
-    smsButton.setOnClickListener(new SmsClickListener());
     smsCancelButton.setOnClickListener(new SmsCancelClickListener());
     smsSendButton.setOnClickListener(new SmsSendClickListener());
     contactFilter.setOnFilterChangedListener(new ContactFilterChangedListener());

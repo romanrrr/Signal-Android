@@ -64,15 +64,6 @@
                         android:layout_height="wrap_content"
                         tools:ignore="ButtonStyle" />
 
-                <Button android:id="@+id/sms_button"
-                        android:drawableLeft="@drawable/outline_message_black_24"
-                        android:drawableStart="@drawable/outline_message_black_24"
-                        android:drawablePadding="10dp"
-                        android:text="@string/InviteActivity_choose_contacts"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        tools:ignore="ButtonStyle" />
-
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
