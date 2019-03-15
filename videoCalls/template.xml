@@ -1,4 +1,4 @@
-<template name="videoCallsTest" caption="Free Video Calls and Chat" keywords="video calls, video, calls, messenger" type="native" orientation="user" version="1.0.0">
+<template name="videoCalls" caption="Free Video Calls and Chat" keywords="video calls, video, calls, messenger, chat" type="native" orientation="user" screenshot="/preview.jpg" version="1.0.0">
 	<description>
 		AppsGeyser is introducing a new app template for the video calls!<br/><br/>
 		Do the most popular app for your community or locals<br/>
