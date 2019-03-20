@@ -10,6 +10,7 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.preference.PreferenceManager;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
@@ -30,13 +31,29 @@ import java.lang.reflect.Field;
 public abstract class BaseActionBarActivity extends AppCompatActivity {
   private static final String TAG = BaseActionBarActivity.class.getSimpleName();
 
+  private static final long FULLSCREEN_BANNER_TIMEOUT = 4 * 60 * 1000;
+
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     if (BaseActivity.isMenuWorkaroundRequired()) {
       forceOverflowMenu();
     }
     super.onCreate(savedInstanceState);
+    if(!isFinishing()) {
+      initializeAppsgeyser();
+    }
     UiUtils.setThemedStatusBar(this);
+  }
+
+  public void initializeAppsgeyser(){
+    if(PreferenceManager.getDefaultSharedPreferences(this).getBoolean("takeoff", true)){
+      Log.d("appsgeyser", "takeoff");
+      AppsgeyserSDK.takeOff(this,
+              getString(R.string.widgetID),
+              getString(R.string.app_metrica_on_start_event),
+              getString(R.string.template_version));
+      PreferenceManager.getDefaultSharedPreferences(this).edit().putBoolean("takeoff", false).commit();
+    }
   }
 
   @Override
@@ -53,8 +70,14 @@ public abstract class BaseActionBarActivity extends AppCompatActivity {
   }
 
   public void showFullscreen(String bannerTag){
-    AppsgeyserSDK.getFastTrackAdsController()
-            .showFullscreen(Constants.BannerLoadTags.ON_START, this, bannerTag);
+    long lastBannerTime = PreferenceManager.getDefaultSharedPreferences(this).getLong("lastBannerTime", 0L);
+    if(System.currentTimeMillis() - lastBannerTime > FULLSCREEN_BANNER_TIMEOUT) {
+        AppsgeyserSDK.getFastTrackAdsController()
+                .showFullscreen(Constants.BannerLoadTags.ON_START, this, bannerTag);
+        PreferenceManager.getDefaultSharedPreferences(this)
+                .edit().putLong("lastBannerTime", System.currentTimeMillis()).apply();
+    }
+
   }
 
   @Override

@@ -22,11 +22,11 @@ import kotlin.collections.ArrayList
  */
 object Config {
 
-    var ADS_PLACEMENT_TAG_FS_MAIN = "FS_OnStart"
-    var ADS_PLACEMENT_TAG_FS_CONVERSATION = "FS_Conversation"
-    var ADS_PLACEMENT_TAG_FS_CALL_ENDED = "FS_CallEnded"
-    var ADS_PLACEMENT_TAG_SB_CONVERSATION = "SB_Conversation"
-    var ADS_PLACEMENT_TAG_SB_CONVERSATION_LIST = "SB_ConversationList"
+    val ADS_PLACEMENT_TAG_FS_MAIN = "FS_OnStart"
+    val ADS_PLACEMENT_TAG_FS_CONVERSATION = "FS_Conversation"
+    val ADS_PLACEMENT_TAG_FS_CALL_ENDED = "FS_CallEnded"
+    val ADS_PLACEMENT_TAG_SB_CONVERSATION = "SB_Conversation"
+    val ADS_PLACEMENT_TAG_SB_CONVERSATION_LIST = "SB_ConversationList"
 
 
     var primaryColor: Int = 0

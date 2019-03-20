@@ -183,9 +183,12 @@
             android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"
             android:exported="true" />
 
-        <activity-alias android:name=".RoutingActivity"
+        <activity android:name=".StartActivity"
             android:targetActivity=".ConversationListActivity"
-            android:exported="true">
+            android:exported="true"
+            android:noHistory="true"
+            android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"
+            android:theme="@style/TextSecure.LightNoActionBar">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -198,7 +201,7 @@
             <meta-data android:name="com.sec.minimode.icon.landscape.normal"
                 android:resource="@drawable/app_icon" />
 
-        </activity-alias>
+        </activity>
 
         <activity android:name=".ConversationListArchiveActivity"
             android:label="@string/AndroidManifest_archived_conversations"

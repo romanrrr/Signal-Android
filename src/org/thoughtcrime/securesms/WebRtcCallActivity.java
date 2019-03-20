@@ -32,6 +32,8 @@ import android.support.v7.app.AlertDialog;
 
 import org.thoughtcrime.securesms.config.Config;
 import org.thoughtcrime.securesms.logging.Log;
+
+import android.support.v7.preference.PreferenceManager;
 import android.view.View;
 import android.view.ViewConfiguration;
 import android.view.Window;
@@ -120,6 +122,8 @@ public class WebRtcCallActivity extends Activity {
       });
       AppsgeyserSDK.getFastTrackAdsController()
               .showFullscreen(Constants.BannerLoadTags.ON_START, WebRtcCallActivity.this, Config.INSTANCE.getADS_PLACEMENT_TAG_FS_CALL_ENDED());
+      PreferenceManager.getDefaultSharedPreferences(this)
+              .edit().putLong("lastBannerTime", System.currentTimeMillis()).apply();
 
     }, 1000);
   }

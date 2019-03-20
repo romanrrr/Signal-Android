@@ -116,17 +116,6 @@ public class ConversationListActivity extends PassphraseRequiredActionBarActivit
         Toolbar toolbar = findViewById(R.id.toolbar);
         Log.w("ADS", "INIT");
 
-
-
-        if(PreferenceManager.getDefaultSharedPreferences(this).getBoolean("takeoff", true)){
-            AppsgeyserSDK.takeOff(this,
-                    getString(R.string.widgetID),
-                    getString(R.string.app_metrica_on_start_event),
-                    getString(R.string.template_version));
-            PreferenceManager.getDefaultSharedPreferences(this).edit().putBoolean("takeoff", false).commit();
-            showFullscreen(Config.INSTANCE.getADS_PLACEMENT_TAG_FS_MAIN());
-        }
-
         setSupportActionBar(toolbar);
         ActionBar actionbar = getSupportActionBar();
         actionbar.setDisplayHomeAsUpEnabled(true);
@@ -190,7 +179,19 @@ public class ConversationListActivity extends PassphraseRequiredActionBarActivit
         });
     }
 
+    @Override
+    public void initializeAppsgeyser() {
+        if(PreferenceManager.getDefaultSharedPreferences(this).getBoolean("takeoff", true)){
+            Log.d("appsgeyser", "takeoff conversation list");
 
+            AppsgeyserSDK.takeOff(this,
+                    getString(R.string.widgetID),
+                    getString(R.string.app_metrica_on_start_event),
+                    getString(R.string.template_version));
+            PreferenceManager.getDefaultSharedPreferences(this).edit().putBoolean("takeoff", false).commit();
+            showFullscreen(Config.INSTANCE.getADS_PLACEMENT_TAG_FS_MAIN());
+        }
+    }
 
     @Override
     public void onResume() {
